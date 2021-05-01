@@ -29,13 +29,8 @@ namespace Thuleanx.Controls {
 			}
 		}
 		
-		Timer attack;
-		bool attackSustained;
+		public Timer Attack;
 		public Timer Dash;
-
-		public bool Attacked {
-			get => attack || attackSustained; 
-		}
 
 		void Awake() {
 			Instance = this;
@@ -46,11 +41,8 @@ namespace Thuleanx.Controls {
 
 		public void OnAttackInput(InputAction.CallbackContext context) {
 			if (Active) {
-				if (context.started) {
-					attackSustained = true;
-				} else if (context.canceled) {
-					attackSustained = false;
-				}
+				Attack = new Timer(InputBufferTime);
+				Attack.Start();
 			}
 		}
 		public void OnMousePosInput(InputAction.CallbackContext context)
@@ -72,5 +64,6 @@ namespace Thuleanx.Controls {
 		}
 
 		public void UseDashInput() => Dash.Stop();
+		public void UseAttackInput() => Attack.Stop();
 	}
 }

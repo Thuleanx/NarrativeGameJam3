@@ -21,7 +21,7 @@ namespace Thuleanx.Editor {
 			var valueProperty = property.FindPropertyRelative("value");
 			var enabledProperty = property.FindPropertyRelative("enabled");
 
-			EditorGUI.BeginProperty(position, label, property);
+			label = EditorGUI.BeginProperty(position, label, property);
 			position.width -= 24;
 			EditorGUI.BeginDisabledGroup(!enabledProperty.boolValue);
 			EditorGUI.PropertyField(position, valueProperty, label, true);
