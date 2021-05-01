@@ -64,6 +64,7 @@ MonoBehaviour:
   Movement: {x: 0, y: 0}
   LastNonZeroMovement: {x: 1, y: 0}
   MouseScreenPos: {x: 0, y: 0}
+  Aiming: 0
 --- !u!114 &2628957814815554103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 2729eaca-75ee-49b7-b6fe-1d58683872a6
     m_ActionName: Gameplay/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2628957814815554102}
+        m_TargetAssemblyTypeName: Thuleanx.Controls.InputController, Assembly-CSharp
+        m_MethodName: OnAimInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 59540d52-0e7c-4200-8e45-006faed00d70
+    m_ActionName: Gameplay/Aim[/Mouse/rightButton]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

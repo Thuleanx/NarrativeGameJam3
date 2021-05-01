@@ -31,6 +31,7 @@ namespace Thuleanx.Controls {
 		
 		public Timer Attack;
 		public Timer Dash;
+		public bool Aiming;
 
 		void Awake() {
 			Instance = this;
@@ -60,6 +61,12 @@ namespace Thuleanx.Controls {
 			if (Active && context.started) {
 				Dash = new Timer(InputBufferTime);
 				Dash.Start();
+			}
+		}
+		public void OnAimInput(InputAction.CallbackContext context) {
+			if (Active) {
+				if (context.started) Aiming = true;
+				if (context.canceled) Aiming = false;
 			}
 		}
 
