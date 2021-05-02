@@ -68,10 +68,10 @@ namespace Yarn_Thuleanx {
 
 			onLineStart?.Invoke(speakerName);
 
-			GameObject dialogueBubble = ObjectPool.Instance.Instantiate(DialogueObjectTag);
-			DialogueText dialogueText = dialogueBubble.GetComponentInChildren<DialogueText>();
-			dialogueText.SetSpeaker(speakerName);
-			dialogueText.SetText(" ");
+			// GameObject dialogueBubble = ObjectPool.Instance.Instantiate(DialogueObjectTag);
+			// DialogueText dialogueText = dialogueBubble.GetComponentInChildren<DialogueText>();
+			// dialogueText.SetSpeaker(speakerName);
+			// dialogueText.SetText(" ");
 
             if (SecondsPerCharacter > 0.0f) {
                 // Display the line one character at a time
@@ -80,12 +80,12 @@ namespace Yarn_Thuleanx {
 
                 foreach (char c in text) {
                     stringBuilder.Append (c);
-					dialogueText?.SetText(stringBuilder.ToString());
+					// dialogueText?.SetText(stringBuilder.ToString());
                     onLineUpdate?.Invoke(stringBuilder.ToString ());
                     if (userRequestedNextLine) {
                         // We've requested a skip of the entire line.
                         // Display all of the text immediately.
-						dialogueText?.SetText(text);
+						// dialogueText?.SetText(text);
                         onLineUpdate?.Invoke(text);
                         break;
                     }
@@ -93,7 +93,7 @@ namespace Yarn_Thuleanx {
                 }
             } else {
                 // Display the entire line immediately if textSpeed <= 0
-				dialogueText?.SetText(text);
+				// dialogueText?.SetText(text);
                 onLineUpdate?.Invoke(text);
             }
 
@@ -112,7 +112,7 @@ namespace Yarn_Thuleanx {
             // Avoid skipping lines if textSpeed == 0
             yield return new WaitForEndOfFrame();
 
-			dialogueText?.Disable();
+			// dialogueText?.Disable();
             // Hide the text and prompt
             onLineEnd?.Invoke();
 
@@ -172,7 +172,6 @@ namespace Yarn_Thuleanx {
             while (waitingForOptionSelection) {
                 yield return null;
             }
-			FMOD_Thuleanx.AudioMaster.Instance.PlayOneShot("Interact");
             
             // Hide all the buttons
             foreach (var button in optionButtons) {
