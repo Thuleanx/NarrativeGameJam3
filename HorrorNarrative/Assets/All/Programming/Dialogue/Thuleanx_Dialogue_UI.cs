@@ -13,19 +13,21 @@ using Thuleanx.Math;
 using UnityEngine.InputSystem;
 
 namespace Yarn_Thuleanx {
-	public class Thuleanx_Dialogue_UI :  Yarn.Unity.DialogueUIBehaviour {
+	public class Thuleanx_Dialogue_UI : Yarn.Unity.DialogueUIBehaviour {
 
-        [Tooltip("How quickly to show the text, in seconds per character")]
-        public float SecondsPerCharacter = 0.025f;
-        public List<Button> optionButtons;
+		[Tooltip("How quickly to show the text, in seconds per character")]
+		public float SecondsPerCharacter = 0.025f;
+		public List<Button> optionButtons;
 
 		public float WaitAfterLine = 2f;
 		public float WaitAfterLinePerCharacter = .025f;
 
 		public BubblePool DialoguePool;
-        private bool userRequestedNextLine = false;
-        private System.Action<int> currentOptionSelectionHandler;
-        private bool waitingForOptionSelection = false;     
+		public Canvas DialogueCanvas;
+
+		private bool userRequestedNextLine = false;
+		private System.Action<int> currentOptionSelectionHandler;
+		private bool waitingForOptionSelection = false;
 
 		public UnityEvent onDialogueStart;
 		public UnityEvent onDialogueEnd;
@@ -38,64 +40,67 @@ namespace Yarn_Thuleanx {
 		public DialogueRunner.StringUnityEvent onCommand;
 
 		internal void Awake() {
-            foreach (var button in optionButtons)
-                button.gameObject.SetActive (false);
+			foreach (var button in optionButtons)
+				button.gameObject.SetActive(false);
 		}
 
-		public override Dialogue.HandlerExecutionType RunLine(Line line, 
+		public override Dialogue.HandlerExecutionType RunLine(Line line,
 			ILineLocalisationProvider localisationProvider, Action onLineComplete) {
 
-            StartCoroutine(DoRunLine(line, localisationProvider, onLineComplete));
-            return Dialogue.HandlerExecutionType.PauseExecution;
+			StartCoroutine(DoRunLine(line, localisationProvider, onLineComplete));
+			return Dialogue.HandlerExecutionType.PauseExecution;
 		}
 
-        private IEnumerator DoRunLine(Yarn.Line line, ILineLocalisationProvider localisationProvider, System.Action onComplete) {
-            userRequestedNextLine = false;
+		private IEnumerator DoRunLine(Yarn.Line line, ILineLocalisationProvider localisationProvider, System.Action onComplete) {
+			userRequestedNextLine = false;
 
 			string unparsedText = localisationProvider.GetLocalisedTextForLine(line);
 
 			if (unparsedText == null) {
-                Debug.LogWarning($"Line {line.ID} doesn't have any localised unparsedText.");
-                unparsedText = line.ID;
+				Debug.LogWarning($"Line {line.ID} doesn't have any localised unparsedText.");
+				unparsedText = line.ID;
 			}
 
 			string speakerName = "Player";
 			string text = unparsedText;
 			if (unparsedText != null && unparsedText.IndexOf(':') != -1) {
 				speakerName = unparsedText.Substring(0, unparsedText.IndexOf(':'));
-				text = unparsedText.Substring(unparsedText.IndexOf(':')+1).TrimStart();
+				text = unparsedText.Substring(unparsedText.IndexOf(':') + 1).TrimStart();
 			}
 
 			onLineStart?.Invoke(speakerName);
 
-			// GameObject dialogueBubble = ObjectPool.Instance.Instantiate(DialogueObjectTag);
-			// DialogueText dialogueText = dialogueBubble.GetComponentInChildren<DialogueText>();
-			// dialogueText.SetSpeaker(speakerName);
-			// dialogueText.SetText(" ");
+			Speaker speaker = Speaker.GetSpeaker(speakerName);
+			Debug.Log(speaker);
 
-            if (SecondsPerCharacter > 0.0f) {
-                // Display the line one character at a time
-                var stringBuilder = new StringBuilder ();
+			GameObject dialogueBubble = DialoguePool.Borrow(gameObject.scene);
+			dialogueBubble.transform.SetParent(DialogueCanvas.transform);
+			DialogueText dialogueText = dialogueBubble.GetComponentInChildren<DialogueText>();
+			dialogueText.SetSpeaker(speaker);
+			dialogueText.SetText("");
 
+			if (SecondsPerCharacter > 0.0f) {
+				// Display the line one character at a time
+				var stringBuilder = new StringBuilder();
 
-                foreach (char c in text) {
-                    stringBuilder.Append (c);
-					// dialogueText?.SetText(stringBuilder.ToString());
-                    onLineUpdate?.Invoke(stringBuilder.ToString ());
-                    if (userRequestedNextLine) {
-                        // We've requested a skip of the entire line.
-                        // Display all of the text immediately.
-						// dialogueText?.SetText(text);
-                        onLineUpdate?.Invoke(text);
-                        break;
-                    }
-                    yield return new WaitForSeconds (SecondsPerCharacter);
-                }
-            } else {
-                // Display the entire line immediately if textSpeed <= 0
-				// dialogueText?.SetText(text);
-                onLineUpdate?.Invoke(text);
-            }
+				foreach (char c in text) {
+					stringBuilder.Append(c);
+					dialogueText?.SetText(stringBuilder.ToString());
+					onLineUpdate?.Invoke(stringBuilder.ToString());
+					if (userRequestedNextLine) {
+						// We've requested a skip of the entire line.
+						// Display all of the text immediately.
+						dialogueText?.SetText(text);
+						onLineUpdate?.Invoke(text);
+						break;
+					}
+					yield return new WaitForSeconds(SecondsPerCharacter);
+				}
+			} else {
+				// Display the entire line immediately if textSpeed <= 0
+				dialogueText?.SetText(text);
+				onLineUpdate?.Invoke(text);
+			}
 
 
 			userRequestedNextLine = false;
@@ -105,117 +110,114 @@ namespace Yarn_Thuleanx {
 			Timer Wait = new Timer(WaitAfterLine + WaitAfterLinePerCharacter * text.Length);
 			Wait.Start();
 
-            while (userRequestedNextLine == false && Wait) {
-                yield return null;
-            }
+			while (userRequestedNextLine == false && Wait) {
+				yield return null;
+			}
 
-            // Avoid skipping lines if textSpeed == 0
-            yield return new WaitForEndOfFrame();
+			// Avoid skipping lines if textSpeed == 0
+			yield return new WaitForEndOfFrame();
 
-			// dialogueText?.Disable();
-            // Hide the text and prompt
-            onLineEnd?.Invoke();
+			dialogueText?.Disable();
+			// Hide the text and prompt
+			onLineEnd?.Invoke();
 
-            onComplete();
+			onComplete();
 		}
 
-		public override void RunOptions(OptionSet optionSet, 
+		public override void RunOptions(OptionSet optionSet,
 			ILineLocalisationProvider localisationProvider, Action<int> onOptionSelected) {
-            StartCoroutine(DoRunOptions(optionSet, localisationProvider, onOptionSelected));
+			StartCoroutine(DoRunOptions(optionSet, localisationProvider, onOptionSelected));
 		}
 
-        private  IEnumerator DoRunOptions (Yarn.OptionSet optionsCollection, 
+		private IEnumerator DoRunOptions(Yarn.OptionSet optionsCollection,
 			ILineLocalisationProvider localisationProvider, System.Action<int> selectOption) {
 
-            if (optionsCollection.Options.Length > optionButtons.Count) {
-                Debug.LogWarning("There are more options to present than there are" +
-                                 "buttons to present them in. This will cause problems.");
-            }
+			if (optionsCollection.Options.Length > optionButtons.Count) {
+				Debug.LogWarning("There are more options to present than there are" +
+								 "buttons to present them in. This will cause problems.");
+			}
 
 			int i = 0;
 
-            waitingForOptionSelection = true;
+			waitingForOptionSelection = true;
 
-            currentOptionSelectionHandler = selectOption;
-            
-            foreach (var optionString in optionsCollection.Options) {
-                optionButtons [i].gameObject.SetActive (true);
+			currentOptionSelectionHandler = selectOption;
 
-                optionButtons [i].onClick.RemoveAllListeners();
-                optionButtons [i].onClick.AddListener(() => SelectOption(optionString.ID));
+			foreach (var optionString in optionsCollection.Options) {
+				optionButtons[i].gameObject.SetActive(true);
 
-                var optionText = localisationProvider.GetLocalisedTextForLine(optionString.Line);
+				optionButtons[i].onClick.RemoveAllListeners();
+				optionButtons[i].onClick.AddListener(() => SelectOption(optionString.ID));
 
-                if (optionText == null) {
-                    Debug.LogWarning($"Option {optionString.Line.ID} doesn't have any localised text");
-                    optionText = optionString.Line.ID;
-                }
+				var optionText = localisationProvider.GetLocalisedTextForLine(optionString.Line);
 
-                var unityText = optionButtons [i].GetComponentInChildren<Text> ();
-                if (unityText != null) {
-                    unityText.text = optionText;
-                }
+				if (optionText == null) {
+					Debug.LogWarning($"Option {optionString.Line.ID} doesn't have any localised text");
+					optionText = optionString.Line.ID;
+				}
 
-                var textMeshProText = optionButtons [i].GetComponentInChildren<TMPro.TMP_Text> ();
-                if (textMeshProText != null) {
-                    textMeshProText.text = optionText;
+				var unityText = optionButtons[i].GetComponentInChildren<Text>();
+				if (unityText != null) {
+					unityText.text = optionText;
+				}
+
+				var textMeshProText = optionButtons[i].GetComponentInChildren<TMPro.TMP_Text>();
+				if (textMeshProText != null) {
+					textMeshProText.text = optionText;
 					// refresh layout
 					LayoutRebuilder.ForceRebuildLayoutImmediate(optionButtons[i].GetComponent<RectTransform>());
-                }
+				}
 
-                i++;
-            }
+				i++;
+			}
 
-            onOptionsStart?.Invoke();
+			onOptionsStart?.Invoke();
 
-            // Wait until the chooser has been used and then removed 
-            while (waitingForOptionSelection) {
-                yield return null;
-            }
-            
-            // Hide all the buttons
-            foreach (var button in optionButtons) {
-                button.gameObject.SetActive (false);
-            }
+			// Wait until the chooser has been used and then removed 
+			while (waitingForOptionSelection) {
+				yield return null;
+			}
 
-            onOptionsEnd?.Invoke();
+			// Hide all the buttons
+			foreach (var button in optionButtons) {
+				button.gameObject.SetActive(false);
+			}
+
+			onOptionsEnd?.Invoke();
 		}
 
-        public override void DialogueStarted ()
-        {
-            onDialogueStart?.Invoke();            
-        }
+		public override void DialogueStarted() {
+			onDialogueStart?.Invoke();
+		}
 
-        public override void DialogueComplete ()
-        {
-            onDialogueEnd?.Invoke();
-        }
+		public override void DialogueComplete() {
+			onDialogueEnd?.Invoke();
+		}
 
-        public void MarkLineComplete() {
-            userRequestedNextLine = true;
-        }
+		public void MarkLineComplete() {
+			userRequestedNextLine = true;
+		}
 
-        public void SelectOption(int optionID) {
-            if (waitingForOptionSelection == false) {
-                Debug.LogWarning("An option was selected, but the dialogue UI was not expecting it.");
-                return;
-            }
-            waitingForOptionSelection = false;
-            currentOptionSelectionHandler?.Invoke(optionID);
-        }
+		public void SelectOption(int optionID) {
+			if (waitingForOptionSelection == false) {
+				Debug.LogWarning("An option was selected, but the dialogue UI was not expecting it.");
+				return;
+			}
+			waitingForOptionSelection = false;
+			currentOptionSelectionHandler?.Invoke(optionID);
+		}
 
 		public override Dialogue.HandlerExecutionType RunCommand(Command command, Action onCommandComplete) {
-            onCommand?.Invoke(command.Text);
+			onCommand?.Invoke(command.Text);
 
-            // Signal to the DialogueRunner that it should continue
-            // executing. (This implementation of RunCommand always signals
-            // that execution should continue, and never calls
-            // onCommandComplete.)
-            return Dialogue.HandlerExecutionType.ContinueExecution;
+			// Signal to the DialogueRunner that it should continue
+			// executing. (This implementation of RunCommand always signals
+			// that execution should continue, and never calls
+			// onCommandComplete.)
+			return Dialogue.HandlerExecutionType.ContinueExecution;
 		}
 
-		public void OnSkipInput(InputAction.CallbackContext context)
-		{
+		public void OnSkipInput(InputAction.CallbackContext context) {
 			if (context.started)
 				MarkLineComplete();
 		}

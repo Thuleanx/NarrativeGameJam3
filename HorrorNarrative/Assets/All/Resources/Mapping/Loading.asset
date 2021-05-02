@@ -33,4 +33,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: MENU_EXIT
   target_scene: {fileID: 11400000, guid: d8af11bc1269348428ce96bef289ab67, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: -608383087676164849, guid: d8af11bc1269348428ce96bef289ab67, type: 2}
