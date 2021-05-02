@@ -71,7 +71,6 @@ namespace Yarn_Thuleanx {
 			onLineStart?.Invoke(speakerName);
 
 			Speaker speaker = Speaker.GetSpeaker(speakerName);
-			Debug.Log(speaker);
 
 			GameObject dialogueBubble = DialoguePool.Borrow(gameObject.scene);
 			dialogueBubble.transform.SetParent(DialogueCanvas.transform);

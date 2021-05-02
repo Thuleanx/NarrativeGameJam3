@@ -11,6 +11,9 @@ namespace Thuleanx.Mechanics.Shooting {
 		public Optional<Transform> GunBase;
 		public float KnockbackAmount = 3f;
 
+		public Transform LeftHand, RightHand;
+		public SpriteRenderer GunRenderer;
+
 		[Tooltip("Point / barrell of gun, where the bullet is spawned. If not specified, we assume the current object is the gunpoint")]
 		public Optional<Transform> GunPoint;
 
@@ -30,11 +33,27 @@ namespace Thuleanx.Mechanics.Shooting {
 		}
 
 		void Update() {
-			Vector2 target = InputController.Instance.MouseWorldPos;
-			Vector2 displacement = target - (Vector2) transform.position;
-			float angleDeg = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
+			// Aiming
+			#region Rotation
 
-			GunBase.Value.rotation = Quaternion.Euler(0f, 0f, angleDeg);
+				// right / left
+				Vector2 target = InputController.Instance.MouseWorldPos;
+
+				if (target.x <= transform.position.x) {
+					GunBase.Value.position = RightHand.position;
+					GunRenderer.flipY = true;
+				} else  {
+					GunBase.Value.position = LeftHand.position;
+					GunRenderer.flipY = false;
+				}
+
+				Vector2 displacement = target - (Vector2) GunBase.Value.position;
+
+				float angleDeg = Mathf.Atan2(displacement.y, displacement.x) * Mathf.Rad2Deg;
+
+				GunBase.Value.rotation = Quaternion.Euler(0f, 0f, angleDeg);
+
+			#endregion
 
 			if (InputController.Instance.Aiming) {
 				float arc = AimDuration == 0 ? MinArc :  Mathf.Lerp(MaxArc, MinArc, Mathf.Clamp01(aimTime/AimDuration));
