@@ -4,7 +4,7 @@ using Thuleanx.Mechanics.Mapping;
 
 [CustomEditor(typeof(Passage))]
 public class PassageEditor : Editor {
-	int _selected = 0;
+	int _selected;
 
 	public override void OnInspectorGUI() {
 		serializedObject.Update();
@@ -17,15 +17,19 @@ public class PassageEditor : Editor {
 
 		EditorGUI.BeginDisabledGroup(passage.target_scene == null);
 
-		EditorGUI.BeginChangeCheck();
 		if (passage.target_scene != null) {
 			int num = passage.target_scene.Passages.Count;
 			string[] _options = new string[num];
-			for (int i = 0; i < num; i++)
-				_options[i] = passage.target_scene.Passages[i].passage_name;
 
+			int _chosen = 0;
+			for (int i = 0; i < num; i++) {
+				_options[i] = passage.target_scene.Passages[i].passage_name;
+				if (passage.target_scene.Passages[i] == passage.target_passage) _chosen = i;
+			}
+
+			EditorGUI.BeginChangeCheck();
 			// EditorGUILayout.PropertyField(serializedObject.FindProperty("target_passage"));
-			_selected = EditorGUILayout.Popup("Target Passage", _selected, _options);
+			_selected = EditorGUILayout.Popup("Target Passage", _chosen, _options);
 
 			if (EditorGUI.EndChangeCheck())
 				passage.target_passage = passage.target_scene.Passages[_selected];
