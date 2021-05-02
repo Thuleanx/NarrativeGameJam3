@@ -38,7 +38,6 @@ namespace Thuleanx.Mechanics.Shooting {
 
 			if (InputController.Instance.Aiming) {
 				float arc = AimDuration == 0 ? MinArc :  Mathf.Lerp(MaxArc, MinArc, Mathf.Clamp01(aimTime/AimDuration));
-				Debug.Log(arc);
 
 				if (BottomLine.Enabled && TopLine.Enabled && IndicatorRange.Enabled) {
 					BottomLine.Value.gameObject.SetActive(true);
