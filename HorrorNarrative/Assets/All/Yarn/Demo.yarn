@@ -1,10 +1,26 @@
 title: Start
 tags: 
 colorID: 0
-position: -461,-2446
+position: -990,-2902
 ---
 Player: Hi
 Player: How's it going?
 Player: This is a test
 Player: And you failed it
+-> Why?
+-> Yes
+-> No you
+Player: Some nonsense to test out dialogue system
+[[Int]]
+===
+title: Int
+tags: 
+colorID: 0
+position: -609,-2886
+---
+Player: Do I want to repeat?
+-> Yes
+    [[Start]]
+-> No
+    Player: Whatever man
 ===

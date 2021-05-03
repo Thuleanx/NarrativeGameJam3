@@ -13,7 +13,7 @@ namespace Thuleanx.Optimization {
 		public bool inPool = false;
 
 		void OnDisable() {
-			Game.Instance?.StartCoroutine(General._InvokeNextFrame(() => {
+			App.Instance?.StartCoroutine(General._InvokeNextFrame(() => {
 				if (!inPool) Pool?.Collects(this);
 			}));
 		}
