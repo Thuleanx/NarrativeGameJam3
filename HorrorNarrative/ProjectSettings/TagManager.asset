@@ -35,9 +35,27 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Solid
+  - Player
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Sky
+    uniqueID: 2362036841
+    locked: 0
+  - name: Wall
+    uniqueID: 3552325403
+    locked: 0
+  - name: Ground
+    uniqueID: 2097535865
+    locked: 0
+  - name: Shadow
+    uniqueID: 3481354303
+    locked: 0
+  - name: Player
+    uniqueID: 239374449
+    locked: 0
+  - name: UI
+    uniqueID: 730124319
     locked: 0
