@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa768b7701a024852bdb710ce3937157, type: 3}
   m_Name: Grounded
   m_EditorClassIdentifier: 
-  StateMachine: {fileID: 0}
+  StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
+  CanFlip: 1
+  AnimationState:
+    enabled: 1
+    value: MovingGrounded
+  AccelerationLambda: 8

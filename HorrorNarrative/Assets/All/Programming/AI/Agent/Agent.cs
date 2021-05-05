@@ -20,13 +20,14 @@ namespace Thuleanx.AI {
 		[HideInInspector]
 		public PhysicsObject PhysicsBody;
 
+		public Animator Anim {get; private set; }
 
-		[FMODUnity.EventRef] public string DeathSFX, HitSFX;
 
 		public virtual void Awake() {
 			if (Machine.Enabled) Machine.Value.Agent = this;
 			LocalContext = new AgentLocalContext(this);
 			PhysicsBody = GetComponent<PhysicsObject>();
+			Anim = GetComponent<Animator>();
 		}
 
 		public virtual void Start() {
@@ -78,12 +79,10 @@ namespace Thuleanx.AI {
 		}
 
 		public virtual void OnDeath() {
-			AudioManager.Instance.PlayOneShot(DeathSFX);
 			OnDeathEvent?.Invoke();
 		}
 
 		public virtual void OnDamageTaken() {
-			AudioManager.Instance.PlayOneShot(HitSFX);
 			OnDamageTakenEvent?.Invoke();
 		}
 	}
