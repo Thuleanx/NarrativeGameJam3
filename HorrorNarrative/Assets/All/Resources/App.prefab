@@ -440,6 +440,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InputBufferTime: 0.2
+  InteractibleMask:
+    serializedVersion: 2
+    m_Bits: 268435456
   Active: 1
   Movement: {x: 0, y: 0}
   LastNonZeroMovement: {x: 1, y: 0}
@@ -618,7 +621,7 @@ MonoBehaviour:
   variableStorage: {fileID: 5729479779471760398}
   dialogueUI: {fileID: 8622282980719615814}
   startNode: Start
-  startAutomatically: 1
+  startAutomatically: 0
   onNodeStart:
     m_PersistentCalls:
       m_Calls: []
