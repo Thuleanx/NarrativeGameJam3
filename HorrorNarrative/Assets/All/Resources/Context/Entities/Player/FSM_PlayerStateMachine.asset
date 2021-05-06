@@ -9,8 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4db81a88261c4f08afcce9bb3d6ff8a, type: 3}
-  m_Name: Player Data
+  m_Script: {fileID: 11500000, guid: 48afd571be70247119b566f69b892b4b, type: 3}
+  m_Name: FSM_PlayerStateMachine
   m_EditorClassIdentifier: 
-  MoveVelocity: 3
-  MaxHealth: 1
+  Agent: {fileID: 0}
+  States:
+  - {fileID: 11400000, guid: b97a49874e46c4f5a83d2dfe89d74e72, type: 2}
+  - {fileID: 11400000, guid: 15ba3cfee4a074cd98fe6eac03872cde, type: 2}

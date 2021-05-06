@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -990,-2902
+position: -990,-2982
 ---
 Player: Hi
 Player: How's it going?
@@ -16,11 +16,33 @@ Player: Some nonsense to test out dialogue system
 title: Int
 tags: 
 colorID: 0
-position: -609,-2886
+position: -609,-2966
 ---
 Player: Do I want to repeat?
 -> Yes
     [[Start]]
 -> No
     Player: Whatever man
+===
+title: Girl
+tags: 
+colorID: 0
+position: -1148,-3542
+---
+<<if visited("Girl") is false>>
+    Girl: New blood. What's your name? // This is a comment, it won't show up in Unity
+    -> Adrian
+    -> Thuleanx
+    -> Cathardigan
+    Girl: Whatever. Forget I asked.
+    Girl: People here, they die by the dozen... // (It's tough to keep track)
+    Girl: So what you do need me for?
+    -> You tell me
+    -> What's your name? 
+        Player: You never said
+    Girl: Urg
+    Girl: Why did I waste my time on you?
+<<else>>
+    Girl: Hurry along. I've no time for you.
+<<endif>>
 ===

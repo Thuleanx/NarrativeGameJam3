@@ -57,13 +57,18 @@ namespace Thuleanx.Controls {
 			}
 		}
 
+		// Should only be called by Interactible
 		public void StartInteracting() {
 			Interacting = true;
 		}
 
+		// Should only be called by Interactible
 		public void StopInteracting() {
 			Interacting = false;
+			Target = null;
 		}
+
+		public void SignalStopInteract() => Target.StopInteraction();
 
 		public void OnMouseClick(InputAction.CallbackContext context) {
 			if (Active) {

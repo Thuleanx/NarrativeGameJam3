@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using Thuleanx.Controls;
+using Thuleanx.AI;
 
 namespace Thuleanx.Interaction {
 	[RequireComponent(typeof(Collider2D))]
@@ -8,51 +9,38 @@ namespace Thuleanx.Interaction {
 
 		[HideInInspector]
 		public bool _selected;
-		
-		[SerializeField] 
-		SpriteRenderer[] Sprites;
 
-		Material[] DefaultMaterial;
-		[SerializeField] Material HighlightMaterial;
+		[Tooltip("Will the player be halted / frozen upon interacting")]
+		public bool ForceInteraction;
 
 		[SerializeField] UnityEvent OnSelectStart;
 		[SerializeField] UnityEvent OnSelectStop;
 		[SerializeField] UnityEvent OnInteractionStart;
 		[SerializeField] UnityEvent OnInteractionStop;
 
-		private void Awake() {
-			DefaultMaterial = new Material[Sprites.Length];
-			for (int i = 0; i < Sprites.Length; i++) DefaultMaterial[i] = Sprites[i].material;
-		}
+		public virtual void Awake() {}
 
-		public void SelectedStart() {
+		public virtual void SelectedStart() {
 			_selected = true;
 			OnSelectStart?.Invoke();
-
-			for (int i = 0; i < Sprites.Length; i++) DefaultMaterial[i] = Sprites[i].material;
-			for (int i = 0; i < Sprites.Length; i++)
-				Sprites[i].material = HighlightMaterial;
-
 		}
 
-		public void SelectedStop() {
+		public virtual void SelectedStop() {
 			OnSelectStop?.Invoke();
 			_selected = false;
-
-			for (int i = 0; i < Sprites.Length; i++)
-				Sprites[i].material = DefaultMaterial[i];
-
 		}
 
-		public void StartInteraction() {
+		public virtual void StartInteraction() {
 			SelectedStop();
 			Controls.InputController.Instance.StartInteracting();
 			OnInteractionStart?.Invoke();
+			if (ForceInteraction) Player.Instance.Halt();
 		}
 
-		public void StopInteraction() {
+		public virtual void StopInteraction() {
 			OnInteractionStop?.Invoke();
 			Controls.InputController.Instance.StopInteracting();
+			if (ForceInteraction) Player.Instance.UnHalt();
 		}
 
 		public static Interactible GetInteractible(Vector2 worldPosition, LayerMask interactibleMask) {

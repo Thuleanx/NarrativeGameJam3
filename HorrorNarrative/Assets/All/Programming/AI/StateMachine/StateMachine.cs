@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 using UnityEngine.Assertions;
 
 namespace Thuleanx.AI {
@@ -33,6 +34,14 @@ namespace Thuleanx.AI {
 
 		public void OnUpdate() {
 			Current?.OnUpdate();
+		}
+
+		public State FindStateOfType(Type type) {
+			foreach (State state in States) {
+				if (type.IsInstanceOfType(state)) 
+					return state;
+			}
+			return null;
 		}
 	}
 }
