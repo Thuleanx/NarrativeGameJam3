@@ -9,13 +9,18 @@ namespace Thuleanx.AI.Context {
 		public Vector2 Position;
 		public Vector2 Velocity;
 
-		public int Health;
+		public int Health {get; private set; }
 		public Timer IFrame;
 		public Timer Damaged;
+		public bool RightFacing;
 
 		public AgentLocalContext(Agent agent) {
 			Agent = agent;
 			Health = agent.Context.MaxHealth;
+			RightFacing = true;
 		}
+
+		public void TakeDamage(int amt) { Health = Mathf.Clamp(Health - amt, 0, Agent.Context.MaxHealth); }
+		public void Heal(int amt) { Health = Mathf.Clamp(Health + amt, 0, Agent.Context.MaxHealth); }
 	}
 }

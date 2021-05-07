@@ -37,6 +37,7 @@ namespace Thuleanx.Controls {
 		
 		public Timer Attack;
 		public Timer Dash;
+		public Timer Reload;
 		[HideInInspector]
 		public bool Aiming;
 
@@ -72,17 +73,32 @@ namespace Thuleanx.Controls {
 
 		public void OnMouseClick(InputAction.CallbackContext context) {
 			if (Active) {
-				MouseClick = new Timer(InputBufferTime);
-				MouseClick.Start();
+				if (context.started) {
+					MouseClick = new Timer(InputBufferTime);
+					MouseClick.Start();
+				}
 			}
 		}
 
 		public void OnAttackInput(InputAction.CallbackContext context) {
 			if (Active) {
-				Attack = new Timer(InputBufferTime);
-				Attack.Start();
+				if (context.started) {
+					Attack = new Timer(InputBufferTime);
+					Attack.Start();
+				}
 			}
 		}
+
+		public void OnReloadInput(InputAction.CallbackContext context) {
+			if (Active) {
+				if (context.started) {
+					Reload = new Timer(InputBufferTime);
+					Reload.Start();
+				}
+			}
+		}
+
+
 		public void OnMousePosInput(InputAction.CallbackContext context)
 		{
 			if (Active) {
@@ -111,6 +127,7 @@ namespace Thuleanx.Controls {
 
 		public void UseDashInput() => Dash.Stop();
 		public void UseAttackInput() => Attack.Stop();
+		public void UseReloadInput() => Reload.Stop();
 		public void UseMouseInput() => MouseClick.Stop();
 	}
 }

@@ -9,6 +9,18 @@ namespace Thuleanx.AI {
 		[SerializeField, Tooltip("Exponential acceleration. Higher means reaching target faster. ")]
 		float AccelerationLambda=8f;
 
+		public override State ShouldTransitionTo() {
+			if (InputController.Instance.Aiming) 
+				return StateMachine.FindStateOfType(typeof(PlayerAiming));
+			if (InputController.Instance.Reload) {
+				InputController.Instance.UseReloadInput();
+				if (!PlayerLocalContext.GunLoaded && PlayerLocalContext.BulletsLeft > 0)
+					return StateMachine.FindStateOfType(typeof(PlayerReload));
+				return null;
+			}
+			return null;
+		}
+
 		public override void OnUpdate() {
 			base.OnUpdate();
 

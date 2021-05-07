@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4db81a88261c4f08afcce9bb3d6ff8a, type: 3}
-  m_Name: CX_Player Data
+  m_Script: {fileID: 11500000, guid: 80233108e8abe4120ae36ccd7c2a823f, type: 3}
+  m_Name: FSM_State_PlayerReload
   m_EditorClassIdentifier: 
-  MoveVelocity: 3
-  MaxHealth: 1
-  AimingMoveSpeed: 1
+  StateMachine: {fileID: 0}
+  AnimationFinish: 0
+  CanFlip: 0
+  AnimationState:
+    enabled: 1
+    value: Reload

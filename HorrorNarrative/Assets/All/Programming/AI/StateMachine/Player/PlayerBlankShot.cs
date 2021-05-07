@@ -1,0 +1,20 @@
+using UnityEngine;
+
+namespace Thuleanx.AI {
+	[CreateAssetMenu(fileName = "PlayerBlankShot", menuName = "~/StateMachine/Player/PlayerBlankShot", order = 0)]
+	public class PlayerBlankShot : PlayerState {
+		public override State ShouldTransitionTo() {
+			if (AnimationFinish)
+				return StateMachine.FindStateOfType(typeof(PlayerGrounded));
+			return null;
+		}
+
+		public override void OnEnter() {
+			base.OnEnter();
+		}
+
+		public override void OnExit() {
+			base.OnExit();
+		}
+	}
+}

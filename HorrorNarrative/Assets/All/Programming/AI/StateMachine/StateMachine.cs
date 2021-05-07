@@ -7,7 +7,9 @@ namespace Thuleanx.AI {
 	public class StateMachine : ScriptableObject {
 		[HideInInspector]
 		public Agent Agent;
-		public State Current  {get; private set; }
+		// Useful only for the OnExit function
+		public State Next {get; private set; }
+		public State Current {get; private set; }
 		public State Prev {get; private set;}
 
 		[SerializeField] 
@@ -26,6 +28,7 @@ namespace Thuleanx.AI {
 			Transition(States[0]); 
 		}
 		public void Transition(State state) {
+			Next = state;
 			Current?.OnExit();
 			Prev = Current;
 			Current = state;
