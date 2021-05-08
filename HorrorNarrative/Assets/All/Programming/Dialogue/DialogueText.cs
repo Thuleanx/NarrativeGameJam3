@@ -39,7 +39,6 @@ namespace Thuleanx.Dialogue {
 		}
 
 		public void Disable() {
-			GetComponent<ObjectReturnToPool>()?.OnWillDisable();
 			speaker = null;
 			gameObject.SetActive(false);
 		}

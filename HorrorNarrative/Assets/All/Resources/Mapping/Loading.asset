@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fe36db065ffe4bd09c02d20a2df7ced, type: 3}
   m_Name: Loading
   m_EditorClassIdentifier: 
-  Scene:
-    Scene: {fileID: 0}
-    SceneName: 
-    sceneIndex: -1
-    sceneEnabled: 0
+  SceneReference:
+    Scene: {fileID: 102900000, guid: 56cf2d6f943c746678cdf96919ba1467, type: 3}
+    SceneName: Loading
+    sceneIndex: 1
+    sceneEnabled: 1
   Passages:
   - {fileID: 7441299414361785854}
 --- !u!114 &7441299414361785854

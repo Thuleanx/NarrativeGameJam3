@@ -1,4 +1,5 @@
 using UnityEngine;
+using Thuleanx.Controls;
 
 namespace Thuleanx.AI {
 	public class Player : Agent {
@@ -10,6 +11,7 @@ namespace Thuleanx.AI {
 			base.Awake();
 			CanControl = true;
 			Instance = this;
+			LocalContext = new Context.PlayerLocalContext(this);
 		}
 
 		public void ForcePlayerState(PlayerState State) {
@@ -22,5 +24,13 @@ namespace Thuleanx.AI {
 		}
 
 		public void Halt() => ForcePlayerState((PlayerState) Machine.Value.FindStateOfType(typeof(PlayerHalt)));
+
+		public override void Update() {
+			base.Update();
+
+			if (Machine.Enabled && ((PlayerState) Machine.Value.Current).CanFlip)
+				if (App.Instance._InputManager.Movement.x != 0)
+					LocalContext.RightFacing = App.Instance._InputManager.Movement.x > 0;
+		}
 	}
 }

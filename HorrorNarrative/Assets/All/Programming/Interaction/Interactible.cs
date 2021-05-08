@@ -32,14 +32,14 @@ namespace Thuleanx.Interaction {
 
 		public virtual void StartInteraction() {
 			SelectedStop();
-			Controls.InputController.Instance.StartInteracting();
+			App.Instance._InputManager.StartInteracting();
 			OnInteractionStart?.Invoke();
 			if (ForceInteraction) Player.Instance.Halt();
 		}
 
 		public virtual void StopInteraction() {
 			OnInteractionStop?.Invoke();
-			Controls.InputController.Instance.StopInteracting();
+			App.Instance._InputManager.StopInteracting();
 			if (ForceInteraction) Player.Instance.UnHalt();
 		}
 
@@ -50,7 +50,7 @@ namespace Thuleanx.Interaction {
 		}
 
 		void Update() {
-			if (_selected && Controls.InputController.Instance.MouseClick)
+			if (_selected && App.Instance._InputManager.MouseClick)
 				StartInteraction();
 		}
 	}

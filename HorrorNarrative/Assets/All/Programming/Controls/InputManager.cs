@@ -8,9 +8,7 @@ using Thuleanx.Interaction;
 namespace Thuleanx.Controls {
 
 	[DisallowMultipleComponent]
-	public class InputController : MonoBehaviour {
-		public static InputController Instance;
-
+	public class InputManager : MonoBehaviour {
 		[Tooltip("How long are the inputs buffered, in seconds.")]
 		public float InputBufferTime = .2f;
 		[Tooltip("Layer Mask to find interactible objects")]
@@ -37,14 +35,11 @@ namespace Thuleanx.Controls {
 		
 		public Timer Attack;
 		public Timer Dash;
+		public Timer Reload;
 		[HideInInspector]
 		public bool Aiming;
 
 		public Timer MouseClick;
-
-		void Awake() {
-			Instance = this;
-		}
 
 		void Update() {
 			if (!Interacting) {
@@ -72,17 +67,32 @@ namespace Thuleanx.Controls {
 
 		public void OnMouseClick(InputAction.CallbackContext context) {
 			if (Active) {
-				MouseClick = new Timer(InputBufferTime);
-				MouseClick.Start();
+				if (context.started) {
+					MouseClick = new Timer(InputBufferTime);
+					MouseClick.Start();
+				}
 			}
 		}
 
 		public void OnAttackInput(InputAction.CallbackContext context) {
 			if (Active) {
-				Attack = new Timer(InputBufferTime);
-				Attack.Start();
+				if (context.started) {
+					Attack = new Timer(InputBufferTime);
+					Attack.Start();
+				}
 			}
 		}
+
+		public void OnReloadInput(InputAction.CallbackContext context) {
+			if (Active) {
+				if (context.started) {
+					Reload = new Timer(InputBufferTime);
+					Reload.Start();
+				}
+			}
+		}
+
+
 		public void OnMousePosInput(InputAction.CallbackContext context)
 		{
 			if (Active) {
@@ -111,6 +121,7 @@ namespace Thuleanx.Controls {
 
 		public void UseDashInput() => Dash.Stop();
 		public void UseAttackInput() => Attack.Stop();
+		public void UseReloadInput() => Reload.Stop();
 		public void UseMouseInput() => MouseClick.Stop();
 	}
 }

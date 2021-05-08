@@ -1,17 +1,18 @@
 using UnityEngine;
+using Thuleanx;
 
 namespace FMOD_Thuleanx {
 	public class AudioSettingsManipulator : MonoBehaviour {
 		public void SetMasterVolume(float value) {
-			AudioManager.Instance?.SetMasterVolume(value);
+			App.Instance._AudioManager?.SetMasterVolume(value);
 		}
 
 		public void SetMusicVolume(float value) {
-			AudioManager.Instance?.SetMusicVolume(value);
+			App.Instance._AudioManager?.SetMusicVolume(value);
 		}
 
 		public void SetSFXVolume(float value) {
-			AudioManager.Instance?.SetSFXVolume(value);
+			App.Instance._AudioManager?.SetSFXVolume(value);
 		}
 	}
 }

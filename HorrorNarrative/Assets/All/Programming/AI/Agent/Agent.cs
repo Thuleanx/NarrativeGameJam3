@@ -35,6 +35,10 @@ namespace Thuleanx.AI {
 		}
 
 		public virtual void Update() {
+			State NxtState;
+			while ((NxtState = Machine.Value.Current.ShouldTransitionTo()) != null)
+				Machine.Value.Transition(NxtState);
+
 			if (Machine.Enabled) Machine.Value.OnUpdate();
 		}
 
@@ -51,7 +55,7 @@ namespace Thuleanx.AI {
 
 			if (!LocalContext.IFrame && damage >= 0) {
 				int taken = Mathf.Min(LocalContext.Health, damage);
-				LocalContext.Health -= taken;
+				LocalContext.TakeDamage(taken);
 				// LocalContext.IFrame = new Math.Timer(Context.IFrameAfterHit);
 				// LocalContext.IFrame.Start();
 				// LocalContext.Damaged= new Math.Timer(Context.IFrameAfterHit);
@@ -66,8 +70,7 @@ namespace Thuleanx.AI {
 		}
 
 		public void Heal(int value) {
-			int res = Mathf.Max(0, Mathf.Min(value, Context.MaxHealth - LocalContext.Health));
-			LocalContext.Health += res;
+			LocalContext.Heal(value);
 		}
 
 		public bool IsDead() {
