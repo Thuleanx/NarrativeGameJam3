@@ -31,7 +31,7 @@ namespace Thuleanx.AI {
 			base.OnUpdate();
 
 			if (PlayerAgent.CanControl) {
-				Vector2 idealMovement = InputController.Instance.Movement * PlayerContext.AimingMoveSpeed;
+				Vector2 idealMovement = App.Instance._InputManager.Movement * PlayerContext.AimingMoveSpeed;
 				PlayerAgent.LocalContext.Velocity = Calc.Damp(PlayerAgent.LocalContext.Velocity, idealMovement, AccelerationLambda, Time.deltaTime);
 			}
 		}

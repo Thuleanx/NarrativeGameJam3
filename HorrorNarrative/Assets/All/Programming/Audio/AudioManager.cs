@@ -6,7 +6,6 @@ using UnityEngine.Events;
 namespace FMOD_Thuleanx {
 	public class AudioManager : MonoBehaviour
 	{
-		public static AudioManager Instance = null;
 		public AudioTrack MainTrack {get; private set; }
 
 		// Settings
@@ -14,10 +13,6 @@ namespace FMOD_Thuleanx {
 		FMOD.Studio.Bus SFX;
 		FMOD.Studio.Bus Master;
 		bool prepped = false;
-
-		void Awake() {
-			Instance = this;
-		}
 
 		void Prep() {
 			Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");

@@ -37,7 +37,7 @@ namespace Thuleanx.Mechanics.Shooting {
 			#region Rotation
 
 				// right / left
-				Vector2 target = InputController.Instance.MouseWorldPos;
+				Vector2 target = App.Instance._InputManager.MouseWorldPos;
 
 				if (target.x <= transform.position.x) {
 					GunBase.Value.position = RightHand.position;
@@ -55,7 +55,7 @@ namespace Thuleanx.Mechanics.Shooting {
 
 			#endregion
 
-			if (InputController.Instance.Aiming) {
+			if (App.Instance._InputManager.Aiming) {
 				float arc = AimDuration == 0 ? MinArc :  Mathf.Lerp(MaxArc, MinArc, Mathf.Clamp01(aimTime/AimDuration));
 
 				if (BottomLine.Enabled && TopLine.Enabled && IndicatorRange.Enabled) {
@@ -78,9 +78,9 @@ namespace Thuleanx.Mechanics.Shooting {
 				aimTime = 0f;
 			}
 
-			if (InputController.Instance.Attack) {
+			if (App.Instance._InputManager.Attack) {
 				TempShoot(target);
-				InputController.Instance.UseAttackInput();
+				App.Instance._InputManager.UseAttackInput();
 			}
 		}
 

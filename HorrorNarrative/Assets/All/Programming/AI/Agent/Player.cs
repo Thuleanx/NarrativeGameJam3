@@ -29,8 +29,8 @@ namespace Thuleanx.AI {
 			base.Update();
 
 			if (Machine.Enabled && ((PlayerState) Machine.Value.Current).CanFlip)
-				if (InputController.Instance.Movement.x != 0)
-					LocalContext.RightFacing = InputController.Instance.Movement.x > 0;
+				if (App.Instance._InputManager.Movement.x != 0)
+					LocalContext.RightFacing = App.Instance._InputManager.Movement.x > 0;
 		}
 	}
 }

@@ -8,9 +8,7 @@ using Thuleanx.Interaction;
 namespace Thuleanx.Controls {
 
 	[DisallowMultipleComponent]
-	public class InputController : MonoBehaviour {
-		public static InputController Instance;
-
+	public class InputManager : MonoBehaviour {
 		[Tooltip("How long are the inputs buffered, in seconds.")]
 		public float InputBufferTime = .2f;
 		[Tooltip("Layer Mask to find interactible objects")]
@@ -42,10 +40,6 @@ namespace Thuleanx.Controls {
 		public bool Aiming;
 
 		public Timer MouseClick;
-
-		void Awake() {
-			Instance = this;
-		}
 
 		void Update() {
 			if (!Interacting) {

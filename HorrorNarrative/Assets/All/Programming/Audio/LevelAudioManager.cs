@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using TMPro;
 using System.Collections;
+using Thuleanx;
 using Thuleanx.Mechanics.Danmaku;
 using Thuleanx.Math;
 
@@ -17,7 +18,7 @@ namespace FMOD_Thuleanx {
 		public GameObject trackTitle;
 
 		void Start() {
-			track = FMOD_Thuleanx.AudioManager.Instance.GetTrack(SongRef);
+			track = App.Instance._AudioManager.GetTrack(SongRef);
 			Announcer.gameObject.SetActive(false);
 			trackTitle.SetActive(false);
 
@@ -37,11 +38,11 @@ namespace FMOD_Thuleanx {
 			Announcer.gameObject.SetActive(true);
 			sleep.Start();
 			Announcer.text = "Ready";
-			AudioManager.Instance.PlayOneShot(AnnouncerRef);
+			App.Instance._AudioManager.PlayOneShot(AnnouncerRef);
 			while (sleep) yield return null;
 			sleep.Start();
 			Announcer.text = "GO";
-			AudioManager.Instance.PlayOneShot(AnnouncerRef);
+			App.Instance._AudioManager.PlayOneShot(AnnouncerRef);
 			while (sleep) yield return null;
 			Announcer.gameObject.SetActive(false);
 
@@ -57,12 +58,12 @@ namespace FMOD_Thuleanx {
 		void Play() {
 			track.Play();
 			BulletInstructionParser.StartParsing(track);
-			FMOD_Thuleanx.AudioManager.Instance.SetMainTrack(track);
+			App.Instance._AudioManager.SetMainTrack(track);
 		}
 		void Stop() {
 			track.Stop(); 
 			BulletInstructionParser.StopParsing(track);
-			FMOD_Thuleanx.AudioManager.Instance.RemoveMainTrack(track);
+			App.Instance._AudioManager.RemoveMainTrack(track);
 			foreach (var obj in FindObjectsOfType<OnSongStop>())
 				obj.OnSongStopEvent?.Invoke();
 		}

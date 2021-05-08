@@ -7,10 +7,10 @@ namespace Thuleanx.Mechanics.Danmaku {
 		public bool setMainTrack = true;
 
 		void Start() {
-			track = FMOD_Thuleanx.AudioManager.Instance.GetTrack(SongName);
+			track = App.Instance._AudioManager.GetTrack(SongName);
 			BulletInstructionParser.StartParsing(track);
 			track.Play();
-			if (setMainTrack) FMOD_Thuleanx.AudioManager.Instance.SetMainTrack(track);
+			if (setMainTrack) App.Instance._AudioManager.SetMainTrack(track);
 		}
 
 		void OnDisable() {
