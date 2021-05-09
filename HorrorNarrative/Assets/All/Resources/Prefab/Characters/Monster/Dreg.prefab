@@ -78,7 +78,7 @@ MonoBehaviour:
   Hurtmask:
     serializedVersion: 2
     m_Bits: 512
-  DamageFrequency: 2
+  DamageFrequency: 1
   inactiveColor: {r: 1, g: 1, b: 1, a: 0.3137255}
   collisionOpenColor: {r: 0.23017643, g: 0.21960782, b: 0.84313726, a: 0.5686275}
   collidingColor: {r: 0.43476486, g: 0, b: 1, a: 0.6862745}
@@ -281,7 +281,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &6460999949328649608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PhysicsBody: {fileID: 0}
-  CorpsePool: {fileID: 0}
+  CorpsePool: {fileID: 11400000, guid: e24feebb422d84b5f9841ec99e836490, type: 2}
 --- !u!114 &6460999949328675450
 MonoBehaviour:
   m_ObjectHideFlags: 0

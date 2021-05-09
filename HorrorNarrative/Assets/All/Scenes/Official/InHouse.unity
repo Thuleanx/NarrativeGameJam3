@@ -11722,10 +11722,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3185530647392453457, guid: 0fbec5bad31704dd88180ca4c002cd93, type: 3}
-      propertyPath: DamageFrequency
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6460999949328649609, guid: 0fbec5bad31704dd88180ca4c002cd93, type: 3}
       propertyPath: m_RootOrder
       value: 9
