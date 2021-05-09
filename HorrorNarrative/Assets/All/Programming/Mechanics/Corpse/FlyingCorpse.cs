@@ -14,23 +14,27 @@ namespace Thuleanx.Mechanics.Corpse {
 
 		Timer Animating;
 
-		void OnEnable() {
+		public void OnEnable() {
 			Animating = new Timer(Duration);
 			Animating.Start();
 			OnStart?.Invoke();
 		}
 
 		void Update() {
+
 			if (Animating) {
 				// height of body
 				Vector3 BodyPos = Body.transform.localPosition;
 				BodyPos.y = Mathf.Sin(Calc.Remap(Animating.TimeLeft, 0, Duration, Mathf.PI, 0)) * FlyingHeight;
 				Body.transform.localPosition = BodyPos;
 				// position of the corpse
-				transform.Translate(Time.deltaTime * Dir * Speed);
+				RigidBody.velocity = Dir * Speed;
 			} else {
+				Vector3 BodyPos = Body.transform.localPosition;
+				BodyPos.y = 0;
+				Body.transform.localPosition = BodyPos;
+				RigidBody.velocity = Vector2.zero;
 				OnFinish?.Invoke();
-				gameObject.SetActive(false);
 			}
 		}
 	}

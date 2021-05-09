@@ -16,6 +16,6 @@ MonoBehaviour:
   AnimationFinish: 0
   CanFlip: 1
   AnimationState:
-    enabled: 0
-    value: 
+    enabled: 1
+    value: Walk
   AccelerationLambda: 8
