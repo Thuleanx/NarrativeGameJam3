@@ -16,5 +16,14 @@ namespace Thuleanx.AI {
 			}
 			base.OnDeath();
 		}
+
+		public override void Update() {
+			base.Update();
+
+			if (Machine.Enabled && ((MonsterState) Machine.Value.Current).CanFlip) {
+				if (LocalContext.Velocity.x != 0)
+					LocalContext.RightFacing = LocalContext.Velocity.x > 0;
+			}
+		}
 	}
 }

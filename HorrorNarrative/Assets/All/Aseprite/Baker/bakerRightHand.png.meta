@@ -35,6 +35,30 @@ TextureImporter:
   - first:
       213: 3478039882541968616
     second: bakerRightHand_10
+  - first:
+      213: 5979101183944745723
+    second: bakerRightHand_11
+  - first:
+      213: -7880371662702013668
+    second: bakerRightHand_12
+  - first:
+      213: -3342712295164308926
+    second: bakerRightHand_13
+  - first:
+      213: -4900584923980737661
+    second: bakerRightHand_14
+  - first:
+      213: 4347947652606566888
+    second: bakerRightHand_15
+  - first:
+      213: -5639503954749593472
+    second: bakerRightHand_16
+  - first:
+      213: -8252902888468783374
+    second: bakerRightHand_17
+  - first:
+      213: -4575118603489778228
+    second: bakerRightHand_18
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -360,6 +384,174 @@ TextureImporter:
       bones: []
       spriteID: 8ec2e8188da744030800000000000000
       internalID: 3478039882541968616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_11
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2e42129d80af250800000000000000
+      internalID: 5979101183944745723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_12
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13979a89bb43a290800000000000000
+      internalID: -7880371662702013668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_13
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2429664c0ec4c91d0800000000000000
+      internalID: -3342712295164308926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_14
+      rect:
+        serializedVersion: 2
+        x: 672
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3835e7ed9ff9dfbb0800000000000000
+      internalID: -4900584923980737661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_15
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e1ab978a53075c30800000000000000
+      internalID: 4347947652606566888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0886db358057cb1b0800000000000000
+      internalID: -5639503954749593472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_17
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fed5077c8cc77d80800000000000000
+      internalID: -8252902888468783374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bakerRightHand_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 32
+        width: 48
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5e5b1ced9e180c0800000000000000
+      internalID: -4575118603489778228
       vertices: []
       indices: 
       edges: []

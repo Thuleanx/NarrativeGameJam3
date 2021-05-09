@@ -13,9 +13,12 @@ MonoBehaviour:
   m_Name: FSM_State_PlayerShot
   m_EditorClassIdentifier: 
   StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
-  AnimationFinish: 0
+  AnimationFinish: 1
   CanFlip: 0
   AnimationState:
     enabled: 1
     value: Shoot
-  KnockbackAmount: 0.1
+  KnockbackAmount: 0.5
+  BulletPool: {fileID: 11400000, guid: 4ecb02195d64842558d5d2d1dd0a2122, type: 2}
+  DistanceFromBody: 1
+  BulletSpeed: 60

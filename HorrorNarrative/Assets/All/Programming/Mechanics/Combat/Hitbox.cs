@@ -83,7 +83,8 @@ namespace Thuleanx.Mechanics.Combat {
 
 			for (int i = 0; i < count; i++) {
 				Hurtbox Hurtbox = receiver[i].GetComponent<Hurtbox>();
-				results.Add(Hurtbox);
+				if (!Hurtbox.Agent.Value.LocalContext.IFrame && !Hurtbox.Agent.Value.IsDead())
+					results.Add(Hurtbox);
 			}
 		
 			return results;

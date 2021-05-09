@@ -9,5 +9,8 @@ namespace Thuleanx.AI.Context {
 
 		[Tooltip("Player Move Speed while reloading")]
 		public float ReloadingMoveSpeed = 1f;
+
+		[Tooltip("Default Bullet Count loaded as the game loads"), Min(0)]
+		public int DefaultBulletCount = 1;
 	}
 }

@@ -12,16 +12,23 @@ namespace Thuleanx.Optimization {
 		Dictionary<Scene, List<Bubble>> BorrowToScene = new Dictionary<Scene, List<Bubble>>();
 
 		public GameObject Borrow(Scene bubbleScene) {
-			return Borrow(Vector2.zero, Quaternion.identity);
+			return Borrow(Vector2.zero, Quaternion.identity, bubbleScene);
 		}
 
 		public GameObject Borrow(Vector3 position, Quaternion rotation) {
+			return Borrow(position, rotation, SceneManager.GetActiveScene());
+		}
+
+		public GameObject Borrow(Vector3 position, Quaternion rotation, Scene bubbleScene) {
 			if (bubblePool.Count==0) Expand(expansionConstant);
 			Bubble bubble = bubblePool.Dequeue();
 			bubble.gameObject.transform.position = position;
 			bubble.gameObject.transform.rotation = rotation;
 			bubble.gameObject.SetActive(true);
 			bubble.inPool = false;
+			if (!BorrowToScene.ContainsKey(bubbleScene))
+				BorrowToScene[bubbleScene] = new List<Bubble>();
+			BorrowToScene[bubbleScene].Add(bubble);
 			return bubble.gameObject;
 		}
 
@@ -45,9 +52,10 @@ namespace Thuleanx.Optimization {
 		}
 
 		public void CollectsAll(Scene scene) {
-			foreach (Bubble bubble in BorrowToScene[scene])
-				if (bubble.gameObject.activeSelf)
-					Collects(bubble);
+			if (BorrowToScene.ContainsKey(scene))
+				foreach (Bubble bubble in BorrowToScene[scene])
+					if (bubble.gameObject.activeSelf)
+						Collects(bubble);
 			BorrowToScene.Remove(scene);
 		}
 

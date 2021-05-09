@@ -15,3 +15,5 @@ MonoBehaviour:
   MoveVelocity: 3
   MaxHealth: 1
   AimingMoveSpeed: 1
+  ReloadingMoveSpeed: 1
+  DefaultBulletCount: 3
