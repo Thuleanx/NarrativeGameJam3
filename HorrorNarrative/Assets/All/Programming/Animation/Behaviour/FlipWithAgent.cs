@@ -1,16 +1,18 @@
-
+using Thuleanx.AI;
 using UnityEngine;
 
 namespace Thuleanx.Animation {
-	public class FlipWithPlayer : MonoBehaviour {
+	public class FlipWithAgent : MonoBehaviour {
 		[SerializeField] bool flipX = false;
 
+		Agent Agent;
 		SpriteRenderer Sprite;
 		float originLocalPos;
 
 		public virtual void Awake() {
 			Sprite = GetComponent<SpriteRenderer>();
 			originLocalPos = transform.localPosition.x;
+			Agent = GetComponentInParent<Agent>();
 		}
 
 		// direction is either 0 or 1
@@ -28,7 +30,10 @@ namespace Thuleanx.Animation {
 				transform.localPosition.y, 
 				transform.localPosition.z
 			);
-
 		} 
+
+		void Update() {
+			Flip(Agent.LocalContext.RightFacing);
+		}
 	}
 }

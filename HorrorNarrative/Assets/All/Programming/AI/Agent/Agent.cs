@@ -35,11 +35,12 @@ namespace Thuleanx.AI {
 		}
 
 		public virtual void Update() {
-			State NxtState;
-			while ((NxtState = Machine.Value.Current.ShouldTransitionTo()) != null)
-				Machine.Value.Transition(NxtState);
-
-			if (Machine.Enabled) Machine.Value.OnUpdate();
+			if (Machine.Enabled) {
+				State NxtState;
+				while ((NxtState = Machine.Value.Current.ShouldTransitionTo()) != null)
+					Machine.Value.Transition(NxtState);
+				Machine.Value.OnUpdate();
+			}
 		}
 
 		public void GiveIFrame(float duration) {
@@ -73,9 +74,7 @@ namespace Thuleanx.AI {
 			LocalContext.Heal(value);
 		}
 
-		public bool IsDead() {
-			return LocalContext.Health == 0;
-		}
+		public bool IsDead() => LocalContext.Health == 0;
 
 		public virtual void OnRespawn() {
 			OnRespawnEvent?.Invoke();

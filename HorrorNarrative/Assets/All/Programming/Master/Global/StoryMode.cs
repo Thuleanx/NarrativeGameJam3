@@ -8,6 +8,7 @@ using Thuleanx.AI.Context;
 
 namespace Thuleanx.Master.Global {
 	public class StoryMode : GameMode {
+
 		public override void OnEditorStart() {
 			#if UNITY_EDITOR
 				// Load Save

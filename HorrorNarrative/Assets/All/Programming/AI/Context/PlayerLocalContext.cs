@@ -8,7 +8,7 @@ namespace Thuleanx.AI.Context {
 
 		public PlayerLocalContext(Agent agent) : base(agent) {
 			GunLoaded = true;
-			BulletsLeft = 1;
+			BulletsLeft = ((PlayerContext) agent.Context).DefaultBulletCount;
 		 }
 	}
 }

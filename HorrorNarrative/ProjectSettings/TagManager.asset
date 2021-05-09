@@ -13,6 +13,10 @@ TagManager:
   - UI
   - 
   - 
+  - HitboxFriendly
+  - HurtboxFriendly
+  - HitboxHostile
+  - HurtboxHostile
   - 
   - 
   - 
@@ -27,12 +31,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Enemy
+  - Bullet
   - Interactible
   - NPC
   - Solid
@@ -55,6 +55,9 @@ TagManager:
     locked: 0
   - name: World
     uniqueID: 239374449
+    locked: 0
+  - name: World Top
+    uniqueID: 3333729027
     locked: 0
   - name: UI
     uniqueID: 730124319

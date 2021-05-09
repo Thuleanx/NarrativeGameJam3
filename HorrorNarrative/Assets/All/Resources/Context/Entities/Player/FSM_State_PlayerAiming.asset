@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: FSM_State_PlayerAiming
   m_EditorClassIdentifier: 
   StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
+  AnimationFinish: 0
   CanFlip: 0
   AnimationState:
     enabled: 1
     value: Aim
   AccelerationLambda: 16
-  MaxArc: 30
-  MinArc: 10
+  MaxArc: 60
+  MinArc: 20
   AimDuration: 1

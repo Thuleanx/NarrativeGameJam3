@@ -1,5 +1,6 @@
 using UnityEngine;
 using Thuleanx.Controls;
+using Thuleanx.AI.Context;
 
 namespace Thuleanx.AI {
 	public class Player : Agent {
@@ -32,5 +33,13 @@ namespace Thuleanx.AI {
 				if (App.Instance._InputManager.Movement.x != 0)
 					LocalContext.RightFacing = App.Instance._InputManager.Movement.x > 0;
 		}
+
+		public override void OnDeath() {
+			base.OnDeath();
+			ForcePlayerState(Machine.Value.FindStateOfType(typeof(PlayerDead)) as PlayerState);
+		}
+
+		public bool IsAiming() => typeof(PlayerAiming).IsInstanceOfType(Machine.Value.Current);
+		public float AimingArc() => ((PlayerLocalContext) LocalContext).aimArc;
 	}
 }
