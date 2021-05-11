@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -2807,-3696
+position: -2561,-3596
 ---
 Player: Hi
 Player: How's it going?
@@ -16,7 +16,7 @@ Player: Some nonsense to test out dialogue system
 title: Int
 tags: 
 colorID: 0
-position: -2494,-3692
+position: -2247,-3590
 ---
 Player: Do I want to repeat?
 -> Yes
@@ -49,7 +49,7 @@ position: -1793,-3216
 title: InspectingVoid
 tags: 
 colorID: 0
-position: -3120,-3294
+position: -3129,-3202
 ---
 Player: The void
 Player: Everyday, it inches closer
@@ -60,16 +60,18 @@ Player: Clearly, I need some more sleep.
 title: DFL
 tags: 
 colorID: 8
-position: -2569,-2641
+position: -3119,-2125
 ---
 <<if $lured_out is false>>
     [[DFLVillage]]
+<<elseif $lured_out is true>>
+    [[DFLEnd]]
 <<endif>>
 ===
 title: DFLVillage
 tags: 
 colorID: 2
-position: -2553,-2942
+position: -3120,-2459
 ---
 <<if visited("DFLVillage")>>
     [[DFLVillage_Personal]]
@@ -87,11 +89,13 @@ position: -2553,-2942
     DFL: The question is should we not end it now?
     Widow: What do you mean?
     Widow: As in...
+    // Shake the screen here
     Villager2: Baker! Come
     DFL: The struggling, yes
     Villager2: Speak some sense to these people
     DFL: Deny it the pleasure of consuming us
     -> I concur
+        <<set $agree_with_leader to true>>
         Player: It's for the best
         Player: We die by what lies outside the barrier or by our hands
         Widow: There's no hope
@@ -101,6 +105,7 @@ position: -2553,-2942
         DFL: Then let us take this last night
         DFL: Tomorrow, those who wish to leave this world can do so
     -> No
+        <<set $agree_with_leader to false>>
         DFL: Why? Has something changed?
         -> I saw one of the creatures
             Player: I saw one of the creatures
@@ -123,23 +128,30 @@ position: -2553,-2942
 title: DFLVillage_Personal
 tags: 
 colorID: 3
-position: -2221,-2937
+position: -2765,-2451
 ---
 DFL: I'm not sure what to say to you.
 ===
 title: Widow
 tags: 
-colorID: 3
-position: -3128,-2943
+colorID: 8
+position: -3075,-2849
 ---
 Widow: Hi
-Widow: My name is ${widow_name}
+Widow: My name is {$widow_name}
 ===
 title: Villager2
 tags: 
-colorID: 0
-position: -2859,-2939
+colorID: 8
+position: -2720,-2825
 ---
 Player: Hi
 Villager2: Hi
+===
+title: DFLEnd
+tags: 
+colorID: 2
+position: -2743,-2126
+---
+Empty Text
 ===

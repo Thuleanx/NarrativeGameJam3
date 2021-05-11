@@ -1358,7 +1358,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182770b2403a1406daa35cfeb53c37bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultValues: []
+  DefaultValues:
+  - name: widow_name
+    value: Alice
+    type: 1
   debugTextView: {fileID: 0}
 --- !u!114 &353570166029726738
 MonoBehaviour:
