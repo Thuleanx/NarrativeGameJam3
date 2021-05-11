@@ -1,0 +1,50 @@
+title: Widow
+tags: 
+colorID: 1
+position: 216,304
+---
+<<if Spoken to Widow is True>>
+        [[I should go to bed]]
+
+<<else>>
+
+    Widow: Hello
+    Player: Good evening.
+    Widow: It isn't good, is it?
+    Player: No, I suppose not.
+    Widow: What do you think happens to them?
+    Player: Who?
+    Widow: Those consumed by the barrier.
+    -> I think they're dead.
+    Player: Whether they're dead or not, they may as well be.
+    Widow: What a horrible thing to say.
+    -> I think we can save them.
+    Player: Who knows? Maybe this is our reckoning.
+    Player: Maybe they're raptured. Maybe they're warm and safe.
+    Widow: I hope that is true.
+    Widow: For all of us.
+    Player: Me too.
+===
+title: Node
+tags: 
+colorID: 0
+position: 1038,213
+---
+Empty Text
+===
+title: I should go to bed
+tags: 
+colorID: 0
+position: 617,306
+---
+Widow: I should go to bed.
+Player: I should, too.
+Widow: Do you miss Poiura?
+-> Of course.
+Player: Not a day goes by.
+-> Every day.
+Player: Poiura's bakery just isn't the same.
+Widow: My husband...a Hateful man. But I miss him.
+Widow: Was Poiura hateful?
+Player: No. Not at all.
+===
