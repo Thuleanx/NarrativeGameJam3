@@ -3,7 +3,7 @@ tags:
 colorID: 1
 position: 216,304
 ---
-<<if Spoken to Widow is True>>
+<<if $Spoken to Widow is True>>
         [[I should go to bed]]
 
 <<else>>
@@ -24,6 +24,8 @@ position: 216,304
     Widow: I hope that is true.
     Widow: For all of us.
     Player: Me too.
+<<set $Spoken to Widow to True>>
+<<endif>>
 ===
 title: Node
 tags: 
