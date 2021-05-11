@@ -1,0 +1,30 @@
+title: Start
+tags: 
+colorID: 0
+position: 322,263
+---
+<<if $spoken_to_Clubman is True>>
+        [[I'll bash 'em good.]]
+
+<<else>>
+
+Clubman: Anything come beyond that barrier to take what's mine?
+Clubman: I'll club it dead.
+-> Fair enough.
+    Player: Let's see them try.
+->  We're doomed.
+    Player: I don't think a club will stop the barrier.
+Clubman: What do you know?
+
+<<set $spoken_to_widow to True>>
+<<endif>>
+===
+title: I'll bash 'em good.
+tags: 
+colorID: 0
+position: 606,42
+---
+Clubman: I'll bash 'em good.
+
+<<endif>>
+===
