@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4859178737531820935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: Long Area 1_Exit
+  m_EditorClassIdentifier: 
+  passage_name: Long Area 1_Exit
+  target_scene: {fileID: 0}
+  target_passage: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe36db065ffe4bd09c02d20a2df7ced, type: 3}
+  m_Name: Long Area 1
+  m_EditorClassIdentifier: 
+  SceneReference:
+    Scene: {fileID: 0}
+    SceneName: 
+    sceneIndex: -1
+    sceneEnabled: 0
+  Passages:
+  - {fileID: 4493171404049787206}
+  - {fileID: -4859178737531820935}
+--- !u!114 &4493171404049787206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: Long Area 1_Entrance
+  m_EditorClassIdentifier: 
+  passage_name: Long Area 1_Entrance
+  target_scene: {fileID: 0}
+  target_passage: {fileID: 0}

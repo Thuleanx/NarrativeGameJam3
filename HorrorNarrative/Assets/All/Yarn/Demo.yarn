@@ -27,7 +27,7 @@ Player: Do I want to repeat?
 title: Girl
 tags: 
 colorID: 0
-position: -1793,-3216
+position: -1939,-2728
 ---
 <<if visited("Girl") is false>>
     Girl: New blood. What's your name? // This is a comment, it won't show up in Unity
@@ -48,7 +48,7 @@ position: -1793,-3216
 ===
 title: InspectingVoid
 tags: 
-colorID: 0
+colorID: 5
 position: -3129,-3202
 ---
 Player: The void
@@ -60,7 +60,7 @@ Player: Clearly, I need some more sleep.
 title: DFL
 tags: 
 colorID: 8
-position: -3119,-2125
+position: -3118,-2124
 ---
 <<if $lured_out is false>>
     [[DFLVillage]]
@@ -71,7 +71,7 @@ position: -3119,-2125
 title: DFLVillage
 tags: 
 colorID: 2
-position: -3120,-2459
+position: -3122,-2462
 ---
 <<if visited("DFLVillage")>>
     [[DFLVillage_Personal]]
@@ -89,7 +89,6 @@ position: -3120,-2459
     DFL: The question is should we not end it now?
     Widow: What do you mean?
     Widow: As in...
-    // Shake the screen here
     Villager2: Baker! Come
     DFL: The struggling, yes
     Villager2: Speak some sense to these people
@@ -131,11 +130,13 @@ colorID: 3
 position: -2765,-2451
 ---
 DFL: I'm not sure what to say to you.
+-> I like you <<if $agree_with_leader is true>>
+-> I don't like you <<if $agree_with_leader is false>>
 ===
 title: Widow
 tags: 
 colorID: 8
-position: -3075,-2849
+position: -3101,-2779
 ---
 Widow: Hi
 Widow: My name is {$widow_name}
@@ -143,7 +144,7 @@ Widow: My name is {$widow_name}
 title: Villager2
 tags: 
 colorID: 8
-position: -2720,-2825
+position: -2750,-2784
 ---
 Player: Hi
 Villager2: Hi
@@ -154,4 +155,38 @@ colorID: 2
 position: -2743,-2126
 ---
 Empty Text
+===
+title: DayBed
+tags: 
+colorID: 5
+position: -3580,-3194
+---
+<<if $leader_encourage_sleep>>
+    Player: Say something
+    <<Transition WakeUp>>
+<<else>>
+    Player: I'm not sleepy yet.
+<<endif>>
+===
+title: Beckoning
+tags: 
+colorID: 7
+position: -4089,-2886
+---
+Player: Poiura
+Player: I miss you
+<<PlayTimeline Beckoning>>
+<<wait 2>>
+Hand: Come
+-> Why are you doing this?
+-> Are you doing this?
+===
+title: EquipGun
+tags: 
+colorID: 5
+position: -4009,-3192
+---
+<<Equip Player Blunderbuss>>
+<<set $got_gun to true>>
+Player: This will come in handy
 ===

@@ -18,7 +18,6 @@ namespace Thuleanx.AI {
 		public virtual void OnFinishTrigger() {}
 		public virtual void OnAnimationFinishTrigger(int action) {}
 
-
 		public Agent Agent => StateMachine.Agent;
 	}
 }

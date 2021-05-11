@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe36db065ffe4bd09c02d20a2df7ced, type: 3}
+  m_Name: Void Entrance
+  m_EditorClassIdentifier: 
+  SceneReference:
+    Scene: {fileID: 102900000, guid: 6d26e185947304c549da3381f0f1c11e, type: 3}
+    SceneName: Void Entrance
+    sceneIndex: 13
+    sceneEnabled: 1
+  Passages:
+  - {fileID: 849833696060374028}
+  - {fileID: 2706999436326076797}
+--- !u!114 &849833696060374028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: Void Entrance_Entrance
+  m_EditorClassIdentifier: 
+  passage_name: Void Entrance_Entrance
+  target_scene: {fileID: 0}
+  target_passage: {fileID: 0}
+--- !u!114 &2706999436326076797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: Void Entrance_Exit
+  m_EditorClassIdentifier: 
+  passage_name: Void Entrance_Exit
+  target_scene: {fileID: 11400000, guid: 3306e8a1813ea44689f7109eb9063819, type: 2}
+  target_passage: {fileID: 0}

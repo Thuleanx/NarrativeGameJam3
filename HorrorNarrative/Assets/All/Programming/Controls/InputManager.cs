@@ -36,6 +36,7 @@ namespace Thuleanx.Controls {
 		public Timer Attack;
 		public Timer Dash;
 		public Timer Reload;
+		public Timer SkipDialogue;
 		[HideInInspector]
 		public bool Aiming;
 
@@ -63,7 +64,7 @@ namespace Thuleanx.Controls {
 			Target = null;
 		}
 
-		public void SignalStopInteract() => Target.StopInteraction();
+		public void SignalStopInteract() => Target?.StopInteraction();
 
 		public void OnMouseClick(InputAction.CallbackContext context) {
 			if (Active) {
@@ -119,9 +120,18 @@ namespace Thuleanx.Controls {
 			}
 		}
 
+		public void OnSkipDialogue(InputAction.CallbackContext context) {
+			if (Active && context.started) {
+				SkipDialogue = new Timer(InputBufferTime);
+				SkipDialogue.Start();
+			}
+		}
+
 		public void UseDashInput() => Dash.Stop();
 		public void UseAttackInput() => Attack.Stop();
 		public void UseReloadInput() => Reload.Stop();
 		public void UseMouseInput() => MouseClick.Stop();
+		public void UseSkipDialogueInput() => SkipDialogue.Stop();
+
 	}
 }

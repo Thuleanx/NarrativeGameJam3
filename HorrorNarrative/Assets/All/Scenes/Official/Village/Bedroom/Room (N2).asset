@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: N2_Room_Bedroom Door
   m_EditorClassIdentifier: 
   passage_name: N2_Room_Bedroom Door
-  target_scene: {fileID: 0}
+  target_scene: {fileID: 11400000, guid: dbb19678a812943c3af517c3eaf8f462, type: 2}
   target_passage: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -28,10 +28,10 @@ MonoBehaviour:
   m_Name: Room (N2)
   m_EditorClassIdentifier: 
   SceneReference:
-    Scene: {fileID: 0}
-    SceneName: 
-    sceneIndex: -1
-    sceneEnabled: 0
+    Scene: {fileID: 102900000, guid: 1da8cd3ef302a45e7946a5b78344efb0, type: 3}
+    SceneName: Room (N2)
+    sceneIndex: 11
+    sceneEnabled: 1
   Passages:
   - {fileID: -7992387328279890938}
   - {fileID: 5868479686387129466}

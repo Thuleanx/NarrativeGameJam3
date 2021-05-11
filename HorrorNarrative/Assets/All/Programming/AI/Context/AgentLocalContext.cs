@@ -13,11 +13,13 @@ namespace Thuleanx.AI.Context {
 		public Timer IFrame;
 		public Timer Damaged;
 		public bool RightFacing;
+		public PlayerEquipment Equipment;
 
 		public AgentLocalContext(Agent agent) {
 			Agent = agent;
 			Health = agent.Context.MaxHealth;
 			RightFacing = true;
+			Equipment = PlayerEquipment.NONE;
 		}
 
 		public void TakeDamage(int amt) { Health = Mathf.Clamp(Health - amt, 0, Agent.Context.MaxHealth); }

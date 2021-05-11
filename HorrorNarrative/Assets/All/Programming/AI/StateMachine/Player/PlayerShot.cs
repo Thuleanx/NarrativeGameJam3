@@ -41,5 +41,8 @@ namespace Thuleanx.AI {
 				Mathf.Deg2Rad * dir) * BulletSpeed;
 
 		}
+
+		public override bool CanEnter() => PlayerLocalContext.Equipment == PlayerEquipment.Blunderbuss
+			&& PlayerLocalContext.GunLoaded;
 	}
 }

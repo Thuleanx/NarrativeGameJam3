@@ -52,6 +52,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Skip Dialogue",
+                    "type": "Button",
+                    "id": "bd67bca2-2f38-43d7-82d2-9b44e4ff1efb",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -162,6 +170,17 @@
                     "processors": "",
                     "groups": "KnM",
                     "action": "Reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "48fa64b7-035c-4495-be5a-5898ac41a3a3",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KnM",
+                    "action": "Skip Dialogue",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
