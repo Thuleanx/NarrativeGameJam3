@@ -1,0 +1,135 @@
+title: Start
+tags: 
+colorID: 0
+position: 424,312
+---
+Heavenly Phoenix: They worship youth. Fear death.
+Heavenly Phoenix: I'm not Heavenly.
+//screen shake to note that she realizes she's not alone.
+Heavenly Phoenix: Oh! You. Baker.
+-> Our Heavenly Phoenix! You're alive?
+Player: This place...I cannot believe you are still alive.
+Heavenly Phoenix: Alive? No, I'm not. It's gone. All gone.
+Heavenly Phoenix: The raven has flown, cawing across the land.
+Heavenly Phoenix: Terrorist Raven caws down to me. 
+Player: What?
+Heavenly Phoenix: The void is as warm as it is cold.
+Heavenly Phoenix: Don't you think?
+Player: You mean where we are?
+Heavenly Phoenix: Leave me alone.
+She will no longer respond to you.
+-> What are you doing here?
+Heavenly Phoenix: What is it doing here? What's the difference?
+Heavenly Phoenix: Life stuck behind the barrier is the same as beyond.
+Heavenly Phoenix: The raven has flown, cawing across the land.
+Heavenly Phoenix: A terrorist raven. Politically motivated.
+Heavenly Phoenix: The town is dead.
+Player: What?
+Heavenly Phoenix: The void is as warm as it is cold.
+Heavenly Phoenix: Don't you think?
+Player: You mean where we are?
+Heavenly Phoenix: Leave me alone.
+She will no longer respond to you.
+
+//I could have totally done all that wrong, so I'm skipping ahead to the next dialogue and not putting any code or making a new node because I think it can all be in this one.
+
+Player: What do we do?
+Heavenly Phoenix: Heh, join the void.
+Player: You must know something more.
+Player: Where are we?
+Heavenly Phoenix: This place is written.
+Heavenly Phoenix: It is beyond death.
+Heavenly Phoenix: It is reserved for the willing dead.
+Player: How do we get out of here?
+Heavenly Phoenix: I've only heard of such things from the village elders.
+Heavenly Phoenix: There are gifts. Small trinkets spread
+Heavenly Phoenix: throughout the void.
+Heavenly Phoenix: There's a ritual. You can sacrifice
+Heavenly Phoenix: the gifts. If you do, the spirits may.
+-> I don't understand.
+    Player: Please speak sense.
+Heavenly Phoenix: You wouldn't. Staking your salvation in youth.
+Player: I do not.
+Heavenly Phoenix: Your elders do. They may grant a wish.
+Player: I will find the trinkets.
+Heavenly Phoenix: You will not.
+Player: Where will I find you?
+Heavenly Phoenix: Oh, around. I will be around.
+She will no longer speak to you.
+-> May what?
+    Player: What will they do?
+Heavenly Phoenix: Grant a wish. Though...
+Player: I will find the trinkets.
+Heavenly Phoenix: You will not.
+Player: Where will I find you?
+Heavenly Phoenix: Oh, around. I will be around.
+She will no longer speak to you.
+
+//skipping ahead again.
+
+Player: Heavenly Phoenix, I believe I've found the last effigy.
+Heavenly Phoenix: Spoiled wastes. Cleanse the aftermath.
+Heavenly Phoenix: That's what they told me.
+Player: What?
+Heavenly Phoenix: You think I wanted this?
+Heavenly Phoenix: Deification.
+Heavenly Phoenix: Beyond the world, there is nothing.
+-> Faith has no reward.
+    Player: Faith takes value beyond the reward of afterlife.
+Heavenly Phoenix: Then what good is it?
+Heavenly Phoenix: The void takes you either way.
+Heavenly Phoenix: Off to the land of little birdies cawing.
+//screenshake on caw caw caw?
+Heavenly Phoenix: Caw, caw, caw.
+//so, I screwed up in the text and didn't have choice 1 lead to the ritual, so instead I'm just going to post it below this green text.
+
+Player: Please, we must try.
+Heavenly Phoenix: And what of your Poiura?
+Player: Poiura is gone. I'm tired of being taunted.
+Heavenly Phoenix: But don't you wish for Poiura to return?
+Player: If Poiura is out here...No.
+Player: What I want is for life to continue.
+Player: There's no point to changing the past. Just the present.
+Player: I just want to bake another loaf of bread.
+Player: So please, try.
+Heavenly Phoenix: I am finished. But if you care about one more moment.
+Heavenly Phoenix: Give them here.
+Heavenly Phoenix: Our elders.
+Heavenly Phoenix: You are liars.
+Heavenly Phoenix: Nasty, awful liars.
+Heavenly Phoenix: Make up for your past misgiving's.
+Heavenly Phoenix: Use these little trinkets to excise us from this hell.
+Player: It's working.
+Heavenly Phoenix: It's not. This is the void tricking us.
+Heavenly Phoenix: It is you who led your people astray.
+Heavenly Phoenix: False promises.
+Heavenly Phoenix: I failed my test of faith.
+Heavenly Phoenix: But I can still save this baker.
+//a portal opens, so maybe next line has screen shake.
+Heavenly Phoenix: Oh my god! It worked! The elders!
+-> Please try.
+    Player: Please, we must try.
+Heavenly Phoenix: And what of your Poiura?
+Player: Poiura is gone. I'm tired of being taunted.
+Heavenly Phoenix: But don't you wish for Poiura to return?
+Player: If Poiura is out here...No.
+Player: What I want is for life to continue.
+Player: There's no point to changing the past. Just the present.
+Player: I just want to bake another loaf of bread.
+Player: So please, try.
+Heavenly Phoenix: I am finished. But if you care about one more moment.
+Heavenly Phoenix: Give them here.
+Heavenly Phoenix: Our elders.
+Heavenly Phoenix: You are liars.
+Heavenly Phoenix: Nasty, awful liars.
+Heavenly Phoenix: Make up for your past misgiving's.
+Heavenly Phoenix: Use these little trinkets to excise us from this hell.
+Player: It's working.
+Heavenly Phoenix: It's not. This is the void tricking us.
+Heavenly Phoenix: It is you who led your people astray.
+Heavenly Phoenix: False promises.
+Heavenly Phoenix: I failed my test of faith.
+Heavenly Phoenix: But I can still save this baker.
+//a portal opens, so maybe next line has screen shake.
+Heavenly Phoenix: Oh my god! It worked! The elders!
+===
