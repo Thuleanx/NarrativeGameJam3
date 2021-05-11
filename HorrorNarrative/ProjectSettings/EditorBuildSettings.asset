@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/All/Scenes/Official/Loading.unity
     guid: 56cf2d6f943c746678cdf96919ba1467
@@ -35,10 +32,25 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/All/Scenes/Official/Village/Hallway/Hallway (D).unity
     guid: 12c0c875d3dd84232ace9d8eb8e56850
-  - enabled: 1
+  - enabled: 0
     path: 
-    guid: 7def733cc83e544369d29be0e36eaf78
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/All/Scenes/Official/Village/Village/Village (N2).unity
     guid: 3b34a986187124bc4ad2fd82b8146ed5
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Bedroom/Room (N2).unity
+    guid: 1da8cd3ef302a45e7946a5b78344efb0
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Hallway/Hallway (N2).unity
+    guid: 911f316e27bea4b44b406b2cb4e0bd41
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Void/Void Entrance.unity
+    guid: 6d26e185947304c549da3381f0f1c11e
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Void/Pathway.unity
+    guid: 0fa871613472c46d5af7620e093a81c7
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Void/Princess Hideout.unity
+    guid: 86297d1b06a4c4954a5c27fedeb927b0
   m_configObjects: {}

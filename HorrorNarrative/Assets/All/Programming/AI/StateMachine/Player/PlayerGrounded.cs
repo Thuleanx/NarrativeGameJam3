@@ -10,11 +10,11 @@ namespace Thuleanx.AI {
 		float AccelerationLambda=8f;
 
 		public override State ShouldTransitionTo() {
-			if (App.Instance._InputManager.Aiming) 
+			if (App.Instance._InputManager.Aiming && StateMachine.FindStateOfType(typeof(PlayerAiming)).CanEnter()) 
 				return StateMachine.FindStateOfType(typeof(PlayerAiming));
 			if (App.Instance._InputManager.Reload) {
 				App.Instance._InputManager.UseReloadInput();
-				if (!PlayerLocalContext.GunLoaded && PlayerLocalContext.BulletsLeft > 0)
+				if (StateMachine.FindStateOfType(typeof(PlayerReload)).CanEnter())
 					return StateMachine.FindStateOfType(typeof(PlayerReload));
 				return null;
 			}

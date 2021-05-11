@@ -209,6 +209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1739165606}
+  - {fileID: 663546164}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -244,6 +245,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &663546163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 663546164}
+  - component: {fileID: 663546165}
+  m_Layer: 28
+  m_Name: WakeUp Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &663546164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663546163}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.73, y: -4.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 37881551}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663546165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663546163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f210e7e831fb34c4a9332833fa169caa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  passage: {fileID: 5868479686387129466, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
 --- !u!1 &824590795
 GameObject:
   m_ObjectHideFlags: 0
@@ -632,7 +677,7 @@ PrefabInstance:
     - target: {fileID: 4101238148394713946, guid: 56c91ae5d9d2e4115abe0b5a0095d4b7, type: 3}
       propertyPath: passage
       value: 
-      objectReference: {fileID: -1864698860194197092, guid: 2c9b5302752304c57835f55c4bf8d271, type: 2}
+      objectReference: {fileID: -7992387328279890938, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
     - target: {fileID: 4101238148394713947, guid: 56c91ae5d9d2e4115abe0b5a0095d4b7, type: 3}
       propertyPath: m_Size.y
       value: 0.17890549

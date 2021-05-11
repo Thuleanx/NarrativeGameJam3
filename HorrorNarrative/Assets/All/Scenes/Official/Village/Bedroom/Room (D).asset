@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
-  m_Name: D2_Room_Sleep
+  m_Name: D_Room_Sleep
   m_EditorClassIdentifier: 
-  passage_name: D2_Room_Sleep
+  passage_name: D_Room_Sleep
   target_scene: {fileID: 11400000, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
   target_passage: {fileID: 5868479686387129466, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
 --- !u!114 &-3460566236480383730
@@ -45,7 +45,7 @@ MonoBehaviour:
   SceneReference:
     Scene: {fileID: 102900000, guid: 45a24833706e04f61b50c6fe9eecdc96, type: 3}
     SceneName: Room (D)
-    sceneIndex: 8
+    sceneIndex: 7
     sceneEnabled: 1
   Passages:
   - {fileID: 3394559972601393501}

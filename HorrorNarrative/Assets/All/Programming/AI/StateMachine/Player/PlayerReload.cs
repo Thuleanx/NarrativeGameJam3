@@ -35,5 +35,9 @@ namespace Thuleanx.AI {
 				PlayerAgent.LocalContext.Velocity = Calc.Damp(PlayerAgent.LocalContext.Velocity, idealMovement, AccelerationLambda, Time.deltaTime);
 			}
 		}
+
+		public override bool CanEnter() => 
+			!PlayerLocalContext.GunLoaded && PlayerLocalContext.BulletsLeft > 0 &&
+			PlayerLocalContext.Equipment == PlayerEquipment.Blunderbuss;
 	}
 }

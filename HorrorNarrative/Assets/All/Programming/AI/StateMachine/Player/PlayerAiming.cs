@@ -16,16 +16,18 @@ namespace Thuleanx.AI {
 		public override State ShouldTransitionTo() {
 			if (App.Instance._InputManager.Attack) {
 				App.Instance._InputManager.UseAttackInput();
-				return PlayerLocalContext.GunLoaded ? StateMachine.FindStateOfType(typeof(PlayerShot))
-					: StateMachine.FindStateOfType(typeof(PlayerBlankShot));
+				if (StateMachine.FindStateOfType(typeof(PlayerShot)).CanEnter())
+					return StateMachine.FindStateOfType(typeof(PlayerShot));
+				else if (StateMachine.FindStateOfType(typeof(PlayerBlankShot)).CanEnter())
+					return StateMachine.FindStateOfType(typeof(PlayerBlankShot));
 			}
 			if (!App.Instance._InputManager.Aiming) {
 				PlayerLocalContext.aimArc = MaxArc;
 				return StateMachine.FindStateOfType(typeof(PlayerGrounded));
 			}
-			if (App.Instance._InputManager.Reload) {
+			if (App.Instance._InputManager.Reload ) {
 				App.Instance._InputManager.UseReloadInput();
-				if (!PlayerLocalContext.GunLoaded && PlayerLocalContext.BulletsLeft > 0)
+				if (StateMachine.FindStateOfType(typeof(PlayerReload)).CanEnter())
 					return StateMachine.FindStateOfType(typeof(PlayerReload));
 				else {
 					// play some contextual sound
@@ -54,5 +56,7 @@ namespace Thuleanx.AI {
 		public override void OnExit() {
 			base.OnExit();
 		}
+
+		public override bool CanEnter() => PlayerLocalContext.Equipment == PlayerEquipment.Blunderbuss;
 	}
 }

@@ -1205,6 +1205,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7e8ff925-ba7a-4a2f-a168-734a0931dd9e
     m_ActionName: Gameplay/Reload[/Keyboard/r]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6235241944237878070}
+        m_TargetAssemblyTypeName: Thuleanx.Controls.InputManager, Assembly-CSharp
+        m_MethodName: OnSkipDialogue
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: bd67bca2-2f38-43d7-82d2-9b44e4ff1efb
+    m_ActionName: Gameplay/Skip Dialogue[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -1223,6 +1239,7 @@ GameObject:
   - component: {fileID: 495520403942617225}
   - component: {fileID: 3543431147144787611}
   - component: {fileID: 353570166029726738}
+  - component: {fileID: 3683298427913436486}
   m_Layer: 0
   m_Name: GB_Dialogue Manager
   m_TagString: Untagged
@@ -1310,7 +1327,7 @@ MonoBehaviour:
   textLanguage: English
   variableStorage: {fileID: 3543431147144787611}
   dialogueUI: {fileID: 6056864566348970791}
-  startNode: Start
+  startNode: Beckoning
   startAutomatically: 0
   onNodeStart:
     m_PersistentCalls:
@@ -1378,6 +1395,18 @@ MonoBehaviour:
   Storage: {fileID: 3543431147144787611}
   Dialogue_UI: {fileID: 6056864566348970791}
   runner: {fileID: 495520403942617225}
+--- !u!114 &3683298427913436486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758053179239785597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db06aa1b693840088f78636d02d5279, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6783104576587805649
 GameObject:
   m_ObjectHideFlags: 0

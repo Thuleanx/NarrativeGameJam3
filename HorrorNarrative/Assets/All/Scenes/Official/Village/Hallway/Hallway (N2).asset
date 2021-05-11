@@ -43,10 +43,10 @@ MonoBehaviour:
   m_Name: Hallway (N2)
   m_EditorClassIdentifier: 
   SceneReference:
-    Scene: {fileID: 0}
-    SceneName: 
-    sceneIndex: -1
-    sceneEnabled: 0
+    Scene: {fileID: 102900000, guid: 911f316e27bea4b44b406b2cb4e0bd41, type: 3}
+    SceneName: Hallway (N2)
+    sceneIndex: 12
+    sceneEnabled: 1
   Passages:
   - {fileID: -6558455926585174993}
   - {fileID: -3401185372971467330}

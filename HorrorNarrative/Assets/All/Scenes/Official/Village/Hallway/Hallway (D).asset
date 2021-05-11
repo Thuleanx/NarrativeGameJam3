@@ -15,7 +15,7 @@ MonoBehaviour:
   SceneReference:
     Scene: {fileID: 102900000, guid: 12c0c875d3dd84232ace9d8eb8e56850, type: 3}
     SceneName: Hallway (D)
-    sceneIndex: 11
+    sceneIndex: 8
     sceneEnabled: 1
   Passages:
   - {fileID: 3852644545188496014}

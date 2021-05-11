@@ -1,6 +1,7 @@
 using UnityEngine;
 using Thuleanx.Controls;
 using Thuleanx.AI.Context;
+using Yarn.Unity;
 
 namespace Thuleanx.AI {
 	public class Player : Agent {
@@ -41,5 +42,14 @@ namespace Thuleanx.AI {
 
 		public bool IsAiming() => typeof(PlayerAiming).IsInstanceOfType(Machine.Value.Current);
 		public float AimingArc() => ((PlayerLocalContext) LocalContext).aimArc;
+
+		[YarnCommand("Equip")]
+		public void Equip(string Equipment) {
+			if (Equipment == "Blunderbuss") {
+				((PlayerLocalContext) LocalContext).Equipment = PlayerEquipment.Blunderbuss;
+			} else if (Equipment == "NONE") {
+				((PlayerLocalContext) LocalContext).Equipment = PlayerEquipment.NONE;
+			}
+		}
 	}
 }

@@ -16,5 +16,8 @@ namespace Thuleanx.AI {
 		public override void OnExit() {
 			base.OnExit();
 		}
+
+		public override bool CanEnter() => 
+			PlayerLocalContext.Equipment == PlayerEquipment.Blunderbuss && !PlayerLocalContext.GunLoaded;
 	}
 }
