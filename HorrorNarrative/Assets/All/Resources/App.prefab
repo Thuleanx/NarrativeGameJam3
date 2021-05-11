@@ -509,6 +509,7 @@ MonoBehaviour:
   _GameModeManager: {fileID: 4781879686988571977}
   _InputManager: {fileID: 6235241944237878070}
   _AudioManager: {fileID: 5201956152881723277}
+  _DialogueManager: {fileID: 353570166029726738}
 --- !u!1 &3306532087809209628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1221,6 +1222,7 @@ GameObject:
   - component: {fileID: 6056864566348970791}
   - component: {fileID: 495520403942617225}
   - component: {fileID: 3543431147144787611}
+  - component: {fileID: 353570166029726738}
   m_Layer: 0
   m_Name: GB_Dialogue Manager
   m_TagString: Untagged
@@ -1316,7 +1318,7 @@ MonoBehaviour:
   onNodeComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 3543431147144787611}
         m_TargetAssemblyTypeName: Yarn_Thuleanx.Thuleanx_InMemoryVariableStorage,
           Assembly-CSharp
         m_MethodName: RegisterNode
@@ -1332,8 +1334,8 @@ MonoBehaviour:
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Thuleanx.Controls.InputController, Assembly-CSharp
+      - m_Target: {fileID: 6235241944237878070}
+        m_TargetAssemblyTypeName: Thuleanx.Controls.InputManager, Assembly-CSharp
         m_MethodName: SignalStopInteract
         m_Mode: 1
         m_Arguments:
@@ -1356,8 +1358,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182770b2403a1406daa35cfeb53c37bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultValues: []
+  DefaultValues:
+  - name: widow_name
+    value: Alice
+    type: 1
   debugTextView: {fileID: 0}
+--- !u!114 &353570166029726738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758053179239785597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62145382aafc6464f8afb0dfde5fc685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Storage: {fileID: 3543431147144787611}
+  Dialogue_UI: {fileID: 6056864566348970791}
+  runner: {fileID: 495520403942617225}
 --- !u!1 &6783104576587805649
 GameObject:
   m_ObjectHideFlags: 0

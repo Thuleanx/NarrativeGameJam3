@@ -22,7 +22,8 @@ MonoBehaviour:
   m_Children: []
   m_Clips: []
   m_Markers:
-    m_Objects: []
+    m_Objects:
+    - {fileID: 3487546305116020390}
 --- !u!114 &-2751028487068427183
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -373,3 +374,19 @@ MonoBehaviour:
     m_DisplayName: CM_PlayerCamera
   m_Markers:
     m_Objects: []
+--- !u!114 &3487546305116020390
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c38f6fa1940124db1ab7f6fe7268d1, type: 3}
+  m_Name: Signal Emitter
+  m_EditorClassIdentifier: 
+  m_Time: 2.7666666666666666
+  m_Retroactive: 0
+  m_EmitOnce: 1
+  m_Asset: {fileID: 11400000, guid: 06b79c9970d4346f5897b68ee52eb816, type: 2}

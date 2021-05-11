@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5257853680795505626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: D_Village_Main Door
+  m_EditorClassIdentifier: 
+  passage_name: D_Village_Main Door
+  target_scene: {fileID: 11400000, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
+  target_passage: {fileID: 7061413637661805913, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe36db065ffe4bd09c02d20a2df7ced, type: 3}
+  m_Name: Village (D)
+  m_EditorClassIdentifier: 
+  SceneReference:
+    Scene: {fileID: 102900000, guid: f700c325258af4a539f2dab28260217c, type: 3}
+    SceneName: Village (D)
+    sceneIndex: 9
+    sceneEnabled: 1
+  Passages:
+  - {fileID: -5257853680795505626}

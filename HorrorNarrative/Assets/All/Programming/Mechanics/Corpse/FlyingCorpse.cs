@@ -14,7 +14,8 @@ namespace Thuleanx.Mechanics.Corpse {
 
 		Timer Animating;
 
-		public void OnEnable() {
+		public override void OnEnable() {
+			base.OnEnable();
 			Animating = new Timer(Duration);
 			Animating.Start();
 			OnStart?.Invoke();

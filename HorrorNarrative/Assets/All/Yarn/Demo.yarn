@@ -1,7 +1,7 @@
 title: Start
 tags: 
 colorID: 0
-position: -990,-2982
+position: -2561,-3596
 ---
 Player: Hi
 Player: How's it going?
@@ -16,7 +16,7 @@ Player: Some nonsense to test out dialogue system
 title: Int
 tags: 
 colorID: 0
-position: -609,-2966
+position: -2247,-3590
 ---
 Player: Do I want to repeat?
 -> Yes
@@ -27,7 +27,7 @@ Player: Do I want to repeat?
 title: Girl
 tags: 
 colorID: 0
-position: -1148,-3542
+position: -1793,-3216
 ---
 <<if visited("Girl") is false>>
     Girl: New blood. What's your name? // This is a comment, it won't show up in Unity
@@ -45,4 +45,113 @@ position: -1148,-3542
 <<else>>
     Girl: Hurry along. I've no time for you.
 <<endif>>
+===
+title: InspectingVoid
+tags: 
+colorID: 0
+position: -3129,-3202
+---
+Player: The void
+Player: Everyday, it inches closer
+Player: Why would the princess go beyond the barrier?
+Player: Clearly, I need some more sleep.
+<<Transition WakeUp>>
+===
+title: DFL
+tags: 
+colorID: 8
+position: -3119,-2125
+---
+<<if $lured_out is false>>
+    [[DFLVillage]]
+<<elseif $lured_out is true>>
+    [[DFLEnd]]
+<<endif>>
+===
+title: DFLVillage
+tags: 
+colorID: 2
+position: -3120,-2459
+---
+<<if visited("DFLVillage")>>
+    [[DFLVillage_Personal]]
+<<else>>
+    DFL: Our princess is gone
+    DFL: She vanished last night
+    DFL: It's too late
+    DFL: Whatever's out there's going to squallow us whole
+    Widow: I’ve lost my husband
+    Widow: My husband, my daughter, my mother // Will replace with names
+    Widow: To whatever that ... thing is
+    Villager2: We've all lost people
+    Villager2: Your grief is no more than any other
+    DFL: The question isn't who has lost more
+    DFL: The question is should we not end it now?
+    Widow: What do you mean?
+    Widow: As in...
+    // Shake the screen here
+    Villager2: Baker! Come
+    DFL: The struggling, yes
+    Villager2: Speak some sense to these people
+    DFL: Deny it the pleasure of consuming us
+    -> I concur
+        <<set $agree_with_leader to true>>
+        Player: It's for the best
+        Player: We die by what lies outside the barrier or by our hands
+        Widow: There's no hope
+        Widow: No hope to change anything?
+        DFL: That's what I thought
+        Villager2: This is madness!
+        DFL: Then let us take this last night
+        DFL: Tomorrow, those who wish to leave this world can do so
+    -> No
+        <<set $agree_with_leader to false>>
+        DFL: Why? Has something changed?
+        -> I saw one of the creatures
+            Player: I saw one of the creatures
+            Widow: The pray-ers?
+            Player: Yes
+            Player: It called me 'Malignant'
+            DFL: 'Malignant'?
+            Player: It viewed me as some sort of tumor
+            Player: I imagine it views all of us the same
+            DFL: And that means something?
+            -> We're as vile to them as they are to us
+            -> We're not tumors
+            Player: We can't possibly let these creatures destroy our hope
+            DFL: It's foolish to believe that us ants, given enough hope, will overcome the foot of an elephant
+            DFL: Those who wish for some agency in their passing, take this last night
+            DFL: We will congregate here tomorrow morning
+    <<set $leader_encourage_sleep to true>>
+<<endif>>
+===
+title: DFLVillage_Personal
+tags: 
+colorID: 3
+position: -2765,-2451
+---
+DFL: I'm not sure what to say to you.
+===
+title: Widow
+tags: 
+colorID: 8
+position: -3075,-2849
+---
+Widow: Hi
+Widow: My name is {$widow_name}
+===
+title: Villager2
+tags: 
+colorID: 8
+position: -2720,-2825
+---
+Player: Hi
+Villager2: Hi
+===
+title: DFLEnd
+tags: 
+colorID: 2
+position: -2743,-2126
+---
+Empty Text
 ===

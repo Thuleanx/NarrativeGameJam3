@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6558455926585174993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: N2_Hallway_Bedroom Door
+  m_EditorClassIdentifier: 
+  passage_name: N2_Hallway_Bedroom Door
+  target_scene: {fileID: 11400000, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
+  target_passage: {fileID: 0}
+--- !u!114 &-3401185372971467330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: N2_Hallway_Main Door
+  m_EditorClassIdentifier: 
+  passage_name: N2_Hallway_Main Door
+  target_scene: {fileID: 11400000, guid: c35c9e3daebdb48ddbb74e9f8daf32bc, type: 2}
+  target_passage: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe36db065ffe4bd09c02d20a2df7ced, type: 3}
+  m_Name: Hallway (N2)
+  m_EditorClassIdentifier: 
+  SceneReference:
+    Scene: {fileID: 0}
+    SceneName: 
+    sceneIndex: -1
+    sceneEnabled: 0
+  Passages:
+  - {fileID: -6558455926585174993}
+  - {fileID: -3401185372971467330}

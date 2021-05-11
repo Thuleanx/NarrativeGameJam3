@@ -5,6 +5,7 @@ using Thuleanx.Controls;
 using FMOD_Thuleanx;
 using Thuleanx.Master.Local;
 using UnityEngine.SceneManagement;	
+using Thuleanx.Dialogue;
 
 namespace Thuleanx {
 	public class App : MonoBehaviour {
@@ -16,6 +17,7 @@ namespace Thuleanx {
 		public GameModeManager _GameModeManager;
 		public InputManager _InputManager;
 		public AudioManager _AudioManager;
+		public DialogueManager _DialogueManager;
 
 		void Awake() {
 			Instance = this;

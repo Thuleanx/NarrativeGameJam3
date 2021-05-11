@@ -1,7 +1,6 @@
 using UnityEngine;
 
 namespace Thuleanx.Mechanics.Mapping {
-	[RequireComponent(typeof(Collider2D))]
 	public class Anchor : MonoBehaviour {
 		public Passage passage;
 

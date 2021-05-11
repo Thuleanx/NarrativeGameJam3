@@ -391,7 +391,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   PhysicsBody: {fileID: 0}
-  CorpsePool: {fileID: 0}
+  CorpsePool: {fileID: 11400000, guid: 85d6887a68c6f4183a0edf3fcdfeb258, type: 2}
 --- !u!95 &297562425
 Animator:
   serializedVersion: 3

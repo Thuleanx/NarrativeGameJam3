@@ -10,8 +10,7 @@ namespace Thuleanx.Dialogue {
 		}
 
 		public void Play() {
-			Yarn.Unity.DialogueRunner runner = FindObjectOfType<Yarn.Unity.DialogueRunner>();
-			runner.StartDialogue(Node.Value);
+			App.Instance._DialogueManager.StartDialogue(Node.Value);
 		}
 	}
 }
