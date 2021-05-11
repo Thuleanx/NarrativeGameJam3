@@ -15,9 +15,30 @@ EditorBuildSettings:
     path: Assets/All/Scenes/Official/MainMenu.unity
     guid: c39dda2c675604a58bb8c23eb7b62420
   - enabled: 1
-    path: Assets/All/Scenes/Doubt.unity
-    guid: c7980f8d9dd064423bcbf0094e8a56eb
+    path: Assets/All/Scenes/Official/Village/Bedroom/Room (N1).unity
+    guid: ac875e663ee4f4bf69efc654c0ed3854
   - enabled: 1
-    path: Assets/All/Scenes/Demo.unity
-    guid: 95cef1cf85fba45eb8be390100a561b3
+    path: Assets/All/Scenes/Official/Village/Hallway/Hallway (N1).unity
+    guid: 237ad4bfaf5654078a17676bd4be358e
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Village/Village (N1).unity
+    guid: edc3bd9362b484ba1bf55ab4c279336e
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Outside/Outside (N1).unity
+    guid: 6b3289f8c35064b0e94918fd56ff5d85
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Village/Village (D).unity
+    guid: f700c325258af4a539f2dab28260217c
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Bedroom/Room (D).unity
+    guid: 45a24833706e04f61b50c6fe9eecdc96
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Hallway/Hallway (D).unity
+    guid: 12c0c875d3dd84232ace9d8eb8e56850
+  - enabled: 1
+    path: 
+    guid: 7def733cc83e544369d29be0e36eaf78
+  - enabled: 1
+    path: Assets/All/Scenes/Official/Village/Village/Village (N2).unity
+    guid: 3b34a986187124bc4ad2fd82b8146ed5
   m_configObjects: {}

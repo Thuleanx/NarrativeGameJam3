@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: FSM_State_PlayerGrounded
   m_EditorClassIdentifier: 
   StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
+  AnimationFinish: 0
   CanFlip: 1
   AnimationState:
     enabled: 1
     value: MovingGrounded
-  AccelerationLambda: 8
+  AccelerationLambda: 16

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4db81a88261c4f08afcce9bb3d6ff8a, type: 3}
   m_Name: CX_Player Data
   m_EditorClassIdentifier: 
-  MoveVelocity: 3
+  MoveVelocity: 4
   MaxHealth: 1
   AimingMoveSpeed: 1
   ReloadingMoveSpeed: 1
