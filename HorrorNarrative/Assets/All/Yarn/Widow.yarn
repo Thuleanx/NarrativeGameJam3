@@ -27,13 +27,6 @@ position: 216,304
 <<set $spoken_to_widow to True>>
 <<endif>>
 ===
-title: Node
-tags: 
-colorID: 0
-position: 1038,213
----
-Empty Text
-===
 title: I should go to bed
 tags: 
 colorID: 0
@@ -44,6 +37,10 @@ Player: I should, too.
 Widow: Do you miss Poiura?
 -> Of course.
 Player: Not a day goes by.
+Player: Poiura's bakery just isn't the same.
+Widow: My husband...a Hateful man. But I miss him.
+Widow: Was Poiura hateful?
+Player: No. Not at all.
 -> Every day.
 Player: Poiura's bakery just isn't the same.
 Widow: My husband...a Hateful man. But I miss him.
