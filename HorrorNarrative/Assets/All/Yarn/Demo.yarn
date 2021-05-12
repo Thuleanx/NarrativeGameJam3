@@ -60,7 +60,7 @@ Player: Clearly, I need some more sleep.
 title: DFL
 tags: 
 colorID: 8
-position: -3118,-2124
+position: -3121,-2126
 ---
 <<if $lured_out is false>>
     [[DFLVillage]]
@@ -213,6 +213,7 @@ DFL: Where are you going?
     DFL: Don't give in to whatever it is
     Player: ...
     Player: Cancer cells kill themselves
+<<set $lured_out to true>>
 <<Transition Sautdanslevide>>
 ===
 title: EquipGun

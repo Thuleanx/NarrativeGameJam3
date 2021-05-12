@@ -8,8 +8,10 @@ namespace Thuleanx.Optimization {
 		public GameObject prefab;
 		[SerializeField] int expansionConstant = 10;
 
-		Queue<Bubble> bubblePool = new Queue<Bubble>();
-		Dictionary<Scene, List<Bubble>> BorrowToScene = new Dictionary<Scene, List<Bubble>>();
+		[HideInInspector]
+		public Queue<Bubble> bubblePool = new Queue<Bubble>();
+		[HideInInspector]
+		public Dictionary<Scene, List<Bubble>> BorrowToScene = new Dictionary<Scene, List<Bubble>>();
 
 		public GameObject Borrow(Scene bubbleScene) {
 			return Borrow(Vector2.zero, Quaternion.identity, bubbleScene);
@@ -26,9 +28,11 @@ namespace Thuleanx.Optimization {
 			bubble.gameObject.transform.rotation = rotation;
 			bubble.gameObject.SetActive(true);
 			bubble.inPool = false;
-
 			if (!BorrowToScene.ContainsKey(bubbleScene))
 				BorrowToScene[bubbleScene] = new List<Bubble>();
+			if (!App.Instance.activePools.Contains(this))
+				App.Instance.activePools.Add(this);
+
 			BorrowToScene[bubbleScene].Add(bubble);
 			return bubble.gameObject;
 		}

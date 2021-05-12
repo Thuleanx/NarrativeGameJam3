@@ -50,9 +50,8 @@ namespace Thuleanx.Master.Global {
 
 			if (passage.target_scene.SceneReference.SceneName != SceneManager.GetActiveScene().name) {
 				// tells all bubble pools to collect
-				foreach (var pool in App.Instance.activePools) {
+				foreach (var pool in App.Instance.activePools)
 					pool.CollectsAll(SceneManager.GetActiveScene());
-				}
 
 				// load next level
 				yield return SceneManager.LoadSceneAsync(passage.target_scene.SceneReference.SceneName, LoadSceneMode.Single);
