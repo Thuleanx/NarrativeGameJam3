@@ -44,11 +44,11 @@ TagManager:
   - name: Sky
     uniqueID: 2362036841
     locked: 0
-  - name: Wall
-    uniqueID: 3552325403
-    locked: 0
   - name: Ground
     uniqueID: 2097535865
+    locked: 0
+  - name: Wall
+    uniqueID: 3552325403
     locked: 0
   - name: Shadow
     uniqueID: 3481354303
