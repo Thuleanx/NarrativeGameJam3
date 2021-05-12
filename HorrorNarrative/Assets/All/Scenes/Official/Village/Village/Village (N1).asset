@@ -30,7 +30,7 @@ MonoBehaviour:
   SceneReference:
     Scene: {fileID: 102900000, guid: edc3bd9362b484ba1bf55ab4c279336e, type: 3}
     SceneName: Village (N1)
-    sceneIndex: 7
+    sceneIndex: 4
     sceneEnabled: 1
   Passages:
   - {fileID: -1383803453992238144}
