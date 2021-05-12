@@ -1057,9 +1057,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Context: {fileID: 11400000, guid: 9f38600cce43747a09f9ceb0aadafc17, type: 2}
+  MachineCore:
+    enabled: 1
+    value: {fileID: 11400000, guid: b0f71adeefe5f4a5bb59fcf3bc6de155, type: 2}
   Machine:
     enabled: 1
-    value: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
   OnDeathEvent:
     m_PersistentCalls:
       m_Calls: []

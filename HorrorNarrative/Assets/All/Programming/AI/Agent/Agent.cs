@@ -10,6 +10,8 @@ using FMOD_Thuleanx;
 namespace Thuleanx.AI {
 	public class Agent : MonoBehaviour {
 		public AgentContext Context;
+		public Optional<StateMachineCore> MachineCore;
+		[HideInInspector]
 		public Optional<StateMachine> Machine;
 		public UnityEvent OnDeathEvent;
 		public UnityEvent OnDamageTakenEvent;
@@ -24,7 +26,10 @@ namespace Thuleanx.AI {
 
 
 		public virtual void Awake() {
-			if (Machine.Enabled) Machine.Value.Agent = this;
+			if (MachineCore.Enabled) {
+				Machine = new Optional<StateMachine>(new StateMachine(MachineCore.Value));
+				Machine.Value.Agent = this;
+			}
 			LocalContext = new AgentLocalContext(this);
 			PhysicsBody = GetComponent<PhysicsObject>();
 			Anim = GetComponent<Animator>();

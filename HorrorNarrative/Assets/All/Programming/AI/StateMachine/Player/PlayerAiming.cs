@@ -51,12 +51,20 @@ namespace Thuleanx.AI {
 				PlayerAgent.LocalContext.Velocity = Calc.Damp(PlayerAgent.LocalContext.Velocity, idealMovement, AccelerationLambda, Time.deltaTime);
 			}
 		}
-		
 
 		public override void OnExit() {
 			base.OnExit();
 		}
 
 		public override bool CanEnter() => PlayerLocalContext.Equipment == PlayerEquipment.Blunderbuss;
+
+		public override State Clone() => Clone(CreateInstance<PlayerAiming>());
+		public override State Clone(State state) {
+			((PlayerAiming) state).AccelerationLambda = AccelerationLambda;
+			((PlayerAiming) state).MaxArc = MaxArc;
+			((PlayerAiming) state).MinArc = MinArc;
+			((PlayerAiming) state).AimDuration = AimDuration;
+			return base.Clone(state);
+		}
 	}
 }

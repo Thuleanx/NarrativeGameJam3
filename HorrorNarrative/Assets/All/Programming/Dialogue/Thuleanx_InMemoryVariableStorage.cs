@@ -10,14 +10,7 @@ namespace Yarn_Thuleanx {
 
 		private Dictionary<string, Yarn.Value> variables = new Dictionary<string, Yarn.Value>();
 
-		[System.Serializable]
-		public struct DefaultValue {
-			public string name;
-			public string value;
-			public Value.Type type;
-		}
-
-		public DefaultValue[] DefaultValues;
+		public YarnVariable[] DefaultValues;
 		[SerializeField]
 		internal UnityEngine.UI.Text debugTextView = null;
 
@@ -35,48 +28,8 @@ namespace Yarn_Thuleanx {
 		public override void ResetToDefaults() {
 			Clear();
 
-			foreach (DefaultValue variable in DefaultValues) {
-
-				object value;
-
-				switch (variable.type) {
-					case Yarn.Value.Type.Number:
-						float f = 0.0f;
-						float.TryParse(variable.value, out f);
-						value = f;
-						break;
-
-					case Yarn.Value.Type.String:
-						value = variable.value;
-						break;
-
-					case Yarn.Value.Type.Bool:
-						bool b = false;
-						bool.TryParse(variable.value, out b);
-						value = b;
-						break;
-
-					case Yarn.Value.Type.Variable:
-						// We don't support assigning default variables from
-						// other variables yet
-						Debug.LogErrorFormat("Can't set variable {0} to {1}: You can't " +
-							"set a default variable to be another variable, because it " +
-							"may not have been initialised yet.", variable.name, variable.value);
-						continue;
-
-					case Yarn.Value.Type.Null:
-						value = null;
-						break;
-
-					default:
-						throw new System.ArgumentOutOfRangeException();
-
-				}
-
-				var v = new Yarn.Value(value);
-
-				SetValue("$" + variable.name, v);
-			}
+			foreach (YarnVariable variable in DefaultValues)
+				SetValue("$" + variable.name, YarnVariable.Evaluate(variable));
 		}
 
 		public override void Clear() {

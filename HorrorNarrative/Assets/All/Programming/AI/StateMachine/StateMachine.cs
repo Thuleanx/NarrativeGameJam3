@@ -3,8 +3,7 @@ using System;
 using UnityEngine.Assertions;
 
 namespace Thuleanx.AI {
-	[CreateAssetMenu(fileName = "StateMachine", menuName = "~/StateMachine/StateMachine", order = 0)]
-	public class StateMachine : ScriptableObject {
+	public class StateMachine {
 		[HideInInspector]
 		public Agent Agent;
 		// Useful only for the OnExit function
@@ -15,7 +14,11 @@ namespace Thuleanx.AI {
 		[SerializeField] 
 		State[] States;
 
-		public StateMachine() {}
+		public StateMachine(StateMachineCore Core) {
+			States = new State[Core.States.Length];
+			for (int i = 0; i < Core.States.Length; i++)
+				States[i] = Core.States[i].Clone();
+		}
 
 		public void Init() {
 			Assert.IsTrue(States != null);

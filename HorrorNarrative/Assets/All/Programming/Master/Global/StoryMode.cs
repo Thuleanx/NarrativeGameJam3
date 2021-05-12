@@ -47,8 +47,10 @@ namespace Thuleanx.Master.Global {
 			PlayerLocalContext ctx = GameObject.FindObjectOfType<Player>().LocalContext as PlayerLocalContext;
 			PlayerState state = player.Machine.Value.Current as PlayerState;
 
-			// load next level
-			yield return SceneManager.LoadSceneAsync(passage.target_scene.SceneReference.SceneName, LoadSceneMode.Single);
+			if (passage.target_scene.SceneReference.SceneName != SceneManager.GetActiveScene().name) {
+				// load next level
+				yield return SceneManager.LoadSceneAsync(passage.target_scene.SceneReference.SceneName, LoadSceneMode.Single);
+			}
 
 			// position player + fill in data
 			GameObject playerObj = GameObject.FindWithTag("Player");

@@ -12,5 +12,7 @@ namespace Thuleanx.AI.Context {
 
 		[Tooltip("Default Bullet Count loaded as the game loads"), Min(0)]
 		public int DefaultBulletCount = 1;
+
+		public PlayerEquipment DefaultEquipment = PlayerEquipment.NONE;
 	}
 }

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48afd571be70247119b566f69b892b4b, type: 3}
-  m_Name: FSM_GakiStateMachine
+  m_Script: {fileID: 11500000, guid: a5178c1d5b03d4b41aee2e7de5974570, type: 3}
+  m_Name: FSM_Gaki State Machine
   m_EditorClassIdentifier: 
-  Agent: {fileID: 0}
   States:
   - {fileID: 11400000, guid: 7e97a80503f7542e09bcde58a1934c53, type: 2}

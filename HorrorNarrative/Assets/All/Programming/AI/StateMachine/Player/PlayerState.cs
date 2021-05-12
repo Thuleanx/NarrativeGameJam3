@@ -22,5 +22,12 @@ namespace Thuleanx.AI {
 			if (AnimationState.Enabled) Agent.Anim.SetBool(AnimationState.Value, false);
 			base.OnExit();
 		}
+
+		public override State Clone() => Clone(CreateInstance<PlayerState>());
+		public override State Clone(State state) {
+			((PlayerState) state).AnimationState = AnimationState;
+			((PlayerState) state).CanFlip = CanFlip;
+			return base.Clone(state);
+		}
 	}
 }

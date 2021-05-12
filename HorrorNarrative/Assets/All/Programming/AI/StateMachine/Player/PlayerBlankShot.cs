@@ -19,5 +19,10 @@ namespace Thuleanx.AI {
 
 		public override bool CanEnter() => 
 			PlayerLocalContext.Equipment == PlayerEquipment.Blunderbuss && !PlayerLocalContext.GunLoaded;
+
+		public override State Clone() => Clone(CreateInstance<PlayerBlankShot>());
+		public override State Clone(State state) {
+			return base.Clone(state);
+		}
 	}
 }

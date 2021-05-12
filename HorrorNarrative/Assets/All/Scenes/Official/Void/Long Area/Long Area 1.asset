@@ -28,10 +28,10 @@ MonoBehaviour:
   m_Name: Long Area 1
   m_EditorClassIdentifier: 
   SceneReference:
-    Scene: {fileID: 0}
-    SceneName: 
-    sceneIndex: -1
-    sceneEnabled: 0
+    Scene: {fileID: 102900000, guid: 35bd119749dbf4e398287bfd8388900f, type: 3}
+    SceneName: Long Area 1
+    sceneIndex: 16
+    sceneEnabled: 1
   Passages:
   - {fileID: 4493171404049787206}
   - {fileID: -4859178737531820935}

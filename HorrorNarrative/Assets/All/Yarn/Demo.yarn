@@ -152,9 +152,17 @@ Villager2: Hi
 title: DFLEnd
 tags: 
 colorID: 2
-position: -2743,-2126
+position: -2744,-2128
 ---
-Empty Text
+<<if visited("DFLEnd")>>
+    DFL: Traitor
+<<else>>
+    DFL: You! You brought this upon us!
+    Player: How?
+    DFL: With your defiance
+    DFL: I needed help back in town, and you left
+    <<Spawn SecondGaki>>
+<<endif>>
 ===
 title: DayBed
 tags: 
@@ -189,4 +197,97 @@ position: -4009,-3192
 <<Equip Player Blunderbuss>>
 <<set $got_gun to true>>
 Player: This will come in handy
+===
+title: Phoenix
+tags: 
+colorID: 8
+position: -4473,-2334
+---
+<<if $trinket_3 is false>>
+    [[PhoenixBefore]]
+<<endif>>
+===
+title: PhoenixBefore
+tags: 
+colorID: 0
+position: -4113,-2328
+---
+<<if visited("PhoenixBefore")>>
+    Phoenix: Hi
+    <<set $talk_with_princess to true>>
+<<else>>
+    Phoenix: Go
+<<endif>>
+===
+title: Effigy
+tags: 
+colorID: 8
+position: -5157,-2357
+---
+<<if $collect_trinket_2>>
+    Player: What
+<<elseif $collect_trinket_1>>
+    [[Effigy2]]
+<<else>>
+    [[Effigy1]]
+<<endif>>
+===
+title: Effigy1
+tags: 
+colorID: 5
+position: -5467,-2356
+---
+Player: Are you what I was told to look for?
+Effigy: Poiura
+Player: Foul trinket
+<<set $collect_trinket_1 to true>>
+===
+title: Effigy2
+tags: 
+colorID: 5
+position: -5151,-2095
+---
+Player: Another one.
+<<set $collect_trinket_2 to true>>
+===
+title: GakiFirstEncounter
+tags: 
+colorID: 6
+position: -5145,-1764
+---
+Gaki: That foul, false savior sends a humble baker to collect effigies on her behalf? 
+Gaki: How lazy and pedantic
+Player: I will defeat you
+Gaki: She knows where they all are, you know
+Gaki: These little trinkets are nothing to me
+Gaki: False hope for a false people
+Gaki: Cancer cells kill themselves
+===
+title: Portal
+tags: 
+colorID: 0
+position: -5316,-3212
+---
+Player: Hi
+Princess: Hi
+-> Faith
+    Princess: A
+-> Comeon
+    Princess: B
+<<PlayTimeline EndingScene>>
+Princess: Chant
+<<wait 5>>
+Player: It's working
+Princess: It's not bro
+Player: Say something
+<<wait 5>>
+Hand: Malignant! 
+Hand: Join me
+-> Join
+    Player: Hi
+    // Endgame somehow
+-> Refuse
+    Hand: No, you say.
+    Hand: Then join your precious Poiura
+    // Endgame somehow
 ===

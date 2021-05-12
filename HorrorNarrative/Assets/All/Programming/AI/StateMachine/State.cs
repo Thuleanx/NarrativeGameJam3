@@ -1,5 +1,6 @@
 using UnityEngine;
 using Thuleanx.AI.Context;
+using System;
 
 namespace Thuleanx.AI {
 	[System.Serializable]
@@ -19,5 +20,10 @@ namespace Thuleanx.AI {
 		public virtual void OnAnimationFinishTrigger(int action) {}
 
 		public Agent Agent => StateMachine.Agent;
+
+		public virtual State Clone() => Clone(CreateInstance<State>());
+		public virtual State Clone(State state) {
+			return state;
+		}
 	}
 }

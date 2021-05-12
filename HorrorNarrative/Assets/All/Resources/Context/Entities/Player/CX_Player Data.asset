@@ -17,3 +17,4 @@ MonoBehaviour:
   AimingMoveSpeed: 1
   ReloadingMoveSpeed: 1
   DefaultBulletCount: 3
+  DefaultEquipment: 1

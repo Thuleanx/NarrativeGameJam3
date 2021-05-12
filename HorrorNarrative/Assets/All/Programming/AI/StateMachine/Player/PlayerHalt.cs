@@ -12,5 +12,10 @@ namespace Thuleanx.AI {
 
 			PlayerAgent.LocalContext.Velocity = Vector2.zero;
 		}
+
+		public override State Clone() => Clone(CreateInstance<PlayerHalt>());
+		public override State Clone(State state) {
+			return base.Clone(state);
+		}
 	}
 }

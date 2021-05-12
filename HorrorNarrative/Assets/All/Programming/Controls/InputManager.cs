@@ -64,7 +64,9 @@ namespace Thuleanx.Controls {
 			Target = null;
 		}
 
-		public void SignalStopInteract() => Target?.StopInteraction();
+		public void SignalStopInteract() {
+			if (Interacting) Target?.StopInteraction();
+		}
 
 		public void OnMouseClick(InputAction.CallbackContext context) {
 			if (Active) {

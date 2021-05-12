@@ -17,6 +17,13 @@ namespace Thuleanx.AI {
 			
 			Agent.LocalContext.Velocity = Calc.Damp(Agent.LocalContext.Velocity, targetVelocity, 
 				AccelerationLambda, Time.deltaTime);
+
+		}
+
+		public override State Clone() => Clone(CreateInstance<MonsterFollowPlayer>());
+		public override State Clone(State state) {
+			((MonsterFollowPlayer) state).AccelerationLambda = AccelerationLambda;
+			return base.Clone(state);
 		}
 	}
 }

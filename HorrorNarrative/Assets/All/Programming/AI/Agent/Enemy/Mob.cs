@@ -12,6 +12,7 @@ namespace Thuleanx.AI {
 				if (PhysicsBody != null) {
 					Corpse corpse = Obj.GetComponent<Corpse>();
 					corpse.Dir = PhysicsBody.KnockbackDir;
+					Obj.name = gameObject.name;
 				}
 			}
 			base.OnDeath();

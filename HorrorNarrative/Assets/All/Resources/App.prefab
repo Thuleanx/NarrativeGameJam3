@@ -1240,6 +1240,7 @@ GameObject:
   - component: {fileID: 3543431147144787611}
   - component: {fileID: 353570166029726738}
   - component: {fileID: 3683298427913436486}
+  - component: {fileID: 2877503557928122934}
   m_Layer: 0
   m_Name: GB_Dialogue Manager
   m_TagString: Untagged
@@ -1379,6 +1380,15 @@ MonoBehaviour:
   - name: widow_name
     value: Alice
     type: 1
+  - name: collect_trinket_1
+    value: true
+    type: 2
+  - name: collect_trinket_2
+    value: true
+    type: 2
+  - name: lured_out
+    value: true
+    type: 2
   debugTextView: {fileID: 0}
 --- !u!114 &353570166029726738
 MonoBehaviour:
@@ -1395,6 +1405,7 @@ MonoBehaviour:
   Storage: {fileID: 3543431147144787611}
   Dialogue_UI: {fileID: 6056864566348970791}
   runner: {fileID: 495520403942617225}
+  runner_async: {fileID: 2877503557928122934}
 --- !u!114 &3683298427913436486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,6 +1418,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7db06aa1b693840088f78636d02d5279, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2877503557928122934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758053179239785597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4bec29c0a230741bdac901dba8da47ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yarnScripts:
+  - {fileID: 2480198943629176163, guid: 93bedb463ca2c466c9aa0ce2f2b7dc14, type: 3}
+  textLanguage: English
+  variableStorage: {fileID: 3543431147144787611}
+  dialogueUI: {fileID: 6056864566348970791}
+  startNode: Beckoning
+  startAutomatically: 0
+  onNodeStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onNodeComplete:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3543431147144787611}
+        m_TargetAssemblyTypeName: Yarn_Thuleanx.Thuleanx_InMemoryVariableStorage,
+          Assembly-CSharp
+        m_MethodName: RegisterNode
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onDialogueComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6783104576587805649
 GameObject:
   m_ObjectHideFlags: 0

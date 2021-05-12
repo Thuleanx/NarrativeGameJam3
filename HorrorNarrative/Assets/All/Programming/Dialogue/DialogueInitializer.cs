@@ -3,6 +3,7 @@ using Thuleanx.Utility;
 
 namespace Thuleanx.Dialogue {
 	public class DialogueInitializer : MonoBehaviour {
+		[SerializeField] bool async = false;
 		[SerializeField] Optional<string> Node;
 
 		void Awake() {
@@ -10,7 +11,9 @@ namespace Thuleanx.Dialogue {
 		}
 
 		public void Play() {
-			App.Instance._DialogueManager.StartDialogue(Node.Value);
+			Debug.Log("TRYING TO START: " + Node.Value);
+			if (async) App.Instance._DialogueManager.StartDialogue_Async(Node.Value);
+			else App.Instance._DialogueManager.StartDialogue(Node.Value);
 		}
 	}
 }
