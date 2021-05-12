@@ -28,9 +28,9 @@ MonoBehaviour:
   m_Name: Portal
   m_EditorClassIdentifier: 
   SceneReference:
-    Scene: {fileID: 0}
-    SceneName: 
-    sceneIndex: -1
-    sceneEnabled: 0
+    Scene: {fileID: 102900000, guid: ca823b96f5a264f989901bb77a06321a, type: 3}
+    SceneName: Portal
+    sceneIndex: 20
+    sceneEnabled: 1
   Passages:
   - {fileID: -4398151667689175010}

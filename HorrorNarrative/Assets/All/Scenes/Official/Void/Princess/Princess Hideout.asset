@@ -48,5 +48,5 @@ MonoBehaviour:
   m_Name: Princess Hideout_Hideout Exit
   m_EditorClassIdentifier: 
   passage_name: Princess Hideout_Hideout Exit
-  target_scene: {fileID: 0}
-  target_passage: {fileID: 0}
+  target_scene: {fileID: 11400000, guid: 8b28b15cf715e4c878ee0ff9b342179d, type: 2}
+  target_passage: {fileID: -8865253370055467572, guid: 8b28b15cf715e4c878ee0ff9b342179d, type: 2}

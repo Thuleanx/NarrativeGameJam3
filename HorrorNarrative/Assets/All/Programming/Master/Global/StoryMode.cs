@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using Thuleanx.Mechanics.Mapping;
+using Thuleanx.Optimization;
 using Thuleanx.Utility;
 using Thuleanx.AI;
 using Thuleanx.AI.Context;
@@ -45,9 +46,14 @@ namespace Thuleanx.Master.Global {
 
 			Player player = GameObject.FindObjectOfType<Player>();
 			PlayerLocalContext ctx = GameObject.FindObjectOfType<Player>().LocalContext as PlayerLocalContext;
-			PlayerState state = player.Machine.Value.Current as PlayerState;
+			// PlayerState state = player.Machine.Value.Current as PlayerState;
 
 			if (passage.target_scene.SceneReference.SceneName != SceneManager.GetActiveScene().name) {
+				// tells all bubble pools to collect
+				foreach (var pool in App.Instance.activePools) {
+					pool.CollectsAll(SceneManager.GetActiveScene());
+				}
+
 				// load next level
 				yield return SceneManager.LoadSceneAsync(passage.target_scene.SceneReference.SceneName, LoadSceneMode.Single);
 			}
@@ -58,14 +64,16 @@ namespace Thuleanx.Master.Global {
 
 			// find an anchor
 			Anchor targetAnchor = GameObject.FindObjectOfType<Anchor>();
-			foreach (Anchor potentialTarget in GameObject.FindObjectsOfType<Anchor>())
+			foreach (Anchor potentialTarget in GameObject.FindObjectsOfType<Anchor>()) {
 				if (potentialTarget.passage == passage.target_passage)
 					targetAnchor = potentialTarget;
+			}
+			if (targetAnchor.passage != passage.target_passage)
+				Debug.Log("Anchor not found.");
 
 			playerObj.transform.position = (Vector2) targetAnchor.transform.position;
 			ctx.Position = playerObj.transform.position;
 
-			player.ForcePlayerState(state);
 			player.LocalContext = ctx;
 
 			// endbackdrop

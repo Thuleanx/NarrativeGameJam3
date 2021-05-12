@@ -179,7 +179,7 @@ position: -3580,-3194
 title: Beckoning
 tags: 
 colorID: 7
-position: -4089,-2886
+position: -4239,-2751
 ---
 Player: Poiura
 Player: I miss you
@@ -187,7 +187,33 @@ Player: I miss you
 <<wait 2>>
 Hand: Come
 -> Why are you doing this?
+    <<PlayTimeline Beckoning>>
+    Hand: Presumptuous malignant
 -> Are you doing this?
+    <<PlayTimeline Beckoning>>
+    Hand: It's happening
+Player: The others intend to die before you can kill them
+Hand: Cancer kills themselves
+Hand: Now come
+-> What do I stand to benefit?
+    Hand: Come
+-> I'm not coming with you
+    Hand: Ignorant malignant
+DFL: Wait!
+<<PlayTimeline DFLAppear>>
+DFL: What are you doing?
+DFL: Where are you going?
+-> I don't know
+    DFL: Don't give in to whatever it is
+    DFL: Perhaps this is how it's killing all of us
+    Player: What if it isn't
+    DFL: Of course it is, you fool!
+    Player: I spoke to it again
+-> It called to me
+    DFL: Don't give in to whatever it is
+    Player: ...
+    Player: Cancer cells kill themselves
+<<Transition Sautdanslevide>>
 ===
 title: EquipGun
 tags: 
@@ -201,28 +227,31 @@ Player: This will come in handy
 title: Phoenix
 tags: 
 colorID: 8
-position: -4473,-2334
+position: -3889,-2467
 ---
-<<if $trinket_3 is false>>
+<<if $trinket_1 is true>>
+    [[PhoenixLastStand]]
+<<elseif $trinket_3 is false>>
     [[PhoenixBefore]]
 <<endif>>
 ===
 title: PhoenixBefore
 tags: 
 colorID: 0
-position: -4113,-2328
+position: -3532,-2465
 ---
 <<if visited("PhoenixBefore")>>
-    Phoenix: Hi
-    <<set $talk_with_princess to true>>
-<<else>>
     Phoenix: Go
+<<else>>
+    Phoenix: Hi
+    Phoenix: Please collect trinkets or effigies
+    <<set $talk_with_princess to true>>
 <<endif>>
 ===
 title: Effigy
 tags: 
 colorID: 8
-position: -5157,-2357
+position: -4573,-2490
 ---
 <<if $collect_trinket_2>>
     Player: What
@@ -235,7 +264,7 @@ position: -5157,-2357
 title: Effigy1
 tags: 
 colorID: 5
-position: -5467,-2356
+position: -4883,-2489
 ---
 Player: Are you what I was told to look for?
 Effigy: Poiura
@@ -245,7 +274,7 @@ Player: Foul trinket
 title: Effigy2
 tags: 
 colorID: 5
-position: -5151,-2095
+position: -4567,-2228
 ---
 Player: Another one.
 <<set $collect_trinket_2 to true>>
@@ -253,7 +282,7 @@ Player: Another one.
 title: GakiFirstEncounter
 tags: 
 colorID: 6
-position: -5145,-1764
+position: -4561,-1897
 ---
 Gaki: That foul, false savior sends a humble baker to collect effigies on her behalf? 
 Gaki: How lazy and pedantic
@@ -265,8 +294,8 @@ Gaki: Cancer cells kill themselves
 ===
 title: Portal
 tags: 
-colorID: 0
-position: -5316,-3212
+colorID: 6
+position: -4752,-3206
 ---
 Player: Hi
 Princess: Hi
@@ -277,8 +306,10 @@ Princess: Hi
 <<PlayTimeline EndingScene>>
 Princess: Chant
 <<wait 5>>
+<<set $portal_end_portal to true>>
 Player: It's working
 Princess: It's not bro
+<<set $portal_end_hand to true>>
 Player: Say something
 <<wait 5>>
 Hand: Malignant! 
@@ -290,4 +321,17 @@ Hand: Join me
     Hand: No, you say.
     Hand: Then join your precious Poiura
     // Endgame somehow
+===
+title: PhoenixLastStand
+tags: 
+colorID: 0
+position: -3886,-2169
+---
+<<if visited("PhoenixLastStand")>>
+    Phoenix: Go
+<<else>>
+    Phoenix: Hi
+    Phoenix: Please collect more trinkets
+    <<set $collect_trinket_3 to true>>
+<<endif>>
 ===

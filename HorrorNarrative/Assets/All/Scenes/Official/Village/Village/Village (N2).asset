@@ -34,3 +34,19 @@ MonoBehaviour:
     sceneEnabled: 1
   Passages:
   - {fileID: -2120657032126991623}
+  - {fileID: 5499956260520356043}
+--- !u!114 &5499956260520356043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: N2_Village_Void Entrance
+  m_EditorClassIdentifier: 
+  passage_name: N2_Village_Void Entrance
+  target_scene: {fileID: 11400000, guid: 445f03aa2ebdc4281930420203d959f7, type: 2}
+  target_passage: {fileID: 0}

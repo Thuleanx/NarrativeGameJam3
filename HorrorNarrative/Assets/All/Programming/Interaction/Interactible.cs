@@ -4,7 +4,6 @@ using Thuleanx.Controls;
 using Thuleanx.AI;
 
 namespace Thuleanx.Interaction {
-	[RequireComponent(typeof(Collider2D))]
 	public class Interactible : MonoBehaviour {
 
 		[HideInInspector]
@@ -32,7 +31,7 @@ namespace Thuleanx.Interaction {
 
 		public virtual void StartInteraction() {
 			SelectedStop();
-			App.Instance._InputManager.StartInteracting();
+			App.Instance._InputManager.StartInteracting(this);
 			OnInteractionStart?.Invoke();
 			if (ForceInteraction) Player.Instance.Halt();
 		}

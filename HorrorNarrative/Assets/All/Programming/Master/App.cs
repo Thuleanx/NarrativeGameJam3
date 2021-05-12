@@ -1,11 +1,13 @@
 using UnityEngine;
 using System;
+using System.Collections.Generic;
 using Thuleanx.Master.Global;
 using Thuleanx.Controls;
 using FMOD_Thuleanx;
 using Thuleanx.Master.Local;
 using UnityEngine.SceneManagement;	
 using Thuleanx.Dialogue;
+using Thuleanx.Optimization;
 
 namespace Thuleanx {
 	public class App : MonoBehaviour {
@@ -18,6 +20,9 @@ namespace Thuleanx {
 		public InputManager _InputManager;
 		public AudioManager _AudioManager;
 		public DialogueManager _DialogueManager;
+
+		[HideInInspector]
+		public List<BubblePool> activePools = new List<BubblePool>();
 
 		void Awake() {
 			Instance = this;

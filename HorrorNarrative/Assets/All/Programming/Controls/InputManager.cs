@@ -54,7 +54,8 @@ namespace Thuleanx.Controls {
 		}
 
 		// Should only be called by Interactible
-		public void StartInteracting() {
+		public void StartInteracting(Interactible target = null) {
+			Target = target;
 			Interacting = true;
 		}
 

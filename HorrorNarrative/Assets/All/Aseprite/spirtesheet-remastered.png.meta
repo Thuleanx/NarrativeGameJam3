@@ -152,6 +152,9 @@ TextureImporter:
   - first:
       213: 2095334314189071860
     second: spirtesheet-remastered_49
+  - first:
+      213: -8718857824931997098
+    second: spirtesheet-remastered_50
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1246,7 +1249,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1267,7 +1270,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1288,7 +1291,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1296,6 +1299,27 @@ TextureImporter:
       bones: []
       spriteID: 4f52dea057f141d10800000000000000
       internalID: 2095334314189071860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spirtesheet-remastered_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a1bc1b005600780800000000000000
+      internalID: -8718857824931997098
       vertices: []
       indices: 
       edges: []

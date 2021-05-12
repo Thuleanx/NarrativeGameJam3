@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using Thuleanx.Mechanics.Mapping;
+using Thuleanx.Optimization;
 
 namespace Thuleanx.Master.Global {
 	public class GameModeManager : MonoBehaviour {

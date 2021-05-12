@@ -26,6 +26,7 @@ namespace Thuleanx.Optimization {
 			bubble.gameObject.transform.rotation = rotation;
 			bubble.gameObject.SetActive(true);
 			bubble.inPool = false;
+
 			if (!BorrowToScene.ContainsKey(bubbleScene))
 				BorrowToScene[bubbleScene] = new List<Bubble>();
 			BorrowToScene[bubbleScene].Add(bubble);
@@ -56,7 +57,7 @@ namespace Thuleanx.Optimization {
 				foreach (Bubble bubble in BorrowToScene[scene])
 					if (bubble.gameObject.activeSelf)
 						Collects(bubble);
-			BorrowToScene.Remove(scene);
+			BorrowToScene.Clear();
 		}
 
 		public void Collects(Bubble bubble) {
@@ -68,5 +69,7 @@ namespace Thuleanx.Optimization {
 			DontDestroyOnLoad(bubble.gameObject);
 			bubble.inPool =true;
 		}
+
+		
 	}
 }

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Long Area 3
   m_EditorClassIdentifier: 
   SceneReference:
-    Scene: {fileID: 0}
-    SceneName: 
-    sceneIndex: -1
-    sceneEnabled: 0
+    Scene: {fileID: 102900000, guid: ef9b6c9a6e42e49f3b8be83e79fcd3b4, type: 3}
+    SceneName: Long Area 3
+    sceneIndex: 19
+    sceneEnabled: 1
   Passages:
   - {fileID: 8050520658397957682}
   - {fileID: 6420587887732624714}
@@ -33,7 +33,7 @@ MonoBehaviour:
   m_Name: Long Area 3_Exit
   m_EditorClassIdentifier: 
   passage_name: Long Area 3_Exit
-  target_scene: {fileID: 0}
+  target_scene: {fileID: 11400000, guid: 93eea40155fc0479aae5aba8f56d71ab, type: 2}
   target_passage: {fileID: 0}
 --- !u!114 &8050520658397957682
 MonoBehaviour:
