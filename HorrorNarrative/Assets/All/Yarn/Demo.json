@@ -1,0 +1,212 @@
+[
+	{
+		"title": "InspectingVoid",
+		"tags": "",
+		"body": "Player: The void\nPlayer: Everyday, it inches closer\nPlayer: Why would the Phoenix rush beyond the barrier?\nPlayer: I shouldn't meddle in the decisions of the Divine.\nPlayer: It's safe here in town.\nPlayer: It's safe here for now.\n<<Transition WakeUp>>\n",
+		"position": {
+			"x": -3317,
+			"y": -3518
+		},
+		"colorID": 5
+	},
+	{
+		"title": "DFL",
+		"tags": "",
+		"body": "<<if $lured_out is false>>\n    [[DFLVillage]]\n<<elseif $lured_out is true>>\n    [[DFLEnd]]\n<<endif>>",
+		"position": {
+			"x": -3283,
+			"y": -2807
+		},
+		"colorID": 8
+	},
+	{
+		"title": "DFLVillage",
+		"tags": "",
+		"body": "<<if visited(\"DFLVillage\")>>\n    [[DFLVillage_Personal]]\n<<else>>\n    DFL: Our Heavenly Phoenix is gone. \n    DFL: She vanished last night.\n    DFL: It's too late.\n    DFL: Whatever is out there. It's going to swallow us.\n    DFL: Whole.\n    Widow: I lost my husband.\n    Widow: My husband, my daughter, and my mother\n    Widow: To whatever this...thing is.\n    Clubman: We've all lost people.\n    Clubman: Your grief is no more than any other.\n    DFL: We aren't discussing who lost the most.\n    DFL: The question is...\n    DFL:Should we not end it now?\n    Widow: What do you mean?\n    Widow: As in?\n    DFL: Self-slaughter, yes.\n    DFL: Deny whatever this is the pleasure of consumption.\n    Widow: Perhaps...I'm all alone. Perhaps...\n    Clubman: Come! Baker! \n    Clubman: What do you make of this madness!\n    -> I agree with his sentiment\n        <<set $agree_with_leader to true>>\n        Player: I think it's for the best.\n        Player: We die by the barrier, or we die by our own hands.\n        Widow: So there's no hope? No hope to change anything?\n        Player: I don't think so. No.\n        DFL: That's what I thought as well.\n        DFL: Let us take this last night.\n        DFL: Tomorrow, those who wish to leave this world...\n        DFL: Can do so.\n        Clubman: I can't do it. I won't do it. There must be something.\n        Clubman: Somewhing we can take back.\n    -> No\n        <<set $agree_with_leader to false>>\n        Player: I saw one of the creatures.\n        Widow: The pray men?\n        Player: Yes. It called me Malignant.\n        DFL: Malignant?\n        Player: It viewed me as a tumor.\n        Player: It views us all as tumors.\n        DFL: And what does this mean?\n        Player: It means we can't let something that views us as\n        Player: no more than tumors...destroy us.\n        Widow: Thank God.\n        Widow: Someone with reason.\n        DFL: It is foolish to believe that an ant\n        DFL: given enough hope\n        DFL: will ever triumph over the foot of an elephant\n        <<wait 1>>\n        DFL: But fine, those who wish to perish by the barrier\n        DFL: do so.\n        DFL: Those who wish to choose their passing,\n        DFL: take this last night\n        DFL: and we will congregate here tomorrow.\n    <<set $leader_encourage_sleep to true>>\n<<endif>>",
+		"position": {
+			"x": -3444,
+			"y": -2337
+		},
+		"colorID": 2
+	},
+	{
+		"title": "DFLVillage_Personal",
+		"tags": "",
+		"body": "<<if visited(\"DFLVillage_Personal\")>>\n    DFL: There's nothing left to say.\n    DFL: Nothing matters anymore after tomorrow's dawn.\n<<else>>\n    DFL: Baker\n    <<if $agree_with_leader is true>>\n        DFL: I'm glad we agree earlier Baker\n        DFL: I hope you will join your Poiura on the other side\n    <<else>>\n        DFL: I know you disapprove my methods\n        DFL: But try managing an entire village in crisis\n        DFL: It's just ...\n        DFL: So tiring\n    <<endif>>\n<<endif>>",
+		"position": {
+			"x": -3433,
+			"y": -2075
+		},
+		"colorID": 3
+	},
+	{
+		"title": "DFLEnd",
+		"tags": "",
+		"body": "<<if visited(\"DFLEnd\")>>\n    [[AfterSpawn]]\n<<else>>\n    DFL: You!\n    DFL: You brought this on us.\n    Player: How?\n    DFL: With your defiance of order!\n    DFL: I needed your help in town.\n    DFL: You disobeyed!\n    Player: And yet you are here.\n    DFL: I was lured.\n    DFL: Like you.\n    DFL: Brainwashed.\n    DFL: You're insolence made me weak.\n    DFL: You ruined our self-slaughter!\n    <<Spawn SecondGaki>>\n<<endif>>",
+		"position": {
+			"x": -2981,
+			"y": -2808
+		},
+		"colorID": 2
+	},
+	{
+		"title": "DayBed",
+		"tags": "",
+		"body": "<<if $leader_encourage_sleep>>\n    Player: I guess this is it.\n    <<Transition WakeUp>>\n<<else>>\n    Player: I'm not sleepy yet.\n<<endif>>\n",
+		"position": {
+			"x": -3767,
+			"y": -3508
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Beckoning",
+		"tags": "",
+		"body": "Player: Poiura\nPlayer: I miss you\n<<PlayTimeline Beckoning>>\n<<wait 2>>\nHand: Come\n-> Why are you doing this?\n    <<PlayTimeline Beckoning>>\n    Hand: Presumptuous malignant\n-> Are you doing this?\n    <<PlayTimeline Beckoning>>\n    Hand: It's happening\nPlayer: The others intend to die before you can kill them\nHand: Cancer kills themselves\nHand: Now come\n-> What do I stand to benefit?\n    Hand: Come\n-> I'm not coming with you\n    Hand: Ignorant malignant\n<<PlayTimeline DFLAppear>>\n<<wait 1>>\nDFL: Wait\nDFL: What are you doing?\nDFL: Where are you going?\n-> I'm not sure.\n    Player: I don't know.\n    DFL: Don't give in!\n    DFL: Perhaps this is how!\n    DFL: How it's killing us!\n    Player: What if it isn't?\n    DFL: What? Of course it is!\n    Player: I spoke to it, again.\n    DFL: It's tricking you.\n    Player: I think it's helping me.\n    DFL: You fool!\n    Player: You're the fool.\n    Player: You hear that? It's comforting us.\n    DFL: You cannot take comfort in that awful cry.\n    Player: Ignorant Malignant.\n-> Beyond the Barrier.\n    Player: It called out to me.\n    DFL: Don't give in!\n    DFL: Perhaps this is how!\n    DFL: How it's killing us!\n    Player: Cancer cells kill themselves.\n<<set $lured_out to true>>\n<<Transition Sautdanslevide>>",
+		"position": {
+			"x": -4427,
+			"y": -3066
+		},
+		"colorID": 7
+	},
+	{
+		"title": "EquipGun",
+		"tags": "",
+		"body": "<<Equip Player Blunderbuss>>\n<<set $got_gun to true>>\nPlayer: This will come in handy\n",
+		"position": {
+			"x": -4195,
+			"y": -3504
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Phoenix",
+		"tags": "",
+		"body": "<<if $collect_trinket_1 is true>>\n    [[PhoenixLastStand]]\n<<elseif $trinket_3 is false>>\n    [[PhoenixBefore]]\n<<endif>>",
+		"position": {
+			"x": -4135,
+			"y": -2835
+		},
+		"colorID": 8
+	},
+	{
+		"title": "PhoenixBefore",
+		"tags": "",
+		"body": "<<if visited(\"PhoenixBefore\")>>\n    Phoenix: ...\n<<else>>\n    Phoenix: They worship youth. Fear death.\n    Phoenix: I'm not Heavenly.\n    Phoenix: Oh! You. Baker.\n    -> Our Phoenix! You're alive?\n        Player: This place...I cannot believe you are still alive.\n        Phoenix: Alive? No, I'm not. It's gone. All gone.\n        Phoenix: The raven has flown, cawing across the land.\n        Phoenix: Terrorist Raven caws down to me. \n    -> What are you doing here?\n        Phoenix: What is it doing here? What's the difference?\n        Phoenix: Life stuck behind the barrier is the same as beyond.\n        Phoenix: The raven has flown, cawing across the land.\n        Phoenix: A terrorist raven. Politically motivated.\n        Phoenix: The town is dead.\n    Player: What?\n    Phoenix: The void is as warm as it is cold.\n    Phoenix: Don't you think?\n    Player: You mean where we are?\n    Phoenix: Leave me alone.\n    <<set $talk_with_princess to true>>\n<<endif>>",
+		"position": {
+			"x": -3825,
+			"y": -2831
+		},
+		"colorID": 0
+	},
+	{
+		"title": "Effigy",
+		"tags": "",
+		"body": "<<if $collect_trinket_2>>\n    Player: This is an error. \n<<elseif $collect_trinket_1>>\n    [[Effigy2]]\n<<else>>\n    [[Effigy1]]\n<<endif>>",
+		"position": {
+			"x": -4763,
+			"y": -2805
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Effigy1",
+		"tags": "",
+		"body": "-> Leave it \n-> Touch it\nEffigy: Poiura\nPlayer: What? \nEffigy: Poiura\nPlayer: How do you know that name?\nEffigy: I am Poiura\nPlayer: Tell me how you know this name. Where is Poiura?\n<<set $collect_trinket_1 to true>>",
+		"position": {
+			"x": -5072,
+			"y": -2805
+		},
+		"colorID": 5
+	},
+	{
+		"title": "Effigy2",
+		"tags": "",
+		"body": "Player: Are you what I was told to collect?\nEffigy: Poiura\nPlayer: Foul trinket!\n<<set $collect_trinket_2 to true>>",
+		"position": {
+			"x": -4758,
+			"y": -2547
+		},
+		"colorID": 5
+	},
+	{
+		"title": "GakiFirstEncounter",
+		"tags": "",
+		"body": "Gaki: That foul, false savior sends a humble baker to collect effigies on her behalf? \nGaki: How lazy and pedantic\nPlayer: I will defeat you\nGaki: She knows where they all are, you know\nGaki: These little trinkets are nothing to me\nGaki: False hope for a false people\nGaki: Cancer cells kill themselves\n",
+		"position": {
+			"x": -4747,
+			"y": -2209
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Portal",
+		"tags": "",
+		"body": "Player: Phoenix, I believe I've found the last of your trinkets.\nPhoenix: Spoiled wastes. Cleanse the aftermath.\nPhoenix: That's what they told me.\nPlayer: What?\nPhoenix: You think I wanted this?\nPhoenix: Deification.\nPhoenix: Beyond the world, there is nothing.\n-> Faith has no reward.\n    Player: Faith takes value beyond the reward of afterlife.\n    Phoenix: Then what good is it?\n    Phoenix: The void takes you either way.\n    Phoenix: Off to the land of little birdies cawing.\n    //screenshake on caw caw caw?\n    Phoenix: Caw, caw, caw.\n-> Please try.\nPlayer: Please, we must try.\nPhoenix: And what of your Poiura?\nPlayer: Poiura is gone. I'm tired of being taunted.\nPhoenix: But don't you wish for Poiura to return?\n-> No\n    Player: If Poiura is out here...No.\n    Player: What I want is for life to continue.\n    Player: There's no point to changing the past. Just the present.\n    Player: I just want to bake another loaf of bread.\n    Player: So please, try.\nPhoenix: I am finished. But if you care about one more moment.\nPhoenix: Give them here.\n<<PlayTimeline EndingScene>>\nPhoenix: Our elders.\nPhoenix: You are liars.\nPhoenix: Nasty, awful liars.\nPhoenix: Make up for your past misgiving's.\nPhoenix: Use these little trinkets to excise us from this hell.\nPlayer: It's working.\nPhoenix: It's not. This is the void tricking us.\nPhoenix: It is you who led your people astray.\nPhoenix: False promises.\nPhoenix: I failed my test of faith.\nPhoenix: But I can still save this baker.\n<<set $portal_end_portal to true>>\nPhoenix: Oh my god! It worked! The elders!\n<<set $portal_end_hand to true>>\n<<wait 5>>\nHand: Malignant! \nHand: Join me\n-> Accept\n    Player: I don't fear you\n    Hand: You ought to\n    Player: But I don’t. You are a manifestation of the void. \n    Player: You are an earthquake, a black hole, a super nova\n    Hand: Come\n    <<Equip Player NONE>>\n    Hand: No weapon?\n    Player: No need\n    Hand: Then how will you defeat me?\n    Player: I can either end my own life or have a cup of coffee.\n    -> End life\n        Hand: Then join your precious Poiura\n    -> Have cup of coffee\n        Hand: Poiura\n        Player: I choose the cup of coffee.\n-> Refuse\n    Hand: No, you say.\n    Hand: Then join your precious Poiura",
+		"position": {
+			"x": -4878,
+			"y": -3427
+		},
+		"colorID": 6
+	},
+	{
+		"title": "PhoenixLastStand",
+		"tags": "",
+		"body": "<<if visited(\"PhoenixLastStand\")>>\n    Phoenix: ...\n<<else>>\n    Player: What do we do?\n    Phoenix: Heh, join the void.\n    Player: You must know something more.\n    Player: Where are we?\n    Phoenix: This place is written.\n    Phoenix: It is beyond death.\n    Phoenix: It is reserved for the willing dead.\n    Player: How do we get out of here?\n    Phoenix: I've only heard of such things from the village elders.\n    Phoenix: There are gifts, embedded in shadows. Small trinkets spread\n    Phoenix: throughout the void.\n    Phoenix: There's a ritual. You can sacrifice\n    Phoenix: the gifts. If you do, the spirits may.\n    -> I don't understand.\n        Player: Please speak some sense.\n        Phoenix: You wouldn't. Staking your salvation in youth.\n        Player: I do not.\n        Phoenix: Your elders do. They may grant a wish.\n    -> May what?\n        Player: What will they do?\n        Phoenix: Grant a wish. Though...\n    Player: I will find the trinkets.\n    Phoenix: You will not.\n    Player: Where will I find you?\n    Phoenix: Oh, around. I will be around.\n    <<set $talk_with_princess_2 to true>>\n<<endif>>",
+		"position": {
+			"x": -3821,
+			"y": -2608
+		},
+		"colorID": 0
+	},
+	{
+		"title": "PhoenixChase",
+		"tags": "",
+		"body": "<<PlayTimeline PhoenixChase>>\n<<set $princess_seen to true>>\n<<wait 6>>\nPlayer: It's the young Phoenix\nPlayer: Where could she be going in the middle of the night?\nPlayer: And why towards that dreadful barrier\n",
+		"position": {
+			"x": -4903,
+			"y": -3156
+		},
+		"colorID": 6
+	},
+	{
+		"title": "Clubman",
+		"tags": "",
+		"body": "<<if visited(\"Clubman\")\">>\n    Clubman: I'll bash them in good\n<<else>>\n    Clubman: Anything come beyond that barrier to take what's mine?\n    Clubman: I'll club it dead\n    -> Fair enough\n        Player: Let's see them try\n    -> We're doomed\n        Player: I don't think a club will stop the barrier\n    Clubman: What do you know?\n<<endif>>\n",
+		"position": {
+			"x": -3800,
+			"y": -3150
+		},
+		"colorID": 8
+	},
+	{
+		"title": "Widow",
+		"tags": "",
+		"body": "<<if visited(\"Widow\")>>\n    [[DeepWidow]]\n<<else>>\n    Widow: Hello\n    Player: Good evening.\n    Widow: It isn't good, is it?\n    Player: No, I suppose not.\n    Widow: What do you think happens to them?\n    Player: Who?\n    Widow: Those consumed by the barrier.\n    -> I think they're dead.\n        Player: They may as well be.\n        Widow: What a horrible thing to say.\n    -> I think we can save them.\n        Player: Who knows? Maybe this is our reckoning.\n        Player: Maybe they're raptured. Maybe they're warm and safe.\n    Widow: I hope that is true.\n    Widow: For all of us.\n    Player: Me too.\n<<endif>>",
+		"position": {
+			"x": -3479,
+			"y": -3155
+		},
+		"colorID": 8
+	},
+	{
+		"title": "DeepWidow",
+		"tags": "",
+		"body": "<<if visited(\"DeepWidow\")\">>\n    Widow: I pray that you won't be the next to be taken.\n<<else>>\n    Widow: I should go to bed.\n    Player: I should, too.\n    Widow: Do you miss Poiura?\n    -> Of course.\n    Player: Not a day goes by.\n    -> Every day.\n    Player: The bakery just isn't the same.\n    Widow: My husband...a Hateful man. \n    Widow: But I miss him.\n    Widow: Was Poiura hateful?\n    Player: No. Not at all.\n<<endif>>",
+		"position": {
+			"x": -3201,
+			"y": -3154
+		},
+		"colorID": 1
+	},
+	{
+		"title": "AfterSpawn",
+		"tags": "",
+		"body": "<<if visited(\"AfterSpawn\")>>\n    DFL: Traitor ...\n    Player: He's in a daze.\n    Player: There's no helping him now.\n<<else>>\n    DFL: I trust nothing from you.\n    DFL: Was it not Poiura who first vanished?\n    DFL: Perhaps you two are the cause for all of it!\n    Player: Watch yourself. Poiura had nothing to do with this.\n    DFL: Says you. The traitor.\n<<endif>>",
+		"position": {
+			"x": -2672,
+			"y": -2811
+		},
+		"colorID": 3
+	}
+]

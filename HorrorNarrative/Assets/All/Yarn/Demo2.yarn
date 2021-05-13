@@ -283,6 +283,19 @@ Effigy: Poiura
 Player: Foul trinket!
 <<set $collect_trinket_2 to true>>
 ===
+title: GakiFirstEncounter
+tags: 
+colorID: 6
+position: -4747,-2209
+---
+Gaki: That foul, false savior sends a humble baker to collect effigies on her behalf? 
+Gaki: How lazy and pedantic
+Player: I will defeat you
+Gaki: She knows where they all are, you know
+Gaki: These little trinkets are nothing to me
+Gaki: False hope for a false people
+Gaki: Cancer cells kill themselves
+===
 title: Portal
 tags: 
 colorID: 6
@@ -481,17 +494,4 @@ position: -2673,-2813
     Player: Watch yourself. Poiura had nothing to do with this.
     DFL: Says you. The traitor.
 <<endif>>
-===
-title: GakiFirstEncounter
-tags: 
-colorID: 6
-position: -4749,-2212
----
-Gaki: That foul, false savior sends a humble baker to collect effigies on her behalf? 
-Gaki: How lazy and pedantic
-Player: I will defeat you
-Gaki: She knows where they all are, you know
-Gaki: These little trinkets are nothing to me
-Gaki: False hope for a false people
-Gaki: Cancer cells kill themselves
 ===
