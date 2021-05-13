@@ -230,7 +230,7 @@ tags:
 colorID: 8
 position: -3889,-2467
 ---
-<<if $trinket_1 is true>>
+<<if $collect_trinket_1 is true>>
     [[PhoenixLastStand]]
 <<elseif $trinket_3 is false>>
     [[PhoenixBefore]]
@@ -333,6 +333,6 @@ position: -3886,-2169
 <<else>>
     Phoenix: Hi
     Phoenix: Please collect more trinkets
-    <<set $collect_trinket_3 to true>>
+    <<set $talk_with_princess_2 to true>>
 <<endif>>
 ===

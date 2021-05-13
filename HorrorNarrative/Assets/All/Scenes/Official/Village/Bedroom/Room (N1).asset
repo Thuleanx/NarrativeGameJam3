@@ -30,7 +30,7 @@ MonoBehaviour:
   SceneReference:
     Scene: {fileID: 102900000, guid: ac875e663ee4f4bf69efc654c0ed3854, type: 3}
     SceneName: Room (N1)
-    sceneIndex: 5
+    sceneIndex: 2
     sceneEnabled: 1
   Passages:
   - {fileID: -1864698860194197092}

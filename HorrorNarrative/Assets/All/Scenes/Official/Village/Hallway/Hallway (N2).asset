@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: N2_Hallway_Bedroom Door
   target_scene: {fileID: 11400000, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: -7992387328279890938, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
 --- !u!114 &-3401185372971467330
 MonoBehaviour:
   m_ObjectHideFlags: 0

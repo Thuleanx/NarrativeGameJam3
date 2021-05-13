@@ -45,7 +45,7 @@ MonoBehaviour:
   SceneReference:
     Scene: {fileID: 102900000, guid: 6b3289f8c35064b0e94918fd56ff5d85, type: 3}
     SceneName: Outside (N1)
-    sceneIndex: 8
+    sceneIndex: 5
     sceneEnabled: 1
   Passages:
   - {fileID: -6318441892189540671}

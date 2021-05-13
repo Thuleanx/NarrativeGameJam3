@@ -65,4 +65,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: D_Room_Bedroom Door
   target_scene: {fileID: 11400000, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: 3852644545188496014, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
