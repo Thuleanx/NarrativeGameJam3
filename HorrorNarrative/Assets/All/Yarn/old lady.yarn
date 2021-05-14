@@ -1,0 +1,53 @@
+title: Start
+tags: 
+colorID: 0
+position: 355,125
+---
+Elder Lady: Young Baker! Hello.
+    -> You seem cheerful.
+    Player: Despite the circumstances.
+    Elder Lady: What's not to be cheerful about?
+    Player: ...Everything?
+    Elder Lady: The pesky barrier? This is but a phase.
+    Player: A phase?
+    Elder Lady: One eddy in a long stream.
+    Player: It threatens to consume us.
+    Player: That doesn't concern you?
+    Elder Lady: It is written about, these times.
+    Elder Lady: By people far more dead than I.
+    Elder Lady: If you can believe it.
+    Player: What did they write about it?
+    Elder Lady: Did you never go to our archives? Tsk tsk.
+    Elder Lady: What would Poiura have said?
+    Player: What did they say?
+    Elder Lady: A turtle upturned, legs flipping in the air.
+    Elder Lady: Try as it might, it stays stuck on its shell.
+    Elder Lady: Get it?
+        -> Go on
+        Player: Please.    
+        Elder Lady: Folk try to erect a church...
+        Elder Lady: But on the last brick, it all topples down, again.
+        Elder Lady: None of the pieces are broken though.
+        Elder Lady: So they try, and try, and try, again.
+        Elder Lady: Get it?
+            -> I don't 
+            Elder Lady: Ah! I see your problem.
+            Elder Lady: The turtle and the Folk.
+            Elder Lady: When asked why?
+            Elder Lady: Why do you keep doing this?
+            Elder Lady: Do you know what they say?
+                -> Yes
+                    Player: Of course!
+                    Elder Lady: Liar.
+                    Player: You're right.
+                    Elder Lady: They say,
+                    Elder Lady: Out of spite. I live in spite of the absurdity.
+                -> No
+                    Elder Lady: Liar.
+                    Player: You're right.
+                    Elder Lady: They say,
+                    Elder Lady: Out of spite. I live in spite of the absurdity.
+                    Elder Lady: That is our town. That is us.
+                    Elder Lady: It's how we've always been.
+                    Elder Lady: And always will be.
+===
