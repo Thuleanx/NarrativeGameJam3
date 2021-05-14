@@ -96,6 +96,8 @@ GameObject:
   - component: {fileID: 3664402988149515020}
   - component: {fileID: 4392680061265998062}
   - component: {fileID: 1366963567444130113}
+  - component: {fileID: 5855280489032345366}
+  - component: {fileID: -927840966178073602}
   m_Layer: 26
   m_Name: Dreg Corpse
   m_TagString: Untagged
@@ -251,6 +253,29 @@ MonoBehaviour:
   Event:
   - event:/SFX/Dreg/Dreg Dead
   - event:/SFX/Dreg/Dreg Fall
+--- !u!114 &5855280489032345366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2210186552830958186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632475c7c4fa34a759067c7c9ca5386b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &-927840966178073602
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2210186552830958186}
+  m_Enabled: 1
+  m_SortingLayerID: 239374449
+  m_SortingLayer: 5
+  m_SortingOrder: 0
 --- !u!1 &2210186552833838478
 GameObject:
   m_ObjectHideFlags: 0
