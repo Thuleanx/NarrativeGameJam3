@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using Thuleanx.UI;
 
 namespace Thuleanx.Master.Global {
 	enum BackdropState {
@@ -13,14 +14,15 @@ namespace Thuleanx.Master.Global {
 
 	public class TransitionManager : MonoBehaviour {
 		BackdropState _backdropState = BackdropState._Loading;
-
-		public bool BackdropComplete = false;
+		[SerializeField] Fader Fader;
+		bool BackdropComplete = false;
 
 		public IEnumerator BackdropBlock() {
 			if (_backdropState != BackdropState._Loading && _backdropState != BackdropState._Released)
 				yield break;
 			_backdropState = BackdropState._Blocking;
 			BackdropComplete = false;
+			Fader.Blocked = true;
 			while (!BackdropComplete) yield return null;
 			_backdropState = BackdropState._Blocked;
 		}
@@ -29,6 +31,7 @@ namespace Thuleanx.Master.Global {
 				yield break;
 			_backdropState = BackdropState._Releasing;
 			BackdropComplete = false;
+			Fader.Blocked = false;
 			while (!BackdropComplete) yield return null;
 			_backdropState = BackdropState._Released;
 		}
