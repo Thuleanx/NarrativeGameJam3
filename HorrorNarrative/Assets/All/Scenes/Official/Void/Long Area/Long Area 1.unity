@@ -7177,6 +7177,90 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1434641607}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[3].m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 509884846, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: list.Array.data[4].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 957230327, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: Event.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 957230327, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: Event.Array.data[4]
+      value: event:/SFX/Player/Death
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1434641607}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlaySound
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1638940331736084257, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: OnDeathEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1638940331736084258, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -7243,6 +7327,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1638940331736084258, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
   m_PrefabInstance: {fileID: 1434641604}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1434641607 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 957230327, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+  m_PrefabInstance: {fileID: 1434641604}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb5810b626904022ac72a9f06507a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1493665901
 GameObject:
   m_ObjectHideFlags: 0

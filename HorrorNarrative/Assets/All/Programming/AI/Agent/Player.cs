@@ -1,6 +1,7 @@
 using UnityEngine;
 using Thuleanx.Controls;
 using Thuleanx.AI.Context;
+using Thuleanx.Master.Global;
 using Yarn.Unity;
 
 namespace Thuleanx.AI {
@@ -25,6 +26,10 @@ namespace Thuleanx.AI {
 			Machine.Value.Reset();
 		}
 
+		public void ResetToDefaultPose() {
+			Machine.Value.Reset();
+		}
+
 		public void Halt() => ForcePlayerState((PlayerState) Machine.Value.FindStateOfType(typeof(PlayerHalt)));
 
 		public override void Update() {
@@ -38,6 +43,7 @@ namespace Thuleanx.AI {
 		public override void OnDeath() {
 			base.OnDeath();
 			ForcePlayerState(Machine.Value.FindStateOfType(typeof(PlayerDead)) as PlayerState);
+			((StoryMode) App.Instance._GameModeManager._current_mode).Respawn();
 		}
 
 		public bool IsAiming() => typeof(PlayerAiming).IsInstanceOfType(Machine.Value.Current);

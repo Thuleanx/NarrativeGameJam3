@@ -10,6 +10,8 @@ using Thuleanx.AI.Context;
 namespace Thuleanx.Master.Global {
 	public class StoryMode : GameMode {
 
+		public Passage lastPassage;
+
 		public override void OnEditorStart() {
 			#if UNITY_EDITOR
 				// Load Save
@@ -45,12 +47,28 @@ namespace Thuleanx.Master.Global {
 			Resume();
 		}
 
+		public void Respawn() => App.Instance.StartCoroutine(_Respawn());
+		public IEnumerator _Respawn() {
+			// block screen
+			yield return App.Instance._TransitionManager.BackdropBlock();
+			Pause();
+
+			Player player = App.LocalInstance._ContextManager.Player;
+			player.Heal(player.Context.MaxHealth);
+			player.ResetToDefaultPose();
+			player.transform.position = Anchor.FindCorrespondence(lastPassage).transform.position;
+
+			// endbackdrop
+			yield return App.Instance._TransitionManager.BackdropRelease();
+			Resume();
+		}
+
 		public override IEnumerator TransitionThroughPassage(Passage passage) {
 			Pause();
 			// backdrop
 			yield return App.Instance._TransitionManager.BackdropBlock();
 
-			Player player = GameObject.FindObjectOfType<Player>();
+			Player player = App.LocalInstance._ContextManager.Player;
 			PlayerLocalContext ctx = GameObject.FindObjectOfType<Player>().LocalContext as PlayerLocalContext;
 			// PlayerState state = player.Machine.Value.Current as PlayerState;
 
@@ -76,16 +94,14 @@ namespace Thuleanx.Master.Global {
 				}
 			}
 
+			lastPassage = passage;
+
 			// position player + fill in data
 			GameObject playerObj = GameObject.FindWithTag("Player");
 			player = playerObj.GetComponent<Player>();
 
+			Anchor targetAnchor = Anchor.FindCorrespondence(passage);
 			// find an anchor
-			Anchor targetAnchor = GameObject.FindObjectOfType<Anchor>();
-			foreach (Anchor potentialTarget in GameObject.FindObjectsOfType<Anchor>()) {
-				if (potentialTarget.passage == passage.target_passage)
-					targetAnchor = potentialTarget;
-			}
 			if (targetAnchor.passage != passage.target_passage)
 				Debug.Log("Anchor not found.");
 

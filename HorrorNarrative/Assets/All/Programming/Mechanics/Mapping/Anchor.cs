@@ -11,5 +11,15 @@ namespace Thuleanx.Mechanics.Mapping {
 				}
 			}
 		}
+
+		public static Anchor FindCorrespondence(Passage passage) {
+			Anchor targetAnchor = GameObject.FindObjectOfType<Anchor>();
+			if (passage == null) return targetAnchor;
+			foreach (Anchor potentialTarget in GameObject.FindObjectsOfType<Anchor>()) {
+				if (potentialTarget.passage == passage.target_passage)
+					targetAnchor = potentialTarget;
+			}
+			return targetAnchor;
+		}
 	}
 }
