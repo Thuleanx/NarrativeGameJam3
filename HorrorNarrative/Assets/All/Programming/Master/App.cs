@@ -20,6 +20,7 @@ namespace Thuleanx {
 		public InputManager _InputManager;
 		public AudioManager _AudioManager;
 		public DialogueManager _DialogueManager;
+		public TransitionManager _TransitionManager;
 
 		[HideInInspector]
 		public List<BubblePool> activePools = new List<BubblePool>();

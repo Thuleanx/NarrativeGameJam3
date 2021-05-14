@@ -25,6 +25,24 @@ namespace Thuleanx.Utility {
 
 		public static bool FitMask(GameObject obj, LayerMask mask) => (mask >> obj.layer & 1) != 0;
 
+		public static Vector2 ViewportToScreenPoint(Vector2 position, Camera camera = null) {
+			if (camera == null)
+				camera = Camera.main;
+			return camera.ViewportToScreenPoint(position);
+		}
+
+		public static Vector2 ViewportToWorldPoint(Vector2 position, Camera camera = null) {
+			if (camera == null)
+				camera = Camera.main;
+			return camera.ViewportToWorldPoint(position);
+		}
+
+		public static Vector2 ToScreenSpace(Vector2 position, Camera camera = null) {
+			if (camera == null)
+				camera = Camera.main;
+			return camera.WorldToScreenPoint(position);
+		}
+
 		public static Vector2 ToViewportSpace(Vector2 position, Camera camera = null) {
 			if (camera == null)
 				camera = Camera.main;

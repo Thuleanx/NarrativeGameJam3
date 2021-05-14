@@ -23,6 +23,7 @@ namespace Thuleanx.Master.Global {
 				App.Instance._AudioManager.MainTrack.Play();
 
 				Debug.Log("At scene: " + _activeSceneName + " " + (_activeSceneHandler));
+				App.Instance.StartCoroutine(App.Instance._TransitionManager.BackdropRelease());
 
 				_state = GameModeState.Started;
 				Resume();
@@ -47,6 +48,7 @@ namespace Thuleanx.Master.Global {
 		public override IEnumerator TransitionThroughPassage(Passage passage) {
 			Pause();
 			// backdrop
+			yield return App.Instance._TransitionManager.BackdropBlock();
 
 			Player player = GameObject.FindObjectOfType<Player>();
 			PlayerLocalContext ctx = GameObject.FindObjectOfType<Player>().LocalContext as PlayerLocalContext;
@@ -89,6 +91,7 @@ namespace Thuleanx.Master.Global {
 			player.LocalContext = ctx;
 
 			// endbackdrop
+			yield return App.Instance._TransitionManager.BackdropRelease();
 
 			Resume();
 		}

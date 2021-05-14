@@ -3,6 +3,7 @@ using TMPro;
 using Yarn;
 using Thuleanx.Optimization;
 using UnityEngine.UI;
+using Thuleanx.Utility;
 
 namespace Thuleanx.Dialogue {
 	public class DialogueText : MonoBehaviour {
@@ -12,6 +13,7 @@ namespace Thuleanx.Dialogue {
 
 		private void Awake() {
 			textMesh = GetComponentInChildren<TMP_Text>();
+			rectTransform = GetComponent<RectTransform>();
 		}
 
 		public void SetText(string text) {
@@ -34,7 +36,10 @@ namespace Thuleanx.Dialogue {
 
 		public void Reposition() {
 			if (speaker != null) {
-				transform.localPosition = (Vector2) speaker.transform.position + speaker.SpeechBubbleDisplacement;
+				rectTransform.position = 
+					(Vector2) General.ToScreenSpace(speaker.transform.position)
+					+ speaker.SpeechBubbleDisplacement * 
+					(General.ToScreenSpace(new Vector2(1,1)) - General.ToScreenSpace(Vector2.zero));
 			}
 		}
 
