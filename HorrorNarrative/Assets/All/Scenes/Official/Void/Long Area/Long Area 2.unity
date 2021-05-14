@@ -44823,6 +44823,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4134448787734253493, guid: cca8ae0ce679c454eb9bda8ac550bc02, type: 3}
+      propertyPath: clauses.Array.data[0].variable_name
+      value: $collect_trinket_2
+      objectReference: {fileID: 0}
     - target: {fileID: 4134448787819979398, guid: cca8ae0ce679c454eb9bda8ac550bc02, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -44870,6 +44874,10 @@ PrefabInstance:
     - target: {fileID: 4134448787819979399, guid: cca8ae0ce679c454eb9bda8ac550bc02, type: 3}
       propertyPath: m_Name
       value: Effigy Total
+      objectReference: {fileID: 0}
+    - target: {fileID: 4134448787927764239, guid: cca8ae0ce679c454eb9bda8ac550bc02, type: 3}
+      propertyPath: clauses.Array.data[0].variable_name
+      value: $collect_trinket_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cca8ae0ce679c454eb9bda8ac550bc02, type: 3}
