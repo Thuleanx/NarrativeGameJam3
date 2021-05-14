@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a26b5b06a1654922b4f0882640b6ea7, type: 3}
   m_Name: FSM_State_PlayerShot
   m_EditorClassIdentifier: 
-  StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
   AnimationFinish: 1
   CanFlip: 0
   AnimationState:
@@ -22,3 +21,4 @@ MonoBehaviour:
   BulletPool: {fileID: 11400000, guid: 4ecb02195d64842558d5d2d1dd0a2122, type: 2}
   DistanceFromBody: 1
   BulletSpeed: 60
+  ShotSound: event:/SFX/Player/Shot

@@ -8771,22 +8771,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 82094391, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 82094391, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[0]
-      value: 2097535865
-      objectReference: {fileID: 0}
-    - target: {fileID: 82094391, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[1]
-      value: -813612993
-      objectReference: {fileID: 0}
-    - target: {fileID: 82094391, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
-      propertyPath: m_ApplyToSortingLayers.Array.data[2]
-      value: -961238269
-      objectReference: {fileID: 0}
     - target: {fileID: 1638940331736084258, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
       propertyPath: m_RootOrder
       value: 14

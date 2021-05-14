@@ -198,10 +198,11 @@ DFL: Where are you going?
 title: EquipGun
 tags: 
 colorID: 5
-position: -4197,-3506
+position: -4199,-3508
 ---
 <<Equip Player Blunderbuss>>
 <<set $got_gun to true>>
+<<PlayOneShot GB_AudioManager Pickup>>
 Player: This will come in handy
 ===
 title: Phoenix

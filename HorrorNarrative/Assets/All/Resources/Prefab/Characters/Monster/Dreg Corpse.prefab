@@ -95,7 +95,8 @@ GameObject:
   - component: {fileID: 2210186552830958199}
   - component: {fileID: 3664402988149515020}
   - component: {fileID: 4392680061265998062}
-  m_Layer: 25
+  - component: {fileID: 1366963567444130113}
+  m_Layer: 26
   m_Name: Dreg Corpse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,16 +152,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dir: {x: -1, y: 0}
   RigidBody: {fileID: 0}
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls: []
   Duration: 0.4
   FlyingHeight: 0.5
   Speed: 4
   Body: {fileID: 2210186552833838478}
   OnFinish:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366963567444130113}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound3D
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnStart:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1366963567444130113}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound3D
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &3664402988149515020
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -208,6 +236,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1366963567444130113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2210186552830958186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb5810b626904022ac72a9f06507a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+  - event:/SFX/Dreg/Dreg Dead
+  - event:/SFX/Dreg/Dreg Fall
 --- !u!1 &2210186552833838478
 GameObject:
   m_ObjectHideFlags: 0

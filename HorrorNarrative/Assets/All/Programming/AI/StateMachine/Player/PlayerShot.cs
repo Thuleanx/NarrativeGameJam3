@@ -10,6 +10,7 @@ namespace Thuleanx.AI {
 		[SerializeField] BubblePool BulletPool;
 		[SerializeField] float DistanceFromBody = 1f;
 		[SerializeField] float BulletSpeed = 1f;
+		[SerializeField, FMODUnity.EventRef] string ShotSound;
 
 		public override State ShouldTransitionTo() {
 			if (AnimationFinish)
@@ -22,6 +23,7 @@ namespace Thuleanx.AI {
 			Agent.PhysicsBody.Knockback(KnockbackAmount, Vector2.right * (Agent.LocalContext.RightFacing ? -1 : 1));
 			PlayerLocalContext.GunLoaded = false;
 			if (BulletPool != null) SpawnBullet();
+			App.Instance._AudioManager.PlayOneShot(ShotSound);
 		}
 
 		public override void OnExit() {
@@ -51,6 +53,7 @@ namespace Thuleanx.AI {
 			((PlayerShot) state).BulletPool = BulletPool;
 			((PlayerShot) state).BulletSpeed = BulletSpeed;
 			((PlayerShot) state).DistanceFromBody= DistanceFromBody;
+			((PlayerShot) state).ShotSound = ShotSound;
 			return base.Clone(state);
 		}
 	}

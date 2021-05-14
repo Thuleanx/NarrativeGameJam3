@@ -34,3 +34,4 @@ MonoBehaviour:
     sceneEnabled: 1
   Passages:
   - {fileID: -1864698860194197092}
+  Ambiance: event:/Ambience/Town

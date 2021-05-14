@@ -4,7 +4,7 @@ using UnityEngine.Events;
 namespace FMOD_Thuleanx {
 	public class AudioTrack {
 		FMOD.Studio.EventInstance track;
-		string reference;
+		public string reference;
 		// MarkerReader reader;
 
 		public AudioTrack(string reference) {
@@ -38,6 +38,13 @@ namespace FMOD_Thuleanx {
 			return length;
 		}
 
+		public bool IsPlaying() {
+			FMOD.Studio.PLAYBACK_STATE state;
+			if (track.getPlaybackState(out state) != FMOD.RESULT.OK) {
+				return false;
+			}
+			return state == FMOD.Studio.PLAYBACK_STATE.PLAYING;
+		}
 		public void Play() => track.start();
 		public void Pause() => track.setPaused(true);
 		public void Resume() => track.setPaused(false);

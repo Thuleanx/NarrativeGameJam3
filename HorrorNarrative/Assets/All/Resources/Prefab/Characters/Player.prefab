@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 82094389}
   m_LocalRotation: {x: -0, y: -0, z: -0.7097084, w: 0.70449555}
-  m_LocalPosition: {x: 1.015, y: 0.166, z: 0}
+  m_LocalPosition: {x: 0.765, y: 0.16784297, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1638940330409307506}
@@ -49,17 +49,17 @@ MonoBehaviour:
   m_Color: {r: 0.8705883, g: 0.9333334, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 0.107
-  m_ApplyToSortingLayers: 0000000069d2c98c79db057d1b2fbcd33f4081cf03abb4c61fd0842b7190440e
+  m_ApplyToSortingLayers: 79db057d3f4081cf03abb4c67190440e
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
   m_ShadowIntensity: 0
   m_ShadowVolumeIntensity: 0
-  m_PointLightInnerAngle: 38.8
-  m_PointLightOuterAngle: 156.8
-  m_PointLightInnerRadius: 5.33
-  m_PointLightOuterRadius: 9.49
+  m_PointLightInnerAngle: 0
+  m_PointLightOuterAngle: 216.3
+  m_PointLightInnerRadius: 2.57
+  m_PointLightOuterRadius: 13.56
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -209,6 +209,54 @@ MonoBehaviour:
     enabled: 1
     value: {fileID: 1638940331736084257}
   color: {r: 0.27333868, g: 0.8207547, b: 0.18970275, a: 0.3882353}
+--- !u!1 &957230325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 957230326}
+  - component: {fileID: 957230327}
+  m_Layer: 31
+  m_Name: Sound Board
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &957230326
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957230325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1638940331736084258}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &957230327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957230325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb5810b626904022ac72a9f06507a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+  - event:/SFX/Player/Reload Push
+  - event:/SFX/Player/Reload Flip
+  - event:/SFX/Player/Reload Done
+  - event:/SFX/Player/Walk
 --- !u!1 &1260922142
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1141,8 @@ GameObject:
   - component: {fileID: 2078130884}
   - component: {fileID: 1434641607}
   - component: {fileID: 1434641616}
+  - component: {fileID: 509884846}
+  - component: {fileID: 5048127813321177881}
   m_Layer: 31
   m_Name: Player
   m_TagString: Player
@@ -1116,6 +1166,7 @@ Transform:
   - {fileID: 1638940332285566769}
   - {fileID: 1638940330353111387}
   - {fileID: 847967848}
+  - {fileID: 957230326}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1286,6 +1337,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632475c7c4fa34a759067c7c9ca5386b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &509884846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638940331736084259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58c030142bcc84773af21c0967b690fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957230327}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957230327}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957230327}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957230327}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5048127813321177881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638940331736084259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListenerNumber: -1
 --- !u!1 &1638940332176673369
 GameObject:
   m_ObjectHideFlags: 0

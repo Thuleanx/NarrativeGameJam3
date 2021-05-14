@@ -35,6 +35,7 @@ MonoBehaviour:
   Passages:
   - {fileID: -1383803453992238144}
   - {fileID: 9150675776113895893}
+  Ambiance: event:/Ambience/Town
 --- !u!114 &9150675776113895893
 MonoBehaviour:
   m_ObjectHideFlags: 0

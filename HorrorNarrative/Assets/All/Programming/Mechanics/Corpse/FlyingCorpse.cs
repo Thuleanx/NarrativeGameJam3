@@ -13,12 +13,14 @@ namespace Thuleanx.Mechanics.Corpse {
 		[SerializeField] UnityEvent OnStart;
 
 		Timer Animating;
+		bool finished = false;
 
 		public override void OnEnable() {
 			base.OnEnable();
 			Animating = new Timer(Duration);
 			Animating.Start();
 			OnStart?.Invoke();
+			finished = false;
 		}
 
 		void Update() {
@@ -35,7 +37,8 @@ namespace Thuleanx.Mechanics.Corpse {
 				BodyPos.y = 0;
 				Body.transform.localPosition = BodyPos;
 				RigidBody.velocity = Vector2.zero;
-				OnFinish?.Invoke();
+				if (!finished) OnFinish?.Invoke();
+				finished = true;
 			}
 		}
 	}

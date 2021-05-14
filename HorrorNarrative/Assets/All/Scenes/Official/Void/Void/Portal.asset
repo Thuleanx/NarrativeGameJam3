@@ -34,3 +34,4 @@ MonoBehaviour:
     sceneEnabled: 1
   Passages:
   - {fileID: -4398151667689175010}
+  Ambiance: event:/Ambience/Beyond

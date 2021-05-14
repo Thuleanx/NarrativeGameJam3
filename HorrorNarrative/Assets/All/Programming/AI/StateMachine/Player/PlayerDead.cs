@@ -7,6 +7,7 @@ namespace Thuleanx.AI {
 	public class PlayerDead : PlayerState {
 		[SerializeField, Tooltip("Exponential acceleration. Higher means reaching target faster. ")]
 		float AccelerationLambda=4f;
+		[SerializeField, FMODUnity.EventRef] string DeadSound;
 
 		public override State ShouldTransitionTo() { return null; }
 
@@ -15,11 +16,13 @@ namespace Thuleanx.AI {
 
 			PlayerAgent.LocalContext.Velocity = Calc.Damp(PlayerAgent.LocalContext.Velocity, Vector2.zero, 
 				AccelerationLambda, Time.deltaTime);
+			App.Instance._AudioManager.PlayOneShot(DeadSound);
 		}
 
 		public override State Clone() => Clone(CreateInstance<PlayerDead>());
 		public override State Clone(State state) {
 			((PlayerDead) state).AccelerationLambda = AccelerationLambda;
+			((PlayerDead) state).DeadSound = DeadSound;
 			return base.Clone(state);
 		}
 	}

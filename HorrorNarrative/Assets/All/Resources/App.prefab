@@ -429,7 +429,7 @@ GameObject:
   - component: {fileID: 2549398705151814817}
   - component: {fileID: 5201956152881723277}
   m_Layer: 0
-  m_Name: GB_Audio Manager
+  m_Name: GB_AudioManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -461,6 +461,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c4672bc3b170456b82058ba789d2162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pickupRef: event:/SFX/Player/Pickup
+  collectEffigyRef: event:/SFX/Preta/Preta Dead
 --- !u!1 &2628957814815554107
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,6 +512,7 @@ MonoBehaviour:
   _InputManager: {fileID: 6235241944237878070}
   _AudioManager: {fileID: 5201956152881723277}
   _DialogueManager: {fileID: 353570166029726738}
+  activePools: []
 --- !u!1 &3306532087809209628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1082,7 @@ MonoBehaviour:
   InteractibleMask:
     serializedVersion: 2
     m_Bits: 268435456
+  InteractSound: event:/SFX/Player/Interact
   Active: 1
   Movement: {x: 0, y: 0}
   LastNonZeroMovement: {x: 1, y: 0}
@@ -1241,6 +1245,7 @@ GameObject:
   - component: {fileID: 353570166029726738}
   - component: {fileID: 3683298427913436486}
   - component: {fileID: 2877503557928122934}
+  - component: {fileID: 8941879293901964216}
   m_Layer: 0
   m_Name: GB_Dialogue Manager
   m_TagString: Untagged
@@ -1307,7 +1312,19 @@ MonoBehaviour:
       m_Calls: []
   onOptionsEnd:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8941879293901964216}
+        m_TargetAssemblyTypeName: FMOD_Thuleanx.AudioEventEmiter, Assembly-CSharp
+        m_MethodName: PlayOneShot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onCommand:
     m_PersistentCalls:
       m_Calls: []
@@ -1462,6 +1479,19 @@ MonoBehaviour:
   onDialogueComplete:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8941879293901964216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758053179239785597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a89f7ddbac504ac39690b98cd7da34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Player/Interact
 --- !u!1 &6783104576587805649
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,6 +36,7 @@ MonoBehaviour:
   - {fileID: 4403561733238897053}
   - {fileID: 703838142522050825}
   - {fileID: -2330873710646180387}
+  Ambiance: event:/Ambience/Beyond
 --- !u!114 &703838142522050825
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,10 @@ namespace Thuleanx.Master.Global {
 				foreach (SceneHandler handler in General.GetAllInstances<SceneHandler>())
 					if (handler.SceneReference.SceneName == _activeSceneName)
 						_activeSceneHandler = handler;
+				
+				App.Instance._AudioManager.SetMainTrack(
+					App.Instance._AudioManager.GetTrack(_activeSceneHandler.Ambiance));
+				App.Instance._AudioManager.MainTrack.Play();
 
 				Debug.Log("At scene: " + _activeSceneName + " " + (_activeSceneHandler));
 
@@ -55,6 +59,15 @@ namespace Thuleanx.Master.Global {
 
 				// load next level
 				yield return SceneManager.LoadSceneAsync(passage.target_scene.SceneReference.SceneName, LoadSceneMode.Single);
+
+				if (passage.target_scene.Ambiance != null && passage.target_scene.Ambiance.Length > 0
+					&& (App.Instance._AudioManager.MainTrack == null || 
+						passage.target_scene.Ambiance != App.Instance._AudioManager.MainTrack.reference)) {
+					App.Instance._AudioManager.MainTrack.Stop();
+					App.Instance._AudioManager.SetMainTrack(
+						App.Instance._AudioManager.GetTrack(passage.target_scene.Ambiance));
+					App.Instance._AudioManager.MainTrack.Play();
+				}
 			}
 
 			// position player + fill in data

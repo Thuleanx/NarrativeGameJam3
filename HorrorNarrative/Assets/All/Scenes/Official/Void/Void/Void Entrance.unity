@@ -4444,6 +4444,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 957230327, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
+      propertyPath: Event.Array.data[3]
+      value: event:/SFX/Player/Walk Dark
+      objectReference: {fileID: 0}
     - target: {fileID: 1638940331736084258, guid: ed91d27d3c0a547f798a4ad07fb17513, type: 3}
       propertyPath: m_RootOrder
       value: 2

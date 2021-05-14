@@ -20,6 +20,7 @@ MonoBehaviour:
   Passages:
   - {fileID: 3852644545188496014}
   - {fileID: 7061413637661805913}
+  Ambiance: event:/Ambience/Town
 --- !u!114 &3852644545188496014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,7 +35,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: D_Hallway_Bedroom Door
   target_scene: {fileID: 11400000, guid: c998559dc8ab148c3944754739f8297a, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: 3394559972601393501, guid: c998559dc8ab148c3944754739f8297a, type: 2}
 --- !u!114 &7061413637661805913
 MonoBehaviour:
   m_ObjectHideFlags: 0

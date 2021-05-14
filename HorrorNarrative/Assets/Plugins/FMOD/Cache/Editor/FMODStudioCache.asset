@@ -1,5 +1,105 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8360563446274405814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Reload Flip
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Reload Flip
+  guid: 40f9cd79be12c94d86003656bcdf6e83
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 483
+--- !u!114 &-8009150217297446646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565390960000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6803984917766286561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dreg/Dreg Fall
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dreg/Dreg Fall
+  guid: 0be21b0f24564547baf61ed10c363152
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 351
+--- !u!114 &-5821743817922930847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565396930000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5223149031282238751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565429540000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5121663474880118731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,12 +114,158 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../HorrorFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637553783420000000
+  lastModified: 637565450420000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 688
+    Value: 1834
   Exists: 1
+--- !u!114 &-3446375138280490347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Pickup
+  guid: fe699ea422673644aa189cdfd566af9e
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 818
+--- !u!114 &-2998139434537681961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dreg/See player
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dreg/See player
+  guid: 3adee65ecc0633488e6d2dfc009b5890
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
+--- !u!114 &-2282745717278803652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565410400000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1043877862965352875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Shot
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Shot
+  guid: 8e812b1d58f59d46b3f9f51401a85644
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1864
+--- !u!114 &-530311101318596679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565370260000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-422134822857194822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565410650000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-95279571012135589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Beyond
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Beyond
+  guid: 31093e77383d9f40ab98ad0b8438cb8e
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 157696
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,15 +280,397 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -5121663474880118731}
-  - {fileID: 6778931683392273017}
-  EditorEvents: []
+  - {fileID: 2104952672243945872}
+  EditorEvents:
+  - {fileID: 5316845193015804495}
+  - {fileID: -8360563446274405814}
+  - {fileID: 729658973227220174}
+  - {fileID: 1170283014459183917}
+  - {fileID: -1043877862965352875}
+  - {fileID: 142499404412145238}
+  - {fileID: 7916535549521742174}
+  - {fileID: 2597851307111584896}
+  - {fileID: 5208535398347327780}
+  - {fileID: 7376406119702951813}
+  - {fileID: -3446375138280490347}
+  - {fileID: 6664454134174490119}
+  - {fileID: 7761327500723438935}
+  - {fileID: -95279571012135589}
+  - {fileID: -2998139434537681961}
+  - {fileID: -6803984917766286561}
+  - {fileID: 4536939193022264202}
+  - {fileID: 3600184669209794410}
+  - {fileID: 3347343790995387049}
+  - {fileID: 1899910644080792243}
+  - {fileID: 9174235511423283943}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 6778931683392273017}
+  - {fileID: 2104952672243945872}
   StringsBanks:
   - {fileID: -5121663474880118731}
-  stringsBankWriteTime: 637553783420000000
+  stringsBankWriteTime: 637565450420000000
   cacheVersion: 3
+--- !u!114 &142499404412145238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Reload Done
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Reload Done
+  guid: 8f32c5bd52ad4c47b525553aeddbffbb
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 478
+--- !u!114 &277170145283416953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565398090000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &729658973227220174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Interact
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Interact
+  guid: 608393bcf55ebb46bd2887a3285707fc
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 520
+--- !u!114 &1170283014459183917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Walk
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Walk
+  guid: 6e666f8e52fafe44901ed20deb0fb4f0
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 39
+--- !u!114 &1687459752262313632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565377440000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1899910644080792243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Blank
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Blank
+  guid: a714e42e0163414b86bad79df4f0609d
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 308
+--- !u!114 &2104952672243945872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565450420000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &2500904387394571399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565407850000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2597851307111584896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death
+  guid: b43037b163838e46b08382acff8b9cf4
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1078
+--- !u!114 &3263410859473361740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565407590000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3347343790995387049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Aiming Steady
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Aiming Steady
+  guid: fd48ed69b8ef9d43a86560138fae39c8
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &3600184669209794410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambience/Town
+  m_EditorClassIdentifier: 
+  Path: event:/Ambience/Town
+  guid: f2300202123fba4092c91b4adeedb953
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 103594
+--- !u!114 &4536939193022264202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dreg/Dreg Dead
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dreg/Dreg Dead
+  guid: 9b61c04afd4b804cbbaa3af00532d7bb
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1194
+--- !u!114 &5208535398347327780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Reload Push
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Reload Push
+  guid: b548bc62cfce7e46924caad384dc653f
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 73
+--- !u!114 &5316845193015804495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Aiming
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Aiming
+  guid: 3d97ad8c2853ee46883e7dac8770f431
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
+--- !u!114 &5587520801758112618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637565411140000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6664454134174490119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Dreg/Spawn
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Dreg/Spawn
+  guid: 10d0165aa72200438209dea0b7eaba5d
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 4248
 --- !u!114 &6778931683392273017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,4 +688,96 @@ MonoBehaviour:
   lastModified: 637553783420000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
+--- !u!114 &7376406119702951813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Walk Dark
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Walk Dark
+  guid: bc51fe2a20f6864c95ff5a6a139912f5
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 476
+--- !u!114 &7761327500723438935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Preta/Preta Dead
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Preta/Preta Dead
+  guid: 22e7170eb047d347a008b58d39dbe114
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 2690
+--- !u!114 &7916535549521742174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Walk Wood
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Walk Wood
+  guid: a691080e37efbb428a71c977c7674326
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 244
+--- !u!114 &9174235511423283943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Preta/Preta Growl
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Preta/Preta Growl
+  guid: 76a65db9862e564ea5762d4bc700b8d7
+  Banks:
+  - {fileID: 2104952672243945872}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 11089
