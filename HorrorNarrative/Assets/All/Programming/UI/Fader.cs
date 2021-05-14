@@ -11,27 +11,15 @@ namespace Thuleanx.UI {
 		[SerializeField] UnityEvent BlockFinish, UnblockFinish, BlockStart, UnblockStart;
 
 		public Animator Anim {get; private set; }
-		[SerializeField] string BlockParam = "Block";
-
-		bool blocked;
-		public bool Blocked {
-			get => blocked;
-			set {
-				if (value != blocked) {
-					blocked = value;
-					Anim?.SetBool(BlockParam, blocked);
-				}
-			}
-		}
+		[SerializeField] string BlockTrigger = "Block";
+		[SerializeField] string UnBlockTrigger = "UnBlock";
 
 		private void Awake() {
 			Anim = GetComponent<Animator>();	
 		}
 
-		private void OnEnable() {
-			blocked = false;
-			Anim?.SetBool(BlockParam, blocked);
-		}
+		public void StartBlock() => Anim?.SetTrigger(BlockTrigger);
+		public void StartUnblock() => Anim?.SetTrigger(UnBlockTrigger);
 
 		public void OnBlockFinish() {
 			BlockFinish?.Invoke();

@@ -1,14 +1,16 @@
 title: InspectingVoid
 tags: 
 colorID: 5
-position: -3318,-3519
+position: -3319,-3521
 ---
-Player: The void
+Player: What lies beyond this barrier?
 Player: Everyday, it inches closer
+Player: Claming us one by one
 Player: Why would the Phoenix rush beyond the barrier?
+<<wait 1>>
 Player: I shouldn't meddle in the decisions of the Divine.
 Player: It's safe here in town.
-Player: It's safe here for now.
+Player: It's safe here ... for now.
 <<Transition WakeUp>>
 ===
 title: DFL
@@ -137,8 +139,10 @@ colorID: 5
 position: -3769,-3510
 ---
 <<if $leader_encourage_sleep>>
-    Player: I guess this is it.
-    <<Transition WakeUp>>
+    -> Sleep
+        Player: I guess this is it.
+        <<Transition WakeUp>>
+    -> There's still more to do
 <<else>>
     Player: I'm not sleepy yet.
 <<endif>>
@@ -262,7 +266,7 @@ position: -4763,-2805
 title: Effigy1
 tags: 
 colorID: 5
-position: -5072,-2805
+position: -5073,-2806
 ---
 -> Leave it 
 -> Touch it
@@ -287,7 +291,7 @@ Player: Foul trinket!
 title: Portal
 tags: 
 colorID: 6
-position: -4880,-3431
+position: -4886,-3435
 ---
 Player: Phoenix, I believe I've found the last of your trinkets.
 Phoenix: Spoiled wastes. Cleanse the aftermath.
@@ -347,12 +351,15 @@ Hand: Join me
     Player: I can either end my own life or have a cup of coffee.
     -> End life
         Hand: Then join your precious Poiura
+        <<Transition ToEnd>>
     -> Have cup of coffee
         Hand: Poiura
         Player: I choose the cup of coffee.
+        <<Transition ToEnd>>
 -> Refuse
     Hand: No, you say.
     Hand: Then join your precious Poiura
+    <<Transition ToEnd>>
 ===
 title: PhoenixLastStand
 tags: 
@@ -393,7 +400,7 @@ position: -3821,-2608
 title: PhoenixChase
 tags: 
 colorID: 6
-position: -4903,-3156
+position: -4908,-3159
 ---
 <<PlayTimeline PhoenixChase>>
 <<set $princess_seen to true>>
@@ -495,4 +502,79 @@ Gaki: She knows where they all are, you know
 Gaki: These little trinkets are nothing to me
 Gaki: False hope for a false people
 Gaki: Cancer cells kill themselves
+===
+title: Thuleanx
+tags: 
+colorID: 8
+position: -4338,-2453
+---
+Thuleanx: Hi this is Thuleanx
+Thuleanx: Do you want to redo the final scene?
+-> Yes
+    <<Equip Player Blunderbuss>>
+    <<Transition WakeUp>>
+-> No
+===
+title: Cathardigan
+tags: 
+colorID: 8
+position: -4001,-2266
+---
+Cathardigan: Hi
+===
+title: Elder
+tags: 
+colorID: 8
+position: -4372,-2167
+---
+<<if visited("Elder")>>
+    Elder: The barrier closes in
+    Elder: We've no choice but to embrace it
+    <<wait 1>>
+    Elder: What a nice day today
+<<else>>
+    Elder: Young Baker! Hello.
+    -> You seem cheerful.
+        Player: Despite the circumstances.
+        Elder: What's not to be cheerful about?
+        Player: ...Everything?
+        Elder: The pesky barrier? This is but a phase.
+        Player: A phase?
+        Elder: One eddy in a long stream.
+        Player: It threatens to consume us.
+        Player: That doesn't concern you?
+        Elder: It is written about, these times.
+        Elder: By people far more dead than I.
+        Elder: If you can believe it.
+        Player: What did they write about it?
+        Elder: Did you never go to our archives? Tsk tsk.
+        Elder: What would Poiura have said?
+        Player: What did they say?
+        Elder: A turtle upturned, legs flipping in the air.
+        Elder: Try as it might, it stays stuck on its shell.
+        Elder: Get it?
+        -> Go on
+            Player: Please.    
+            Elder: Folk try to erect a church...
+            Elder: But on the last brick, it all topples down, again.
+            Elder: None of the pieces are broken though.
+            Elder: So they try, and try, and try, again.
+            Elder: Get it?
+            -> I don't 
+                Elder: Ah! I see your problem.
+                Elder: The turtle and the Folk.
+                Elder: When asked why?
+                Elder: Why do you keep doing this?
+                Elder: Do you know what they say?
+                -> Yes
+                    Player: Of course!
+                -> No
+                    Elder: Liar.
+                    Player: You're right.
+                Elder: They say,
+                Elder: Out of spite. I live in spite of the absurdity.
+                Elder: That is our town. That is us.
+                Elder: It's how we've always been.
+                Elder: And always will be.
+<<endif>>
 ===

@@ -2,7 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 namespace Thuleanx.Utility {
 	public class General {
@@ -61,6 +63,8 @@ namespace Thuleanx.Utility {
 			action?.Invoke();
 		}
 
+
+#if UNITY_EDITOR
 		public static T[] GetAllInstances<T>() where T : ScriptableObject {
 			string[] guids = AssetDatabase.FindAssets("t:" + typeof(T).Name);  //FindAssets uses tags check documentation for more info
 			T[] a = new T[guids.Length];
@@ -73,5 +77,6 @@ namespace Thuleanx.Utility {
 			return a;
 
 		}
+#endif
 	}
 }

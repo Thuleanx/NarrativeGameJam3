@@ -68,4 +68,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/All/Scenes/Official/Void/Void/Portal.unity
     guid: ca823b96f5a264f989901bb77a06321a
+  - enabled: 1
+    path: Assets/All/Scenes/Official/End.unity
+    guid: e2851ab815b024a72ae1be95514fdca9
   m_configObjects: {}

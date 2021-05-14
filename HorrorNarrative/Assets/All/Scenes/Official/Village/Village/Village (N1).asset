@@ -51,5 +51,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: N1_Village_GardenPath
   target_scene: {fileID: 11400000, guid: f57f1a6067d3b43b385868d5b7d4d897, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: -6318441892189540671, guid: f57f1a6067d3b43b385868d5b7d4d897, type: 2}
   traversal_sound: event:/SFX/Misc/Walk Away

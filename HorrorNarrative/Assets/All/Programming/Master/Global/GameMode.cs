@@ -12,7 +12,10 @@ namespace Thuleanx.Master.Global {
 		public virtual IEnumerator OnEnd() { yield return null; }
 
 		public virtual void Pause() => Time.timeScale = 0f;
-		public virtual void Resume() => Time.timeScale = 1f;
+		public virtual void Resume() {
+			Time.timeScale = 1f;
+			Debug.Log("RESUMED");
+		}
 
 		public virtual IEnumerator TransitionThroughPassage(Passage passage) { yield return null; }
 	}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{6085543a-ab90-4b68-b34d-2f505e450acb}">
+		<property name="assetPath">
+			<value>Grunt.flac</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.57962499999999995</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c8b7ff1-a28a-4fc7-a46b-51ab3d291ed1}</destination>
+		</relationship>
+	</object>
+</objects>

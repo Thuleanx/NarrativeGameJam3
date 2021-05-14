@@ -19,6 +19,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4954986833374113214, guid: 9c4cb244587684760a8184f18a4f4aa5, type: 3}
+    - target: {fileID: 8027088549656656686, guid: 46acce8e9e3d44019b4aff658886ce72, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8027088549656656686, guid: 46acce8e9e3d44019b4aff658886ce72, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.267
+      objectReference: {fileID: 0}
     - target: {fileID: 8027088550150688592, guid: 46acce8e9e3d44019b4aff658886ce72, type: 3}
       propertyPath: m_Name
       value: Clubman

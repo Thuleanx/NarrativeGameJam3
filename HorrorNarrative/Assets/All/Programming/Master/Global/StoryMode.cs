@@ -36,7 +36,16 @@ namespace Thuleanx.Master.Global {
 				yield break;
 			Pause();
 			_state = GameModeState.Starting;
+			_activeSceneHandler = App.Instance._GameModeManager.InitialScene;
+			
+			App.Instance._AudioManager.SetMainTrack(
+				App.Instance._AudioManager.GetTrack(_activeSceneHandler.Ambiance));
+			App.Instance._AudioManager.MainTrack.Play();
+
+			yield return App.Instance._TransitionManager.BackdropRelease();
+
 			_state = GameModeState.Started;
+
 			Resume();
 		}
 		public override IEnumerator OnEnd() {
@@ -65,6 +74,8 @@ namespace Thuleanx.Master.Global {
 
 		public override IEnumerator TransitionThroughPassage(Passage passage) {
 			Pause();
+			if (passage.traversal_sound != null && passage.traversal_sound.Length>0)
+				App.Instance._AudioManager.PlayOneShot(passage.traversal_sound);
 			// backdrop
 			yield return App.Instance._TransitionManager.BackdropBlock();
 
@@ -73,8 +84,6 @@ namespace Thuleanx.Master.Global {
 			// PlayerState state = player.Machine.Value.Current as PlayerState;
 
 
-			if (passage.traversal_sound != null && passage.traversal_sound.Length>0)
-				App.Instance._AudioManager.PlayOneShot(passage.traversal_sound);
 			if (passage.target_scene.SceneReference.SceneName != SceneManager.GetActiveScene().name) {
 				// tells all bubble pools to collect
 				foreach (var pool in App.Instance.activePools) 

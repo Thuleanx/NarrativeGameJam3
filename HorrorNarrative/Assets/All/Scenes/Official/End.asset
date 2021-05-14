@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4337085218692903505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: End_LoopBackToPortal
+  m_EditorClassIdentifier: 
+  passage_name: End_LoopBackToPortal
+  target_scene: {fileID: 11400000, guid: 93eea40155fc0479aae5aba8f56d71ab, type: 2}
+  target_passage: {fileID: -4398151667689175010, guid: 93eea40155fc0479aae5aba8f56d71ab, type: 2}
+  traversal_sound: event:/SFX/Misc/Walk Away
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fe36db065ffe4bd09c02d20a2df7ced, type: 3}
+  m_Name: End
+  m_EditorClassIdentifier: 
+  SceneReference:
+    Scene: {fileID: 102900000, guid: e2851ab815b024a72ae1be95514fdca9, type: 3}
+    SceneName: End
+    sceneIndex: 21
+    sceneEnabled: 1
+  Passages:
+  - {fileID: 8626405663527459196}
+  - {fileID: -4337085218692903505}
+  Ambiance: event:/Ambience/Town
+--- !u!114 &8626405663527459196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74e8f9a264f374a85a6a2d3aa8ae861f, type: 3}
+  m_Name: End_Entrance
+  m_EditorClassIdentifier: 
+  passage_name: End_Entrance
+  target_scene: {fileID: 0}
+  target_passage: {fileID: 0}
+  traversal_sound: 

@@ -14,7 +14,8 @@ namespace Thuleanx.AI {
 			if (Player == null) Player = GameObject.FindWithTag("Player");
 			if (Player != null) {
 				rectTransform.position = (Vector2) Utility.General.ToScreenSpace(Player.transform.position) 
-					+ displacement;
+					+ displacement * 
+					(Utility.General.ToScreenSpace(Vector2.right + Vector2.up) - Utility.General.ToScreenSpace(Vector2.zero));
 			}
 		}
 	}

@@ -46,7 +46,7 @@ namespace Thuleanx.Controls {
 		public Timer MouseClick;
 
 		void Update() {
-			if (!Interacting && (App.LocalInstance._ContextManager.Player == null || !App.LocalInstance._ContextManager.Player.IsDead())) {
+			if (App.LocalInstance != null && !Interacting && (App.LocalInstance._ContextManager.Player == null || !App.LocalInstance._ContextManager.Player.IsDead())) {
 				Interactible NxtTarget = Interactible.GetInteractible(MouseWorldPos, InteractibleMask);
 				if (NxtTarget != Target) {
 					Target?.SelectedStop();

@@ -22,7 +22,7 @@ namespace Thuleanx.Master.Global {
 				yield break;
 			_backdropState = BackdropState._Blocking;
 			BackdropComplete = false;
-			Fader.Blocked = true;
+			Fader.StartBlock();
 			while (!BackdropComplete) yield return null;
 			_backdropState = BackdropState._Blocked;
 		}
@@ -31,7 +31,7 @@ namespace Thuleanx.Master.Global {
 				yield break;
 			_backdropState = BackdropState._Releasing;
 			BackdropComplete = false;
-			Fader.Blocked = false;
+			Fader.StartUnblock();
 			while (!BackdropComplete) yield return null;
 			_backdropState = BackdropState._Released;
 		}

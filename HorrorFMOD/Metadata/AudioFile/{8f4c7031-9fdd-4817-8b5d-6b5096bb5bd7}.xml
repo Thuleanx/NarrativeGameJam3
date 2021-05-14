@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{8f4c7031-9fdd-4817-8b5d-6b5096bb5bd7}">
+		<property name="assetPath">
+			<value>impactcrunch02.mp3.flac</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.0459637188208617</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c8b7ff1-a28a-4fc7-a46b-51ab3d291ed1}</destination>
+		</relationship>
+	</object>
+</objects>

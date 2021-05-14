@@ -12,6 +12,7 @@ namespace Thuleanx.Master.Global {
 
 		StoryMode _storyMode = new StoryMode();
 		MainMenuMode _mainMenuMode = new MainMenuMode();
+		public SceneHandler InitialScene;
 
 		private void Awake() {
 			Time.timeScale = 0;
@@ -34,20 +35,20 @@ namespace Thuleanx.Master.Global {
 			#endif
 		}
 
+		public void Boot() {
+			SceneManager.LoadScene(InitialScene.SceneReference.SceneName);
+			App.Instance.StartCoroutine(SwitchMode(_storyMode));
+		}
+
 		private IEnumerator SwitchMode(GameMode mode) {
 			yield return new WaitUntil(() => !_isSwitching);
 			if (_current_mode == mode) yield break;
 
 			_isSwitching = true;
-			// Switching code here
 
-			// backdrop
-
-			if (_current_mode != null) yield return _current_mode.OnStart();
+			if (_current_mode != null) yield return _current_mode.OnEnd();
 			_current_mode = mode;
 			yield return _current_mode.OnStart();
-
-			// backdrop release
 
 			_isSwitching = false;
 		}
