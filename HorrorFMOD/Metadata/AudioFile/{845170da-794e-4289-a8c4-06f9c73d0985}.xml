@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{845170da-794e-4289-a8c4-06f9c73d0985}">
+		<property name="assetPath">
+			<value>Ambient/door creak.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1.1767083333333332</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c8b7ff1-a28a-4fc7-a46b-51ab3d291ed1}</destination>
+		</relationship>
+	</object>
+</objects>

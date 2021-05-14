@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: Princess Last Stand_Exit
   target_scene: {fileID: 11400000, guid: 7a4abba3398204e62847052bdcdb3429, type: 2}
   target_passage: {fileID: -8955112124038646260, guid: 7a4abba3398204e62847052bdcdb3429, type: 2}
+  traversal_sound: event:/SFX/Misc/Walk Away
 --- !u!114 &-2832603118325117790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +31,7 @@ MonoBehaviour:
   passage_name: Princess Last Stand_Entrance
   target_scene: {fileID: 0}
   target_passage: {fileID: 0}
+  traversal_sound: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,4 +52,4 @@ MonoBehaviour:
   Passages:
   - {fileID: -2832603118325117790}
   - {fileID: -3204691586872869210}
-  Ambiance: event:/Ambience/Town
+  Ambiance: event:/Ambience/Indoor Beyond

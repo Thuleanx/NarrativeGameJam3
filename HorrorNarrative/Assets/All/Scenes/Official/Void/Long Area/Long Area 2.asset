@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: Long Area 2_Entrance
   target_scene: {fileID: 0}
   target_passage: {fileID: 0}
+  traversal_sound: 
 --- !u!114 &-8045018772000018247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +31,7 @@ MonoBehaviour:
   passage_name: Long Area 2_Exit
   target_scene: {fileID: 11400000, guid: ea8b99a24b65648a88c40d2a1fce0988, type: 2}
   target_passage: {fileID: 0}
+  traversal_sound: event:/SFX/Misc/Walk Away
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

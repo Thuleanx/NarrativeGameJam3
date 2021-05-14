@@ -54,10 +54,14 @@ namespace Thuleanx.Master.Global {
 			PlayerLocalContext ctx = GameObject.FindObjectOfType<Player>().LocalContext as PlayerLocalContext;
 			// PlayerState state = player.Machine.Value.Current as PlayerState;
 
+
+			if (passage.traversal_sound != null && passage.traversal_sound.Length>0)
+				App.Instance._AudioManager.PlayOneShot(passage.traversal_sound);
 			if (passage.target_scene.SceneReference.SceneName != SceneManager.GetActiveScene().name) {
 				// tells all bubble pools to collect
 				foreach (var pool in App.Instance.activePools) 
 					pool.CollectsAll(SceneManager.GetActiveScene());
+
 
 				// load next level
 				yield return SceneManager.LoadSceneAsync(passage.target_scene.SceneReference.SceneName, LoadSceneMode.Single);

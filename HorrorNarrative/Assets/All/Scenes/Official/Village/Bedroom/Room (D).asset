@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: D_Room_Sleep
   target_scene: {fileID: 11400000, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
   target_passage: {fileID: 5868479686387129466, guid: 58ba8056f171f465580b5fe4c8c1dde4, type: 2}
+  traversal_sound: 
 --- !u!114 &-3460566236480383730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +31,7 @@ MonoBehaviour:
   passage_name: D_Room_WakingUp
   target_scene: {fileID: 0}
   target_passage: {fileID: 0}
+  traversal_sound: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,7 +53,7 @@ MonoBehaviour:
   - {fileID: 3394559972601393501}
   - {fileID: -3460566236480383730}
   - {fileID: -3641638447053951208}
-  Ambiance: event:/Ambience/Town
+  Ambiance: event:/Ambience/Indoor
 --- !u!114 &3394559972601393501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,3 +69,4 @@ MonoBehaviour:
   passage_name: D_Room_Bedroom Door
   target_scene: {fileID: 11400000, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
   target_passage: {fileID: 3852644545188496014, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
+  traversal_sound: event:/SFX/Misc/Door

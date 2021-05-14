@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{b95da676-2e86-4e56-a576-2d4bc700b8d7}">
 		<property name="name">
-			<value>Preta Growl</value>
+			<value>Dreg Growl</value>
 		</property>
 		<property name="outputFormat">
 			<value>2</value>
 		</property>
 		<relationship name="folder">
-			<destination>{8043ba4d-c208-4696-8468-3f612b2dcc23}</destination>
+			<destination>{48c29f94-4221-48f1-b537-5a8a1faad521}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{4dbbd62e-cc35-4a22-a3e7-10323de3ed3e}</destination>

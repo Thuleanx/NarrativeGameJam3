@@ -36,6 +36,7 @@ MonoBehaviour:
   passage_name: Princess Hideout_Hideout Door
   target_scene: {fileID: 11400000, guid: 3306e8a1813ea44689f7109eb9063819, type: 2}
   target_passage: {fileID: -2330873710646180387, guid: 3306e8a1813ea44689f7109eb9063819, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &7734207238143310796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,3 +52,4 @@ MonoBehaviour:
   passage_name: Princess Hideout_Hideout Exit
   target_scene: {fileID: 11400000, guid: 8b28b15cf715e4c878ee0ff9b342179d, type: 2}
   target_passage: {fileID: -8865253370055467572, guid: 8b28b15cf715e4c878ee0ff9b342179d, type: 2}
+  traversal_sound: event:/SFX/Misc/Door

@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: D_Village_Main Door
   target_scene: {fileID: 11400000, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
   target_passage: {fileID: 7061413637661805913, guid: 80e0fc80403e741f5b76756e99bffc8f, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

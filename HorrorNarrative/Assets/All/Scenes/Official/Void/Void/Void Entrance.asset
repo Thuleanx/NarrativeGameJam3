@@ -36,6 +36,7 @@ MonoBehaviour:
   passage_name: Void Entrance_Entrance
   target_scene: {fileID: 0}
   target_passage: {fileID: 0}
+  traversal_sound: event:/SFX/Misc/Walk Away
 --- !u!114 &2706999436326076797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,3 +52,4 @@ MonoBehaviour:
   passage_name: Void Entrance_Exit
   target_scene: {fileID: 11400000, guid: 3306e8a1813ea44689f7109eb9063819, type: 2}
   target_passage: {fileID: 4403561733238897053, guid: 3306e8a1813ea44689f7109eb9063819, type: 2}
+  traversal_sound: event:/SFX/Misc/Walk Away

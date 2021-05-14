@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: N1_Room_Bedroom Door
   target_scene: {fileID: 11400000, guid: 62c8fd3bd22a94b84baf5d6d66e587dd, type: 2}
   target_passage: {fileID: -5052934120131981060, guid: 62c8fd3bd22a94b84baf5d6d66e587dd, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,4 +35,4 @@ MonoBehaviour:
     sceneEnabled: 1
   Passages:
   - {fileID: -1864698860194197092}
-  Ambiance: event:/Ambience/Town
+  Ambiance: event:/Ambience/Indoor

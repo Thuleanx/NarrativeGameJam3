@@ -20,7 +20,7 @@ MonoBehaviour:
   Passages:
   - {fileID: 3852644545188496014}
   - {fileID: 7061413637661805913}
-  Ambiance: event:/Ambience/Town
+  Ambiance: event:/Ambience/Indoor
 --- !u!114 &3852644545188496014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,6 +36,7 @@ MonoBehaviour:
   passage_name: D_Hallway_Bedroom Door
   target_scene: {fileID: 11400000, guid: c998559dc8ab148c3944754739f8297a, type: 2}
   target_passage: {fileID: 3394559972601393501, guid: c998559dc8ab148c3944754739f8297a, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &7061413637661805913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,4 +51,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: D_Hallway_Main Door
   target_scene: {fileID: 11400000, guid: 47a360f44b83f4a71b4de3cd1b9d9a9a, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: -5257853680795505626, guid: 47a360f44b83f4a71b4de3cd1b9d9a9a, type: 2}
+  traversal_sound: event:/SFX/Misc/Door

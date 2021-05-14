@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: N2_Village_Main Door
   target_scene: {fileID: 11400000, guid: dbb19678a812943c3af517c3eaf8f462, type: 2}
   target_passage: {fileID: -3401185372971467330, guid: dbb19678a812943c3af517c3eaf8f462, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,3 +52,4 @@ MonoBehaviour:
   passage_name: N2_Village_Void Entrance
   target_scene: {fileID: 11400000, guid: 445f03aa2ebdc4281930420203d959f7, type: 2}
   target_passage: {fileID: 0}
+  traversal_sound: event:/SFX/Misc/Walk Away

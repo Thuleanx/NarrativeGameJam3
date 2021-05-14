@@ -8,6 +8,7 @@ public class PassageEditor : Editor {
 
 	public override void OnInspectorGUI() {
 		serializedObject.Update();
+		DrawDefaultInspector();
 
 		Passage passage = (Passage) target;
 

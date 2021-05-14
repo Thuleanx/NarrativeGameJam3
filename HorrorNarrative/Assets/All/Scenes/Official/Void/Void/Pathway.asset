@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   passage_name: Pathway_Hideout Door
   target_scene: {fileID: 11400000, guid: c278855f4a092411faba74ca160193d5, type: 2}
-  target_passage: {fileID: 0}
+  target_passage: {fileID: 65990941648492707, guid: c278855f4a092411faba74ca160193d5, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,6 +53,7 @@ MonoBehaviour:
   passage_name: Pathway_Exit
   target_scene: {fileID: 11400000}
   target_passage: {fileID: 4403561733238897053}
+  traversal_sound: event:/SFX/Misc/Walk Away
 --- !u!114 &4403561733238897053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,3 +69,4 @@ MonoBehaviour:
   passage_name: Pathway_Entrance
   target_scene: {fileID: 11400000}
   target_passage: {fileID: 703838142522050825}
+  traversal_sound: 

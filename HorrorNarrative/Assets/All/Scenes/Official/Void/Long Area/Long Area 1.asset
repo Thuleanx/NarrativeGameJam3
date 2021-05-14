@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: Long Area 1_Hideout Door
   target_scene: {fileID: 11400000, guid: c278855f4a092411faba74ca160193d5, type: 2}
   target_passage: {fileID: 7734207238143310796, guid: c278855f4a092411faba74ca160193d5, type: 2}
+  traversal_sound: event:/SFX/Misc/Door
 --- !u!114 &-4859178737531820935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,6 +31,7 @@ MonoBehaviour:
   passage_name: Long Area 1_Exit
   target_scene: {fileID: 11400000, guid: 8c2b3b0a5a74c44b7a8d335ffc32873c, type: 2}
   target_passage: {fileID: -2832603118325117790, guid: 8c2b3b0a5a74c44b7a8d335ffc32873c, type: 2}
+  traversal_sound: event:/SFX/Misc/Walk Away
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +70,7 @@ MonoBehaviour:
   passage_name: Long Area 1_Loop
   target_scene: {fileID: 11400000}
   target_passage: {fileID: 4493171404049787206}
+  traversal_sound: event:/SFX/Misc/Walk Away
 --- !u!114 &4493171404049787206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,3 +86,4 @@ MonoBehaviour:
   passage_name: Long Area 1_Entrance
   target_scene: {fileID: 0}
   target_passage: {fileID: 0}
+  traversal_sound: 
