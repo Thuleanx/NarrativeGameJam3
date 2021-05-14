@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{91a4648f-e51f-4466-95a6-c49c79c54efa}">
+		<property name="assetPath">
+			<value>SFX/Monster/monster-spawn.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>5.7487708333333334</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c8b7ff1-a28a-4fc7-a46b-51ab3d291ed1}</destination>
+		</relationship>
+	</object>
+</objects>

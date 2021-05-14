@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367506623eae74df98452ed99052e9e6, type: 3}
   m_Name: FSM_State_PlayerShootBlank
   m_EditorClassIdentifier: 
-  StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
   AnimationFinish: 0
   CanFlip: 0
   AnimationState:
     enabled: 1
     value: ShootBlank
+  BlankShotSound: event:/SFX/Player/Blank

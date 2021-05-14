@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using Yarn.Unity;
 
 namespace FMOD_Thuleanx {
 	public class AudioManager : MonoBehaviour
@@ -13,6 +14,9 @@ namespace FMOD_Thuleanx {
 		FMOD.Studio.Bus SFX;
 		FMOD.Studio.Bus Master;
 		bool prepped = false;
+
+		[SerializeField, FMODUnity.EventRef] string pickupRef;
+		[SerializeField, FMODUnity.EventRef] string collectEffigyRef;
 
 		void Prep() {
 			Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
@@ -82,8 +86,23 @@ namespace FMOD_Thuleanx {
 			if (!prepped) Prep();
 			Master.setVolume(amt);
 		}
+
+		[YarnCommand("PlayOneShot")]
+		public void PlayOneShotYarn(string sound) {
+			if (sound == "Pickup") PlayOneShot(pickupRef);
+			if (sound == "Effigy") PlayOneShot(collectEffigyRef);
+		}
+
 		public void PlayOneShot(string soundRef) {
 			FMODUnity.RuntimeManager.PlayOneShot(soundRef);
+		}
+
+		public void PlayOneShot3D(string soundRef, Vector3 position) {
+			FMODUnity.RuntimeManager.PlayOneShot(soundRef, position);
+		}
+
+		public void PlayOneShotAttached(string soundRef,  Transform attache) {
+			FMODUnity.RuntimeManager.PlayOneShotAttached(soundRef, attache.gameObject);
 		}
 
 		public FMOD.Studio.EventInstance GetInstance(string soundRef) {

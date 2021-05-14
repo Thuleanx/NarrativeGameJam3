@@ -333,6 +333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 219990568}
   - component: {fileID: 219990569}
+  - component: {fileID: 219990570}
   m_Layer: 0
   m_Name: CM_Cinematic NPC Camera
   m_TagString: Untagged
@@ -390,6 +391,23 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1703153392}
+--- !u!114 &219990570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219990567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 155122857788480208}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!213 &263874727
 Sprite:
   m_ObjectHideFlags: 0
@@ -962,6 +980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 922134016}
   - component: {fileID: 922134017}
+  - component: {fileID: 922134018}
   m_Layer: 0
   m_Name: CM_PlayerCamera
   m_TagString: Untagged
@@ -1019,6 +1038,23 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 861366489}
+--- !u!114 &922134018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922134015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 155122857788480208}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!1 &1160027135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,6 +2594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9837ed6d192fa4eae8f208069da734ee, type: 3}
+--- !u!60 &155122857788480208 stripped
+PolygonCollider2D:
+  m_CorrespondingSourceObject: {fileID: 7080047579133537648, guid: 9837ed6d192fa4eae8f208069da734ee, type: 3}
+  m_PrefabInstance: {fileID: 155122857788480207}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8559991605215792975
 PrefabInstance:
   m_ObjectHideFlags: 0

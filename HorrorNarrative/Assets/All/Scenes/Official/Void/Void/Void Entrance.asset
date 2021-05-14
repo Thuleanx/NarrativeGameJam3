@@ -20,6 +20,7 @@ MonoBehaviour:
   Passages:
   - {fileID: 849833696060374028}
   - {fileID: 2706999436326076797}
+  Ambiance: event:/Ambience/Beyond
 --- !u!114 &849833696060374028
 MonoBehaviour:
   m_ObjectHideFlags: 0

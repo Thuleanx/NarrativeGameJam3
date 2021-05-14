@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cec9c7d2a6539426bbc39a11af790572, type: 3}
   m_Name: FSM_State_PlayerDead
   m_EditorClassIdentifier: 
-  StateMachine: {fileID: 0}
   AnimationFinish: 0
   CanFlip: 0
   AnimationState:
     enabled: 1
     value: Death
+  AccelerationLambda: 4
+  DeadSound: event:/SFX/Dreg/Dreg Dead

@@ -12,6 +12,11 @@ namespace Thuleanx.AI {
 		public float MinArc = 0f;
 		public float AimDuration = 1f;
 		float aimTimeStart;
+		[SerializeField, FMODUnity.EventRef] string AimingSound;
+		[SerializeField, FMODUnity.EventRef] string AimingSteadySound;
+		FMOD.Studio.EventInstance AimingInstance;
+		FMOD.Studio.EventInstance AimingSteadyInstance;
+		bool steady = false;
 
 		public override State ShouldTransitionTo() {
 			if (App.Instance._InputManager.Attack) {
@@ -40,11 +45,21 @@ namespace Thuleanx.AI {
 			base.OnEnter();
 			PlayerLocalContext.Velocity = Vector2.zero;
 			aimTimeStart = Time.time;
+			AimingInstance = App.Instance._AudioManager.GetInstance(AimingSound);
+			AimingSteadyInstance = App.Instance._AudioManager.GetInstance(AimingSteadySound);
+			AimingInstance.start();
+			steady = false;
 		}
 
 		public override void OnUpdate() {
 			base.OnUpdate();
 			PlayerLocalContext.aimArc = AimDuration == 0 ? MinArc :  Mathf.Lerp(MaxArc, MinArc, Mathf.Clamp01((Time.time - aimTimeStart)/AimDuration));
+
+			if (AimDuration < Time.time - aimTimeStart && !steady) {
+				AimingInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+				AimingSteadyInstance.start();
+				steady = true;
+			}
 
 			if (PlayerAgent.CanControl) {
 				Vector2 idealMovement = App.Instance._InputManager.Movement * PlayerContext.AimingMoveSpeed;
@@ -53,6 +68,8 @@ namespace Thuleanx.AI {
 		}
 
 		public override void OnExit() {
+			AimingInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+			AimingSteadyInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 			base.OnExit();
 		}
 
@@ -64,6 +81,8 @@ namespace Thuleanx.AI {
 			((PlayerAiming) state).MaxArc = MaxArc;
 			((PlayerAiming) state).MinArc = MinArc;
 			((PlayerAiming) state).AimDuration = AimDuration;
+			((PlayerAiming) state).AimingSound = AimingSound;
+			((PlayerAiming) state).AimingSteadySound = AimingSteadySound;
 			return base.Clone(state);
 		}
 	}

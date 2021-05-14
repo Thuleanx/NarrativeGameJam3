@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{a028a84a-d56c-4bfd-b8de-4d4626e6e667}">
+		<property name="assetPath">
+			<value>Ambient/Narrative Game Jam Ambience - Town_1.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>103.59466666666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{7c8b7ff1-a28a-4fc7-a46b-51ab3d291ed1}</destination>
+		</relationship>
+	</object>
+</objects>

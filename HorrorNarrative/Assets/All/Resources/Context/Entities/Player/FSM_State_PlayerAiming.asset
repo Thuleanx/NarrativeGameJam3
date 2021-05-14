@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 864481af9b7c24feb8ed65cfebefc4ba, type: 3}
   m_Name: FSM_State_PlayerAiming
   m_EditorClassIdentifier: 
-  StateMachine: {fileID: 11400000, guid: b03a0a87d296e4e2ea45bebab5d1aeaf, type: 2}
   AnimationFinish: 0
   CanFlip: 0
   AnimationState:
@@ -22,3 +21,5 @@ MonoBehaviour:
   MaxArc: 60
   MinArc: 20
   AimDuration: 1
+  AimingSound: event:/SFX/Player/Aiming
+  AimingSteadySound: event:/SFX/Player/Aiming Steady

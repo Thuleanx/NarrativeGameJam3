@@ -210,6 +210,10 @@ GameObject:
   - component: {fileID: 6460999949328675444}
   - component: {fileID: 6460999949328675445}
   - component: {fileID: 6460999949328675450}
+  - component: {fileID: -7754202917203094636}
+  - component: {fileID: 3819627967283348517}
+  - component: {fileID: -3012165771056079428}
+  - component: {fileID: 2166408679486542223}
   m_Layer: 26
   m_Name: Dreg
   m_TagString: Untagged
@@ -355,6 +359,33 @@ MonoBehaviour:
       m_Calls: []
   PhysicsBody: {fileID: 0}
   CorpsePool: {fileID: 11400000, guid: e24feebb422d84b5f9841ec99e836490, type: 2}
+  OnSpawn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -7754202917203094636}
+        m_TargetAssemblyTypeName: FMOD_Thuleanx.AudioEventEmiter, Assembly-CSharp
+        m_MethodName: PlayOneShotAttached
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3819627967283348517}
+        m_TargetAssemblyTypeName: Thuleanx.Audio.SoundBoard, Assembly-CSharp
+        m_MethodName: PlaySound
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6460999949328675450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,6 +407,56 @@ MonoBehaviour:
     enabled: 1
     value:
     - {fileID: 3185530647392453457}
+--- !u!114 &-7754202917203094636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460999949328675447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a89f7ddbac504ac39690b98cd7da34a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: event:/SFX/Preta/Preta Growl
+--- !u!114 &3819627967283348517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460999949328675447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cb5810b626904022ac72a9f06507a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event:
+  - event:/SFX/Dreg/See player
+--- !u!114 &-3012165771056079428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460999949328675447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632475c7c4fa34a759067c7c9ca5386b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!210 &2166408679486542223
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6460999949328675447}
+  m_Enabled: 1
+  m_SortingLayerID: 239374449
+  m_SortingLayer: 5
+  m_SortingOrder: 0
 --- !u!1 &6460999949727418409
 GameObject:
   m_ObjectHideFlags: 0

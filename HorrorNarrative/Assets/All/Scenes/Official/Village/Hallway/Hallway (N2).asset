@@ -50,3 +50,4 @@ MonoBehaviour:
   Passages:
   - {fileID: -6558455926585174993}
   - {fileID: -3401185372971467330}
+  Ambiance: event:/Ambience/Town

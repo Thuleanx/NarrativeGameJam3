@@ -17,6 +17,9 @@ namespace Thuleanx.Controls {
 		Interactible Target;
 		bool Interacting;
 
+		[FMODUnity.EventRef]
+		public string InteractSound;
+
 		public bool Active;
 
 		[HideInInspector]
@@ -57,6 +60,7 @@ namespace Thuleanx.Controls {
 		public void StartInteracting(Interactible target = null) {
 			Target = target;
 			Interacting = true;
+			App.Instance._AudioManager.PlayOneShot(InteractSound);
 		}
 
 		// Should only be called by Interactible

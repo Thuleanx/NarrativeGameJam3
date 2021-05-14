@@ -20,6 +20,7 @@ MonoBehaviour:
   Passages:
   - {fileID: 65990941648492707}
   - {fileID: 7734207238143310796}
+  Ambiance: event:/Ambience/Town
 --- !u!114 &65990941648492707
 MonoBehaviour:
   m_ObjectHideFlags: 0

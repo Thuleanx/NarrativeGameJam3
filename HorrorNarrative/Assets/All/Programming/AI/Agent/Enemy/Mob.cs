@@ -1,10 +1,16 @@
 using UnityEngine;
+using UnityEngine.Events;
 using Thuleanx.Optimization;
 using Thuleanx.Mechanics.Corpse;
 
 namespace Thuleanx.AI {
 	public class Mob : Agent {
 		public BubblePool CorpsePool;
+		public UnityEvent OnSpawn;
+
+		void OnEnable() {
+			OnSpawn?.Invoke();
+		}
 
 		public override void OnDeath() {
 			if (CorpsePool != null) {

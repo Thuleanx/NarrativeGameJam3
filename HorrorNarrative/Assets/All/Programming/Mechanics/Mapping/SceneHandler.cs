@@ -9,5 +9,6 @@ namespace Thuleanx.Mechanics.Mapping {
 		public SceneReference SceneReference;
 		[HideInInspector]
 		public List<Passage> Passages = new List<Passage>();
+		[FMODUnity.EventRef] public string Ambiance;
 	}
 }
