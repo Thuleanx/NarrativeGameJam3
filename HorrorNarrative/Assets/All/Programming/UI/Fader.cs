@@ -18,8 +18,14 @@ namespace Thuleanx.UI {
 			Anim = GetComponent<Animator>();	
 		}
 
-		public void StartBlock() => Anim?.SetTrigger(BlockTrigger);
-		public void StartUnblock() => Anim?.SetTrigger(UnBlockTrigger);
+		public IEnumerator StartBlock() {
+			while (Anim == null) yield return null;
+			Anim?.SetTrigger(BlockTrigger);
+		}
+		public IEnumerator StartUnblock() {
+			while (Anim == null) yield return null;
+			Anim?.SetTrigger(UnBlockTrigger);
+		}
 
 		public void OnBlockFinish() {
 			BlockFinish?.Invoke();

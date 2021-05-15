@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Reload Flip
   guid: 40f9cd79be12c94d86003656bcdf6e83
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -56,7 +56,7 @@ MonoBehaviour:
   Path: event:/SFX/Dreg/Dreg Fall
   guid: 0be21b0f24564547baf61ed10c363152
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -79,7 +79,7 @@ MonoBehaviour:
   Path: event:/Ambience/Indoor
   guid: d5c06570df97bb459169a8f548d2ec94
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -155,11 +155,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../HorrorFMOD/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637566052920000000
+  lastModified: 637566214690000000
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2150
+    Value: 2190
   Exists: 1
 --- !u!114 &-3872987262153928259
 MonoBehaviour:
@@ -176,7 +176,7 @@ MonoBehaviour:
   Path: event:/Ambience/Indoor Beyond
   guid: c34e2ba7deaa8949adf232b24ac3d392
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Pickup
   guid: fe699ea422673644aa189cdfd566af9e
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -240,7 +240,7 @@ MonoBehaviour:
   Path: event:/SFX/Dreg/See player
   guid: 3adee65ecc0633488e6d2dfc009b5890
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -263,7 +263,7 @@ MonoBehaviour:
   Path: event:/SFX/Misc/Walk Away
   guid: a74d99c291a29e43848369ffaa3ca5bc
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -306,7 +306,7 @@ MonoBehaviour:
   lastModified: 637566052920000000
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1043877862965352875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +322,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Shot
   guid: 8e812b1d58f59d46b3f9f51401a85644
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -363,7 +363,7 @@ MonoBehaviour:
   Path: event:/SFX/Misc/Door
   guid: e913ad7fce49af4a8f596114b33cdd0e
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -386,6 +386,24 @@ MonoBehaviour:
   Path: ../HorrorFMOD/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637565370260000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-504040911340828264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637566106430000000
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -422,7 +440,7 @@ MonoBehaviour:
   Path: event:/SFX/Dreg/Dreg Growl
   guid: 76a65db9862e564ea5762d4bc700b8d7
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -445,7 +463,7 @@ MonoBehaviour:
   Path: event:/Ambience/Beyond
   guid: 31093e77383d9f40ab98ad0b8438cb8e
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -467,7 +485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -5121663474880118731}
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   EditorEvents:
   - {fileID: 5316845193015804495}
   - {fileID: -8360563446274405814}
@@ -497,12 +515,13 @@ MonoBehaviour:
   - {fileID: -787021635643682088}
   - {fileID: 8308694838831403667}
   - {fileID: 6142418845071349179}
+  - {fileID: 610783508601238031}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   StringsBanks:
   - {fileID: -5121663474880118731}
-  stringsBankWriteTime: 637566052920000000
+  stringsBankWriteTime: 637566214690000000
   cacheVersion: 3
 --- !u!114 &142499404412145238
 MonoBehaviour:
@@ -519,7 +538,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Reload Done
   guid: 8f32c5bd52ad4c47b525553aeddbffbb
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -563,6 +582,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &610783508601238031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Misc/Bullet Hit
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Misc/Bullet Hit
+  guid: 77ae01d275c839479a323777963099af
+  Banks:
+  - {fileID: 8256360013874791954}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1846
 --- !u!114 &729658973227220174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,7 +620,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Interact
   guid: 608393bcf55ebb46bd2887a3285707fc
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -619,7 +661,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Walk
   guid: 6e666f8e52fafe44901ed20deb0fb4f0
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -660,7 +702,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Blank
   guid: a714e42e0163414b86bad79df4f0609d
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -719,7 +761,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Death
   guid: b43037b163838e46b08382acff8b9cf4
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -727,6 +769,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1078
+--- !u!114 &3010637982801379638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637566104540000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &3263410859473361740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,7 +838,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Aiming Steady
   guid: fd48ed69b8ef9d43a86560138fae39c8
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -801,7 +861,7 @@ MonoBehaviour:
   Path: event:/Ambience/Town
   guid: f2300202123fba4092c91b4adeedb953
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -842,7 +902,7 @@ MonoBehaviour:
   Path: event:/SFX/Dreg/Dreg Dead
   guid: 9b61c04afd4b804cbbaa3af00532d7bb
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -865,7 +925,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Reload Push
   guid: b548bc62cfce7e46924caad384dc653f
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -888,7 +948,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Aiming
   guid: 3d97ad8c2853ee46883e7dac8770f431
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
@@ -929,7 +989,7 @@ MonoBehaviour:
   Path: event:/SFX/Preta/Hand Appear
   guid: 84305c10a318b74f864a4ed35248b27b
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -952,7 +1012,7 @@ MonoBehaviour:
   Path: event:/SFX/Dreg/Spawn
   guid: 10d0165aa72200438209dea0b7eaba5d
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -993,7 +1053,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Walk Dark
   guid: bc51fe2a20f6864c95ff5a6a139912f5
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1016,7 +1076,7 @@ MonoBehaviour:
   Path: event:/SFX/Preta/Preta Dead
   guid: 22e7170eb047d347a008b58d39dbe114
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1039,7 +1099,7 @@ MonoBehaviour:
   Path: event:/SFX/Player/Walk Wood
   guid: a691080e37efbb428a71c977c7674326
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1047,6 +1107,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 244
+--- !u!114 &8256360013874791954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../HorrorFMOD/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637566214690000000
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &8308694838831403667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1140,7 @@ MonoBehaviour:
   Path: event:/SFX/Preta/Elder God Appear
   guid: 5aa1c8d8580117449bb2173432b6997d
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1103,7 +1181,7 @@ MonoBehaviour:
   Path: event:/SFX/Preta/Preta Growl
   guid: faba3c9f5d393e4dbd268b0348e8063a
   Banks:
-  - {fileID: -1141614593064789475}
+  - {fileID: 8256360013874791954}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0

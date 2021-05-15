@@ -2537,4 +2537,5 @@ MonoBehaviour:
   UnblockStart:
     m_PersistentCalls:
       m_Calls: []
-  BlockParam: Blocked
+  BlockTrigger: Block
+  UnBlockTrigger: Unblock

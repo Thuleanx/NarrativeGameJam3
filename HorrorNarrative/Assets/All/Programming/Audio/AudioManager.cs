@@ -17,6 +17,8 @@ namespace FMOD_Thuleanx {
 
 		[SerializeField, FMODUnity.EventRef] string pickupRef;
 		[SerializeField, FMODUnity.EventRef] string collectEffigyRef;
+		[SerializeField, FMODUnity.EventRef] string handAppearRef;
+		[SerializeField, FMODUnity.EventRef] string elderGodAppearRef;
 
 		void Prep() {
 			Music = FMODUnity.RuntimeManager.GetBus("bus:/Master/Music");
@@ -91,6 +93,8 @@ namespace FMOD_Thuleanx {
 		public void PlayOneShotYarn(string sound) {
 			if (sound == "Pickup") PlayOneShot(pickupRef);
 			if (sound == "Effigy") PlayOneShot(collectEffigyRef);
+			if (sound == "Hand") PlayOneShot(handAppearRef);
+			if (sound == "ElderGod") PlayOneShot(elderGodAppearRef);
 		}
 
 		public void PlayOneShot(string soundRef) {
