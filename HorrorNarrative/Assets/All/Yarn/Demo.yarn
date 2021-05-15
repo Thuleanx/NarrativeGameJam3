@@ -295,7 +295,7 @@ Player: Foul trinket!
 title: Portal
 tags: 
 colorID: 6
-position: -4888,-3439
+position: -4889,-3441
 ---
 Player: Phoenix, I believe I've found the last of your trinkets.
 Phoenix: Spoiled wastes. Cleanse the aftermath.
@@ -353,7 +353,7 @@ Hand: Join me
     Player: You are an earthquake, a black hole, a super nova
     Hand: Come
     <<Equip Player NONE>>
-    <<PlayOneShot GB_AudioManager Hand>>
+    <<PlayOneShot GB_AudioManager Pickup>>
     Hand: No weapon?
     Player: No need
     Hand: Then how will you defeat me?
@@ -364,6 +364,8 @@ Hand: Join me
     -> Have cup of coffee
         Hand: Poiura
         Player: I choose the cup of coffee.
+        <<PlayOneShot GB_AudioManager Pickup>>
+        <<Equip Player Coffee>>
         <<Transition ToEnd>>
 -> Refuse
     Hand: No, you say.
@@ -515,14 +517,31 @@ Gaki: Cancer cells kill themselves
 title: Thuleanx
 tags: 
 colorID: 8
-position: -4338,-2453
+position: -4339,-2455
 ---
-Thuleanx: Hi this is Thuleanx
-Thuleanx: Do you want to redo the final scene?
+<<if visited("Thuleanx")>>
+    Thuleanx: I don't have something witty to say
+    Thuleanx: But if you do, feel free to leave it under the game jam's comments
+    Thuleanx: I'd love to hear suggestions about how to improve
+    Thuleanx: And comments makes me feel like I've done well
+<<else>>
+    Thuleanx: Hi
+    Thuleanx: This is Thuleanx, the programmer
+    Thuleanx: As of now, you've finished all the contents
+    Thuleanx: Congratulations for beating Poiura
+    Thuleanx: I hope you enjoyed your time
+    Thuleanx: I know making the game was a lot of fun for me
+<<endif>>
+Thuleanx: I know some people might be curious about different endings
+Thuleanx: Do you want to redo the final scene in case you missed something?
 -> Yes
     <<Equip Player Blunderbuss>>
     <<Transition WakeUp>>
 -> No
+    Thuleanx: Ah. That's alright.
+    Thuleanx: Well, hope you have a good day.
+    Thuleanx: If you think Poiura was time well spent, check out my other game jam games
+    Thuleanx: It should be at my itch profile. thuleanx.itch.io
 ===
 title: Cathardigan
 tags: 

@@ -28,7 +28,7 @@ namespace Thuleanx.Animation {
 		}
 
 		public Vector2 Wave(float time) {
-			return new Vector2(0f, Mathf.Sin(2 * Mathf.PI * (Offset + time / Period)));
+			return new Vector2(0f, Mathf.Sin(2 * Mathf.PI * (Offset + time / Period)) * Amount);
 		}
 	}
 }

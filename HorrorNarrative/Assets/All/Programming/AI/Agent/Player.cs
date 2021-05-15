@@ -2,6 +2,7 @@ using UnityEngine;
 using Thuleanx.Controls;
 using Thuleanx.AI.Context;
 using Thuleanx.Master.Global;
+using UnityEngine.Events;
 using Yarn.Unity;
 
 namespace Thuleanx.AI {
@@ -9,6 +10,10 @@ namespace Thuleanx.AI {
 		public bool CanControl {get; private set; }
 
 		public static Player Instance;
+		[FMODUnity.EventRef]
+		public string Footstep;
+		[SerializeField]
+		UnityEvent OnShotEvent;
 
 		public override void Awake() {
 			base.Awake();
@@ -55,7 +60,19 @@ namespace Thuleanx.AI {
 				((PlayerLocalContext) LocalContext).Equipment = PlayerEquipment.Blunderbuss;
 			} else if (Equipment == "NONE") {
 				((PlayerLocalContext) LocalContext).Equipment = PlayerEquipment.NONE;
+			} else if (Equipment == "Coffee") {
+				((PlayerLocalContext) LocalContext).Equipment = PlayerEquipment.Coffee;
 			}
+		}
+
+		public void OnFootstep() {
+			if (LocalContext.Velocity.magnitude > .1f) {
+				App.Instance._AudioManager.PlayOneShot(Footstep);
+			}
+		}
+
+		public void OnShot() {
+			OnShotEvent?.Invoke();
 		}
 	}
 }

@@ -41,6 +41,8 @@ namespace Thuleanx.AI {
 			Projectile projectile = bulletObj.GetComponent<Projectile>();
 			projectile.Velocity = Calc.Rotate(PlayerAgent.LocalContext.RightFacing ? Vector2.right : Vector2.left, 
 				Mathf.Deg2Rad * dir) * BulletSpeed;
+			
+			PlayerAgent.OnShot();
 
 		}
 
