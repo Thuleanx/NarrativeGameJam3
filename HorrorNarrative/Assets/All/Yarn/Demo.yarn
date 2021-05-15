@@ -150,18 +150,21 @@ position: -3769,-3510
 title: Beckoning
 tags: 
 colorID: 7
-position: -4427,-3066
+position: -4428,-3068
 ---
 Player: Poiura
 Player: I miss you
+<<PlayOneShot GB_AudioManager Hand>>
 <<PlayTimeline Beckoning>>
 <<wait 2>>
 Hand: Come
 -> Why are you doing this?
     <<PlayTimeline Beckoning>>
+    <<PlayOneShot GB_AudioManager Hand>>
     Hand: Presumptuous malignant
 -> Are you doing this?
     <<PlayTimeline Beckoning>>
+    <<PlayOneShot GB_AudioManager Hand>>
     Hand: It's happening
 Player: The others intend to die before you can kill them
 Hand: Cancer kills themselves
@@ -223,13 +226,14 @@ position: -4135,-2835
 title: PhoenixBefore
 tags: 
 colorID: 0
-position: -3825,-2831
+position: -3827,-2833
 ---
 <<if visited("PhoenixBefore")>>
     Phoenix: ...
 <<else>>
     Phoenix: They worship youth. Fear death.
     Phoenix: I'm not Heavenly.
+    <<CameraShake GB_CinematographyManager .3>>
     Phoenix: Oh! You. Baker.
     -> Our Phoenix! You're alive?
         Player: This place...I cannot believe you are still alive.
@@ -291,7 +295,7 @@ Player: Foul trinket!
 title: Portal
 tags: 
 colorID: 6
-position: -4886,-3435
+position: -4888,-3439
 ---
 Player: Phoenix, I believe I've found the last of your trinkets.
 Phoenix: Spoiled wastes. Cleanse the aftermath.
@@ -333,10 +337,14 @@ Phoenix: False promises.
 Phoenix: I failed my test of faith.
 Phoenix: But I can still save this baker.
 <<set $portal_end_portal to true>>
+<<CameraShake GB_CinematographyManager .1>>
 Phoenix: Oh my god! It worked! The elders!
+<<PlayOneShot GB_AudioManager ElderGod>>
+<<CameraShake GB_CinematographyManager .3>>
 <<set $portal_end_hand to true>>
-<<wait 5>>
-Hand: Malignant! 
+<<wait 3>>
+<<PlayOneShot GB_AudioManager Preta>>
+Hand: Malignant!
 Hand: Join me
 -> Accept
     Player: I don't fear you
@@ -345,6 +353,7 @@ Hand: Join me
     Player: You are an earthquake, a black hole, a super nova
     Hand: Come
     <<Equip Player NONE>>
+    <<PlayOneShot GB_AudioManager Hand>>
     Hand: No weapon?
     Player: No need
     Hand: Then how will you defeat me?

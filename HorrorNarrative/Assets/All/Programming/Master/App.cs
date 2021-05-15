@@ -8,6 +8,7 @@ using Thuleanx.Master.Local;
 using UnityEngine.SceneManagement;	
 using Thuleanx.Dialogue;
 using Thuleanx.Optimization;
+using Thuleanx.Cinematography;
 
 namespace Thuleanx {
 	public class App : MonoBehaviour {
@@ -21,6 +22,7 @@ namespace Thuleanx {
 		public AudioManager _AudioManager;
 		public DialogueManager _DialogueManager;
 		public TransitionManager _TransitionManager;
+		public CinematographyManager _CinematographyManager;
 
 		[HideInInspector]
 		public List<BubblePool> activePools = new List<BubblePool>();
