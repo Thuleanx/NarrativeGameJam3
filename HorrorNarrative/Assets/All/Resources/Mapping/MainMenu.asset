@@ -15,6 +15,7 @@ MonoBehaviour:
   passage_name: PLAYMODE_EXIT
   target_scene: {fileID: 11400000, guid: 028b017c0489247ac9d88c236318aa96, type: 2}
   target_passage: {fileID: 1772262794429042203, guid: 028b017c0489247ac9d88c236318aa96, type: 2}
+  traversal_sound: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,11 +31,12 @@ MonoBehaviour:
   SceneReference:
     Scene: {fileID: 102900000, guid: c39dda2c675604a58bb8c23eb7b62420, type: 3}
     SceneName: MainMenu
-    sceneIndex: 2
+    sceneIndex: 1
     sceneEnabled: 1
   Passages:
   - {fileID: 3191013431908175833}
   - {fileID: -608383087676164849}
+  Ambiance: 
 --- !u!114 &3191013431908175833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,3 +52,4 @@ MonoBehaviour:
   passage_name: MENU_ENTER
   target_scene: {fileID: 0}
   target_passage: {fileID: 0}
+  traversal_sound: 
